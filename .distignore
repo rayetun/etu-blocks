@@ -12,6 +12,7 @@
 /.claude
 README.md
 .gitignore
+.gitattributes
 .distignore
 .editorconfig
 .prettierrc
