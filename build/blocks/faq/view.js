@@ -1,0 +1,1 @@
+import{getContext as t,store as e}from"@wordpress/interactivity";e("etu/faq",{actions:{toggle(){const e=t();e.allowMultiple?e.open=!e.open:e.activeId=e.activeId===e.id?"":e.id}},callbacks:{syncOpen(){const e=t();e.allowMultiple||(e.open=e.activeId===e.id)}}});

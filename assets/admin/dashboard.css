@@ -1,0 +1,673 @@
+/**
+ * Etu Blocks — admin dashboard theme.
+ * Tokens scoped under .etu-admin so nothing leaks into wp-admin globals.
+ */
+
+.etu-admin {
+	/* Brand / accent */
+	--etu-primary: #635bff;
+	--etu-primary-hover: #514be0;
+	--etu-primary-soft: #eeecff;
+
+	/* Sidebar (dark) */
+	--etu-nav-bg: #1e1b4b;
+	--etu-nav-bg-active: #2b2765;
+	--etu-nav-text: #c3c1de;
+	--etu-nav-text-active: #ffffff;
+
+	/* Canvas + surfaces */
+	--etu-canvas: #f5f6fa;
+	--etu-surface: #ffffff;
+	--etu-border: #eaebf1;
+
+	/* Text */
+	--etu-text: #1e1b39;
+	--etu-text-body: #5b6070;
+	--etu-text-muted: #8a8fa3;
+
+	/* Accents */
+	--etu-amber: #f5a623;
+
+	/* Radius + elevation */
+	--etu-radius-card: 16px;
+	--etu-radius-btn: 10px;
+	--etu-radius-pill: 999px;
+	--etu-shadow-card: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
+
+	display: grid;
+	grid-template-columns: 232px 1fr;
+	gap: 0;
+	min-height: calc(100vh - 32px);
+	margin: 0 0 0 -20px;
+	background: var(--etu-canvas);
+	color: var(--etu-text);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+}
+
+/* Sidebar */
+.etu-admin__sidebar {
+	background: var(--etu-nav-bg);
+	padding: 24px 16px;
+}
+
+.etu-admin__brand {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 24px;
+	padding: 0 8px;
+}
+
+.etu-admin__brand-name {
+	color: var(--etu-nav-text-active);
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.etu-admin__brand-badge {
+	color: var(--etu-nav-text-active);
+	background: rgba(255, 255, 255, 0.14);
+	border-radius: var(--etu-radius-pill);
+	font-size: 11px;
+	font-weight: 600;
+	padding: 2px 8px;
+}
+
+.etu-admin__nav ul {
+	margin: 0;
+	list-style: none;
+}
+
+.etu-admin__nav-link {
+	display: block;
+	padding: 10px 12px;
+	margin-bottom: 2px;
+	border-radius: 10px;
+	color: var(--etu-nav-text);
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.etu-admin__nav-link:hover,
+.etu-admin__nav-link:focus-visible {
+	color: var(--etu-nav-text-active);
+	background: rgba(255, 255, 255, 0.06);
+}
+
+.etu-admin__nav-link.is-active {
+	color: var(--etu-nav-text-active);
+	background: var(--etu-nav-bg-active);
+}
+
+/* Main */
+.etu-admin__main {
+	padding: 32px;
+}
+
+.etu-admin__header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 16px;
+	margin-bottom: 28px;
+}
+
+.etu-admin__title {
+	margin: 0 0 4px;
+	font-size: 27px;
+	font-weight: 700;
+	color: var(--etu-text);
+}
+
+.etu-admin__subtitle {
+	margin: 0;
+	font-size: 14px;
+	color: var(--etu-text-body);
+}
+
+.etu-admin__eyebrow {
+	margin: 0 0 16px;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--etu-text-muted);
+}
+
+.etu-admin__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 16px;
+}
+
+.etu-admin__card {
+	background: var(--etu-surface);
+	border: 1px solid var(--etu-border);
+	border-radius: var(--etu-radius-card);
+	box-shadow: var(--etu-shadow-card);
+	padding: 20px;
+}
+
+.etu-admin__card-title {
+	margin: 0 0 6px;
+	font-size: 15px;
+	font-weight: 600;
+	color: var(--etu-text);
+}
+
+.etu-admin__card-desc {
+	margin: 0;
+	font-size: 13px;
+	line-height: 1.5;
+	color: var(--etu-text-body);
+}
+
+.etu-admin__empty {
+	color: var(--etu-text-body);
+	font-size: 14px;
+}
+
+/* Buttons */
+.etu-admin__btn {
+	display: inline-block;
+	padding: 9px 16px;
+	border-radius: var(--etu-radius-btn);
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	line-height: 1.2;
+	cursor: pointer;
+}
+
+.etu-admin__btn--primary {
+	background: var(--etu-primary);
+	color: #fff;
+}
+
+.etu-admin__btn--primary:hover,
+.etu-admin__btn--primary:focus-visible {
+	background: var(--etu-primary-hover);
+	color: #fff;
+}
+
+.etu-admin__btn--amber {
+	background: var(--etu-amber);
+	color: #1e1b39;
+}
+
+.etu-admin__btn--ghost {
+	background: transparent;
+	border: 1px solid var(--etu-border);
+	color: var(--etu-text);
+}
+
+/* Settings tab */
+.etu-admin__settings {
+	background: var(--etu-surface);
+	border: 1px solid var(--etu-border);
+	border-radius: var(--etu-radius-card);
+	padding: 28px 32px;
+}
+
+.etu-admin__form {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	max-width: 640px;
+}
+
+.etu-admin__field {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.etu-admin__field-label {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--etu-text);
+}
+
+.etu-admin__field-input {
+	width: 100%;
+	padding: 9px 12px;
+	border: 1px solid var(--etu-border);
+	border-radius: var(--etu-radius-sm, 8px);
+	background: var(--etu-surface);
+	color: var(--etu-text);
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.etu-admin__field-input:focus,
+.etu-admin__field-input:focus-visible {
+	outline: 2px solid var(--etu-primary);
+	outline-offset: 1px;
+	border-color: var(--etu-primary);
+}
+
+.etu-admin__field-check {
+	display: inline-flex;
+	align-items: flex-start;
+	gap: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	color: var(--etu-text);
+	cursor: pointer;
+}
+
+.etu-admin__field-check input[type="checkbox"] {
+	margin-top: 3px;
+}
+
+.etu-admin__field-help {
+	margin: 0;
+	font-size: 12.5px;
+	line-height: 1.5;
+	color: var(--etu-text-muted);
+}
+
+.etu-admin__field-actions {
+	margin-top: 6px;
+}
+
+/* WordPress's default submit button gets our button styling too. */
+.etu-admin__form .button-primary,
+.etu-admin__form input[type="submit"].button-primary {
+	background: var(--etu-primary) !important;
+	border-color: var(--etu-primary) !important;
+	color: #fff !important;
+	padding: 8px 20px !important;
+	height: auto !important;
+	line-height: 1.4 !important;
+	border-radius: var(--etu-radius-sm, 8px) !important;
+	font-weight: 600 !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+}
+
+.etu-admin__form .button-primary:hover,
+.etu-admin__form input[type="submit"].button-primary:hover {
+	background: color-mix(in srgb, var(--etu-primary) 88%, #000) !important;
+}
+
+.etu-admin__notice {
+	padding: 12px 16px;
+	border-radius: var(--etu-radius-sm, 8px);
+	margin-bottom: 18px;
+	font-size: 14px;
+}
+
+.etu-admin__notice--success {
+	background: color-mix(in srgb, #22c55e 12%, transparent);
+	border: 1px solid color-mix(in srgb, #22c55e 45%, transparent);
+	color: color-mix(in srgb, #16a34a 88%, var(--etu-text));
+}
+
+/* Pro upsell card (dormant in 1.0.0 — hidden by default via the
+   etublocks_show_upsell filter). */
+.etu-admin__upsell {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin-top: 24px;
+	padding: 22px 24px;
+	background: linear-gradient(120deg, var(--etu-primary-soft, #eef0ff), var(--etu-surface));
+	border: 1px solid var(--etu-border);
+	border-radius: var(--etu-radius-card);
+	box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.etu-admin__upsell-body {
+	flex: 1 1 320px;
+}
+
+.etu-admin__upsell-eyebrow {
+	margin: 0 0 4px;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--etu-primary);
+}
+
+.etu-admin__upsell-title {
+	margin: 0 0 6px;
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--etu-text);
+}
+
+.etu-admin__upsell-text {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.5;
+	color: var(--etu-text-muted);
+	max-width: 60ch;
+}
+
+.etu-admin__upsell-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.etu-admin[data-theme="dark"] .etu-admin__upsell {
+	background: linear-gradient(120deg, #2b2765, #201d47);
+}
+
+@media (prefers-color-scheme: dark) {
+	.etu-admin:not([data-theme="light"]) .etu-admin__upsell {
+		background: linear-gradient(120deg, #2b2765, #201d47);
+	}
+}
+
+/* Support banner */
+.etu-admin__banner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	flex-wrap: wrap;
+	margin-top: 28px;
+	padding: 20px 24px;
+	background: linear-gradient(90deg, var(--etu-primary-soft), #f6efff);
+	border: 1px solid var(--etu-border);
+	border-radius: var(--etu-radius-card);
+}
+
+.etu-admin__banner-text {
+	margin: 0;
+	font-size: 14px;
+	color: var(--etu-text);
+	max-width: 60ch;
+}
+
+.etu-admin__banner-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+/* Ghost buttons sit on the tinted banner, so give them a border that contrasts
+   with it (the neutral --etu-border blends into the banner fill). */
+.etu-admin__banner .etu-admin__btn--ghost,
+.etu-admin__banner .etu-admin__btn--ghost:hover,
+.etu-admin__banner .etu-admin__btn--ghost:focus {
+	color: inherit;
+	border-color: currentColor;
+	background: rgba(255, 255, 255, 0.08);
+}
+
+.etu-admin__banner .etu-admin__btn--ghost:hover,
+.etu-admin__banner .etu-admin__btn--ghost:focus {
+	background: rgba(255, 255, 255, 0.18);
+}
+
+/* Block manager: search + filters */
+.etu-blocks-controls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 18px;
+}
+
+.etu-admin input.etu-blocks-search {
+	flex: 1 1 220px;
+	max-width: 340px;
+	padding: 9px 14px;
+	border: 1px solid var(--etu-border);
+	border-radius: var(--etu-radius-btn);
+	background: var(--etu-surface);
+	color: var(--etu-text);
+	font-size: 14px;
+	box-shadow: none;
+}
+
+.etu-admin input.etu-blocks-search::placeholder {
+	color: var(--etu-text-muted);
+}
+
+.etu-admin input.etu-blocks-search:focus {
+	border-color: var(--etu-primary);
+	box-shadow: 0 0 0 1px var(--etu-primary);
+	outline: none;
+}
+
+.etu-blocks-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.etu-blocks-filter {
+	padding: 7px 14px;
+	border: 1px solid var(--etu-border);
+	border-radius: var(--etu-radius-pill);
+	background: var(--etu-surface);
+	color: var(--etu-text-body);
+	font-size: 13px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.etu-blocks-filter:hover {
+	color: var(--etu-primary);
+	border-color: var(--etu-primary);
+}
+
+.etu-blocks-filter.is-active {
+	background: var(--etu-primary);
+	border-color: var(--etu-primary);
+	color: #fff;
+}
+
+/* Block card */
+.etu-blocks-card {
+	display: flex;
+	flex-direction: column;
+	transition: opacity 0.16s ease;
+}
+
+.etu-blocks-card.is-disabled {
+	opacity: 0.55;
+}
+
+/* Author rule so search/filter hiding beats .etu-blocks-card { display:flex }. */
+.etu-blocks-card[hidden] {
+	display: none;
+}
+
+.etu-blocks-card__head {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 8px;
+}
+
+.etu-blocks-card .etu-admin__card-title {
+	margin: 0;
+}
+
+.etu-blocks-card__meta {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	margin-top: 14px;
+}
+
+.etu-blocks-card__usage {
+	font-size: 12px;
+	color: var(--etu-text-muted);
+}
+
+.etu-blocks-card__usage.is-used {
+	color: var(--etu-primary);
+	font-weight: 600;
+}
+
+.etu-blocks-card__group {
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: var(--etu-text-muted);
+	background: var(--etu-canvas);
+	border: 1px solid var(--etu-border);
+	padding: 2px 8px;
+	border-radius: var(--etu-radius-pill);
+}
+
+.etu-blocks-noresults {
+	margin-top: 16px;
+	color: var(--etu-text-body);
+	font-size: 14px;
+}
+
+/* Toggle switch */
+.etu-switch {
+	position: relative;
+	display: inline-flex;
+	flex: 0 0 auto;
+	width: 40px;
+	height: 22px;
+	cursor: pointer;
+}
+
+.etu-switch input {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.etu-switch__slider {
+	position: absolute;
+	inset: 0;
+	border-radius: var(--etu-radius-pill);
+	background: var(--etu-border);
+	transition: background-color 0.18s ease;
+}
+
+.etu-switch__slider::before {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 1px 2px rgba(16, 24, 40, 0.25);
+	transition: transform 0.18s ease;
+}
+
+.etu-switch input:checked + .etu-switch__slider {
+	background: var(--etu-primary);
+}
+
+.etu-switch input:checked + .etu-switch__slider::before {
+	transform: translateX(18px);
+}
+
+.etu-switch input:focus-visible + .etu-switch__slider {
+	outline: 2px solid var(--etu-primary);
+	outline-offset: 2px;
+}
+
+/* Header actions + theme toggle */
+.etu-admin__header-actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-shrink: 0;
+}
+
+.etu-admin__theme-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 8px 12px;
+	border: 1px solid var(--etu-border);
+	border-radius: var(--etu-radius-btn);
+	background: var(--etu-surface);
+	color: var(--etu-text);
+	font-size: 13px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.etu-admin__theme-toggle:hover {
+	border-color: var(--etu-primary);
+	color: var(--etu-primary);
+}
+
+.etu-admin__theme-icon {
+	font-size: 15px;
+	line-height: 1;
+}
+
+/* Visible focus everywhere */
+.etu-admin a:focus-visible,
+.etu-admin button:focus-visible {
+	outline: 2px solid var(--etu-primary);
+	outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+	.etu-admin {
+		grid-template-columns: 1fr;
+		margin-left: -10px;
+	}
+}
+
+/* Dark theme — manual toggle ([data-theme="dark"]) and auto (system dark,
+   unless the owner forced light). The banner keeps a dark fill so its text and
+   ghost button stay legible. */
+.etu-admin[data-theme="dark"] {
+	--etu-canvas: #14131f;
+	--etu-surface: #1c1b2a;
+	--etu-border: #2a2940;
+	--etu-text: #f4f4fb;
+	--etu-text-body: #c4c6d4;
+	--etu-text-muted: #9096ab;
+	--etu-primary-soft: #2b2765;
+}
+
+.etu-admin[data-theme="dark"] .etu-admin__btn--amber {
+	color: #14131f;
+}
+
+.etu-admin[data-theme="dark"] .etu-admin__banner {
+	background: linear-gradient(90deg, #2b2765, #241f52);
+}
+
+@media (prefers-color-scheme: dark) {
+	.etu-admin:not([data-theme="light"]) {
+		--etu-canvas: #14131f;
+		--etu-surface: #1c1b2a;
+		--etu-border: #2a2940;
+		--etu-text: #f4f4fb;
+		--etu-text-body: #c4c6d4;
+		--etu-text-muted: #9096ab;
+		--etu-primary-soft: #2b2765;
+	}
+
+	.etu-admin:not([data-theme="light"]) .etu-admin__btn--amber {
+		color: #14131f;
+	}
+
+	.etu-admin:not([data-theme="light"]) .etu-admin__banner {
+		background: linear-gradient(90deg, #2b2765, #241f52);
+	}
+}

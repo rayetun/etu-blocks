@@ -1,0 +1,88 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "etu/progress-bar",
+  "version": "1.0.0",
+  "title": "Progress Bar",
+  "category": "etu-blocks",
+  "icon": "performance",
+  "description": "A labelled progress bar that fills when it scrolls into view.",
+  "keywords": [
+    "progress",
+    "bar",
+    "skill",
+    "meter"
+  ],
+  "textdomain": "etu-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "interactivity": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Design"
+    },
+    "value": {
+      "type": "number",
+      "default": 75
+    },
+    "showValue": {
+      "type": "boolean",
+      "default": true
+    },
+    "preset": {
+      "type": "string",
+      "default": "rounded"
+    },
+    "height": {
+      "type": "object",
+      "default": {}
+    },
+    "accentColor": {
+      "type": "string",
+      "default": ""
+    },
+    "trackColor": {
+      "type": "string",
+      "default": ""
+    },
+    "labelColor": {
+      "type": "string",
+      "default": ""
+    },
+    "labelTypography": {
+      "type": "object",
+      "default": {}
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockMargin": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "example": {
+    "attributes": {
+      "label": "Accessibility",
+      "value": 92,
+      "preset": "rounded"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

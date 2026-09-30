@@ -1,0 +1,86 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "etu/star-rating",
+  "version": "1.0.0",
+  "title": "Star Rating",
+  "category": "etu-blocks",
+  "icon": "star-filled",
+  "description": "A star (or heart / circle) rating with optional label and value.",
+  "keywords": [
+    "rating",
+    "stars",
+    "review",
+    "score"
+  ],
+  "textdomain": "etu-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "rating": {
+      "type": "number",
+      "default": 4.5
+    },
+    "maxStars": {
+      "type": "number",
+      "default": 5
+    },
+    "showValue": {
+      "type": "boolean",
+      "default": true
+    },
+    "label": {
+      "type": "string",
+      "default": ""
+    },
+    "preset": {
+      "type": "string",
+      "default": "star"
+    },
+    "size": {
+      "type": "object",
+      "default": {}
+    },
+    "contentAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": ""
+    },
+    "emptyColor": {
+      "type": "string",
+      "default": ""
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockMargin": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "example": {
+    "attributes": {
+      "rating": 4.5,
+      "showValue": true,
+      "preset": "star"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,76 @@
+/**
+ * Data Table block — editor-only styles.
+ *
+ * The preview reuses the front-end table classes (style.scss is enqueued in the
+ * editor too). These rules make the in-cell inputs sit flush inside the table and
+ * lay out the per-column tools.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-data-table--editor {
+	.etu-dt-editor__scroll {
+		overflow-x: auto;
+	}
+
+	.etu-dt-editor__caption {
+		margin: 0;
+	}
+
+	.etu-dt-editor__input {
+		width: 100%;
+		min-width: 90px;
+		box-sizing: border-box;
+		padding: 4px 6px;
+		border: 1px solid transparent;
+		border-radius: 6px;
+		background: transparent;
+		color: inherit;
+		font: inherit;
+
+		&:hover {
+			border-color: var(--etu-border, #e2e8f0);
+		}
+
+		&:focus,
+		&:focus-visible {
+			outline: none;
+			border-color: var(--etu-accent, #635bff);
+			background: var(--etu-surface, #fff);
+		}
+	}
+
+	.etu-dt-editor__head-input {
+		font-weight: 600;
+		margin-bottom: 6px;
+	}
+
+	.etu-dt-editor__coltools {
+		display: flex;
+		align-items: center;
+		gap: 2px;
+		flex-wrap: wrap;
+	}
+
+	.etu-dt-editor__type {
+		max-width: 84px;
+		padding: 2px 4px;
+		font-size: 11px;
+		border: 1px solid var(--etu-border, #e2e8f0);
+		border-radius: 4px;
+		background: var(--etu-surface, #fff);
+	}
+
+	/* Control cells (add column / remove row) sit outside the data grid. */
+	.etu-dt-editor__ctrl {
+		padding: 6px 8px;
+		background: transparent;
+		border: 0;
+		vertical-align: middle;
+		text-align: center;
+		white-space: nowrap;
+	}
+
+	.etu-dt-editor__actions {
+		margin-top: 12px;
+	}
+}

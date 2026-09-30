@@ -1,0 +1,223 @@
+/**
+ * Taxonomy block — front-end (and shared) styles.
+ * Layouts: grid (image cards), list (compact rows), pills. Uses house tokens.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-taxonomy {
+	--etu-tax-accent: var(--etu-accent, #635bff);
+	--etu-tax-card-bg: var(--etu-surface, #fff);
+	--etu-tax-text: var(--etu-text, #1e293b);
+	--etu-tax-count: var(--etu-text-muted, #64748b);
+	--etu-tax-gap: 20px;
+
+	display: block;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__item {
+		margin: 0;
+	}
+
+	/* ---- Card (grid + list share it) ---- */
+	&__card {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		text-decoration: none;
+		color: var(--etu-tax-text);
+		background: var(--etu-tax-card-bg);
+		border: 1px solid var(--etu-border, #e2e8f0);
+		border-radius: var(--etu-radius-md, 12px);
+		overflow: hidden;
+		transition: transform 0.18s ease, box-shadow 0.18s ease,
+			border-color 0.18s ease;
+	}
+
+	&__card:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+		border-color: color-mix(in srgb, var(--etu-tax-accent) 50%, transparent);
+	}
+
+	&__card:focus-visible {
+		outline: 3px solid var(--etu-tax-accent);
+		outline-offset: 2px;
+	}
+
+	&__media {
+		display: block;
+		aspect-ratio: 16 / 10;
+		background: var(--etu-surface-hover, #eef2f7);
+	}
+
+	&__media img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	&__media--blank {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 2.25rem;
+		font-weight: 700;
+		color: #fff;
+		background: hsl(var(--etu-tax-hue, 220) 52% 52%);
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		padding: 14px 16px;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+	}
+
+	&__name {
+		font-weight: 600;
+		line-height: 1.3;
+	}
+
+	&__count {
+		flex: none;
+		font-size: 0.78rem;
+		font-weight: 600;
+		color: var(--etu-tax-count);
+		background: color-mix(in srgb, var(--etu-tax-accent) 12%, transparent);
+		padding: 2px 9px;
+		border-radius: var(--etu-radius-pill, 999px);
+	}
+
+	&__desc {
+		font-size: 0.88rem;
+		line-height: 1.5;
+		color: var(--etu-text-muted, #64748b);
+	}
+
+	&__sr {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		border: 0;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		white-space: nowrap;
+	}
+
+	/* ---- Grid ---- */
+	&__grid {
+		display: grid;
+		gap: var(--etu-tax-gap);
+		grid-template-columns: repeat(2, 1fr);
+	}
+	&--cols-3 &__grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	&--cols-4 &__grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	&--cols-5 &__grid {
+		grid-template-columns: repeat(5, 1fr);
+	}
+
+	@media (max-width: 1024px) {
+		&--cols-4 &__grid,
+		&--cols-5 &__grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	@media (max-width: 767px) {
+		&--cols-3 &__grid,
+		&--cols-4 &__grid,
+		&--cols-5 &__grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (max-width: 460px) {
+		&__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	/* ---- List ---- */
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	&--list &__card {
+		flex-direction: row;
+		align-items: center;
+	}
+	&--list &__body {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		gap: 16px;
+	}
+	&--list &__row {
+		flex: 1;
+	}
+
+	/* ---- Pills ---- */
+	&__pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	&__pill {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		padding: 8px 16px;
+		border-radius: var(--etu-radius-pill, 999px);
+		background: color-mix(in srgb, var(--etu-tax-accent) 10%, transparent);
+		color: var(--etu-tax-text);
+		text-decoration: none;
+		border: 1px solid transparent;
+		transition: background-color 0.18s ease, color 0.18s ease;
+	}
+
+	&__pill:hover {
+		background: var(--etu-tax-accent);
+		color: #fff;
+	}
+
+	&__pill:focus-visible {
+		outline: 2px solid var(--etu-tax-accent);
+		outline-offset: 2px;
+	}
+
+	&__pill &__count {
+		background: rgba(255, 255, 255, 0.25);
+		color: inherit;
+	}
+	&__pill:not(:hover) &__count {
+		background: color-mix(in srgb, var(--etu-tax-accent) 18%, transparent);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		&__card,
+		&__pill {
+			transition: none;
+		}
+	}
+}

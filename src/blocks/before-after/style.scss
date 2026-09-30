@@ -1,0 +1,235 @@
+/**
+ * Before / After block — front-end (and shared) styles.
+ *
+ * The "after" image is the base; the "before" image is an absolutely-positioned
+ * overlay clipped with clip-path. A transparent full-frame range input sits on
+ * top for pointer + keyboard control; the divider and handle are decorative and
+ * positioned from the Interactivity context. Uses the shared house tokens.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-before-after {
+	--etu-ba-accent: var(--etu-accent, #635bff);
+	--etu-ba-handle: 44px;
+
+	&__frame {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		aspect-ratio: 16 / 9;
+		background: var(--etu-surface-hover, #f1f5f9);
+		border-radius: var(--etu-radius-md, 12px);
+		/* Stop the browser selecting the images while dragging. */
+		user-select: none;
+		-webkit-user-select: none;
+		touch-action: none;
+	}
+
+	&__image {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+		margin: 0;
+		max-width: none;
+		pointer-events: none;
+		user-select: none;
+	}
+
+	&__before {
+		position: absolute;
+		inset: 0;
+		/* clip-path is set inline (start position) and updated via the store. */
+		will-change: clip-path;
+		pointer-events: none;
+	}
+
+	/* Transparent control layer — covers the whole frame so a drag anywhere
+	   moves the divider, and gives us native keyboard operation for free. */
+	&__range {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		z-index: 4;
+		cursor: ew-resize;
+		background: transparent;
+		appearance: none;
+		-webkit-appearance: none;
+
+		&::-webkit-slider-runnable-track {
+			background: transparent;
+			border: 0;
+		}
+		&::-moz-range-track {
+			background: transparent;
+			border: 0;
+		}
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: var(--etu-ba-handle);
+			height: 100%;
+			background: transparent;
+			border: 0;
+			cursor: ew-resize;
+		}
+		&::-moz-range-thumb {
+			width: var(--etu-ba-handle);
+			height: 100%;
+			background: transparent;
+			border: 0;
+			cursor: ew-resize;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	/* Divider line + handle — decorative, positioned from context. */
+	&__divider {
+		position: absolute;
+		z-index: 3;
+		pointer-events: none;
+		background: var(--etu-ba-accent);
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+	}
+
+	&__handle {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: var(--etu-ba-handle);
+		height: var(--etu-ba-handle);
+		border-radius: 50%;
+		background: var(--etu-ba-accent);
+		box-shadow: 0 2px 10px rgba(15, 23, 42, 0.35);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 7px;
+
+		/* Two chevrons pointing outward from the centre. */
+		&::before,
+		&::after {
+			content: "";
+			flex: none;
+			width: 7px;
+			height: 7px;
+			border: solid #fff;
+			border-width: 0 2px 2px 0;
+		}
+	}
+
+	/* Labels. */
+	&__label {
+		position: absolute;
+		z-index: 2;
+		top: 12px;
+		padding: 4px 10px;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 1.4;
+		color: #fff;
+		background: rgba(15, 23, 42, 0.62);
+		border-radius: var(--etu-radius-pill, 999px);
+		pointer-events: none;
+		backdrop-filter: blur(2px);
+	}
+
+	/* ---------- Horizontal (default) ---------- */
+	&--horizontal &__divider {
+		top: 0;
+		bottom: 0;
+		width: 3px;
+		transform: translateX(-50%);
+	}
+	&--horizontal &__handle::before {
+		transform: rotate(135deg); /* points left */
+	}
+	&--horizontal &__handle::after {
+		transform: rotate(-45deg); /* points right */
+	}
+	&--horizontal &__label--before {
+		left: 12px;
+	}
+	&--horizontal &__label--after {
+		right: 12px;
+	}
+
+	/* ---------- Vertical ---------- */
+	&--vertical &__frame {
+		touch-action: none;
+	}
+	&--vertical &__range {
+		cursor: ns-resize;
+		writing-mode: vertical-lr;
+		&::-webkit-slider-thumb {
+			width: 100%;
+			height: var(--etu-ba-handle);
+			cursor: ns-resize;
+		}
+		&::-moz-range-thumb {
+			width: 100%;
+			height: var(--etu-ba-handle);
+			cursor: ns-resize;
+		}
+	}
+	&--vertical &__divider {
+		left: 0;
+		right: 0;
+		height: 3px;
+		transform: translateY(-50%);
+	}
+	&--vertical &__handle {
+		flex-direction: column;
+	}
+	&--vertical &__handle::before {
+		transform: rotate(-135deg); /* points up */
+	}
+	&--vertical &__handle::after {
+		transform: rotate(45deg); /* points down */
+	}
+	&--vertical &__label {
+		top: auto;
+	}
+	&--vertical &__label--before {
+		top: 12px;
+		left: 12px;
+	}
+	&--vertical &__label--after {
+		bottom: 12px;
+		left: 12px;
+	}
+
+	/* ---------- Aspect ratios ---------- */
+	&--ar-16x9 &__frame {
+		aspect-ratio: 16 / 9;
+	}
+	&--ar-3x2 &__frame {
+		aspect-ratio: 3 / 2;
+	}
+	&--ar-4x3 &__frame {
+		aspect-ratio: 4 / 3;
+	}
+	&--ar-1x1 &__frame {
+		aspect-ratio: 1 / 1;
+	}
+	&--ar-21x9 &__frame {
+		aspect-ratio: 21 / 9;
+	}
+
+	/* Keyboard focus lands on the (invisible) range — show a clear ring on the
+	   handle so sighted keyboard users can see what they're moving. */
+	&__range:focus-visible ~ &__divider &__handle {
+		outline: 3px solid var(--etu-ba-accent);
+		outline-offset: 3px;
+		box-shadow: 0 0 0 3px #fff, 0 2px 10px rgba(15, 23, 42, 0.35);
+	}
+}

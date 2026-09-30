@@ -1,0 +1,37 @@
+/**
+ * Etu Blocks — house design tokens.
+ *
+ * One shared visual language every block draws from, so the library is
+ * consistent and globally themeable. Emitted (idempotently) by each block's
+ * stylesheet via `@use`. Per-block accents default to --etu-accent but can be
+ * overridden per instance by the Accent colour control.
+ */
+:root {
+	/* Brand */
+	--etu-accent: #635bff;
+
+	/* Surfaces & lines */
+	--etu-surface: #ffffff;
+	--etu-surface-soft: #f8fafc;
+	--etu-surface-hover: #f1f5f9;
+	--etu-border: #e2e8f0;
+	--etu-border-strong: #cbd5e1;
+
+	/* Text */
+	--etu-text: #1e293b;
+	--etu-text-soft: #334155;
+	--etu-text-muted: #64748b;
+
+	/* Radii */
+	--etu-radius-sm: 8px;
+	--etu-radius-md: 12px;
+	--etu-radius-lg: 16px;
+	--etu-radius-pill: 999px;
+
+	/* Elevation */
+	--etu-shadow-card: 0 4px 20px rgba(15, 23, 42, 0.05);
+	--etu-shadow-card-hover: 0 10px 30px rgba(15, 23, 42, 0.09);
+
+	/* Spacing */
+	--etu-pad-card: 28px;
+}

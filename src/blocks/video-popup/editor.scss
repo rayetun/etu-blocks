@@ -1,0 +1,56 @@
+/**
+ * Video Popup block — editor-only styles.
+ *
+ * The poster preview reuses the shared front-end styles (style.scss is enqueued in
+ * the editor too). These rules cover the setup panel shown before a source is set.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-video-popup__setup {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	padding: 40px 24px;
+	text-align: center;
+	border: 1px dashed var(--etu-border-strong, #cbd5e1);
+	border-radius: var(--etu-radius-md, 12px);
+	background: var(--etu-surface-hover, #f8fafc);
+
+	&-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 56px;
+		height: 56px;
+		border-radius: 50%;
+		background: var(--etu-accent, #635bff);
+		color: #fff;
+		margin-bottom: 4px;
+
+		svg {
+			width: 26px;
+			height: 26px;
+			margin-left: 2px;
+		}
+	}
+
+	&-title {
+		margin: 0;
+		font-size: 15px;
+		font-weight: 600;
+		color: var(--etu-text, #1e293b);
+	}
+
+	&-help {
+		margin: 0 0 8px;
+		font-size: 13px;
+		color: var(--etu-text-muted, #64748b);
+	}
+}
+
+/* The poster is a real <button> on the front end; in the editor it's a div, so
+   give it the pointer affordance without implying it's clickable there. */
+.etu-video-popup--editor .etu-video-popup__poster {
+	cursor: default;
+}

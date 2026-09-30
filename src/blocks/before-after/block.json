@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "etu/before-after",
+	"version": "1.0.0",
+	"title": "Before / After",
+	"category": "etu-blocks",
+	"icon": "image-flip-horizontal",
+	"description": "An accessible before/after image comparison slider — drag or use the keyboard to reveal, built on the Interactivity API.",
+	"keywords": [ "before after", "comparison", "image slider", "reveal", "juxtapose" ],
+	"textdomain": "etu-blocks",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"interactivity": true,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"beforeImage": { "type": "object", "default": {} },
+		"afterImage": { "type": "object", "default": {} },
+		"beforeLabel": { "type": "string", "default": "Before" },
+		"afterLabel": { "type": "string", "default": "After" },
+		"showLabels": { "type": "boolean", "default": true },
+		"startPosition": { "type": "number", "default": 50 },
+		"orientation": { "type": "string", "default": "horizontal" },
+		"aspectRatio": { "type": "string", "default": "16x9" },
+		"accentColor": { "type": "string", "default": "" },
+		"rounded": { "type": "object", "default": {} },
+		"blockId": { "type": "string", "default": "" },
+		"blockPadding": { "type": "object", "default": {} },
+		"blockMargin": { "type": "object", "default": {} }
+	},
+	"example": {
+		"attributes": {
+			"beforeLabel": "Before",
+			"afterLabel": "After",
+			"startPosition": 50
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

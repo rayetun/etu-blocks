@@ -1,0 +1,20 @@
+/**
+ * Post Grid block — editor-only styles.
+ */
+.etu-post-grid--editor {
+	.etu-post-grid__empty {
+		margin: 0;
+		padding: 24px;
+		border: 1px dashed var(--etu-border-strong, #cbd5e1);
+		border-radius: var(--etu-radius-md, 12px);
+		color: var(--etu-text-muted, #64748b);
+		text-align: center;
+	}
+
+	/* The filter / carousel controls are inert in the editor preview. */
+	.etu-post-grid__filter,
+	.etu-post-grid__arrow,
+	.etu-post-grid__dot {
+		pointer-events: none;
+	}
+}

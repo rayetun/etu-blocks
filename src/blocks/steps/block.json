@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "etu/steps",
+	"version": "1.0.0",
+	"title": "Steps",
+	"category": "etu-blocks",
+	"icon": "editor-ol",
+	"description": "A numbered, ordered list of steps — great for how-tos and processes.",
+	"keywords": [ "steps", "process", "how to", "numbered" ],
+	"textdomain": "etu-blocks",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": [
+				{ "title": "Sign up", "description": "Create your free account in seconds." },
+				{ "title": "Add blocks", "description": "Insert Etu blocks into any page or post." },
+				{ "title": "Publish", "description": "Go live with accessible, fast content." }
+			]
+		},
+		"preset": { "type": "string", "default": "connected" },
+		"accentColor": { "type": "string", "default": "" },
+		"titleColor": { "type": "string", "default": "" },
+		"descColor": { "type": "string", "default": "" },
+		"titleTypography": { "type": "object", "default": {} },
+		"blockId": { "type": "string", "default": "" },
+		"blockPadding": { "type": "object", "default": {} },
+		"blockMargin": { "type": "object", "default": {} }
+	},
+	"example": {
+		"attributes": {
+			"preset": "connected",
+			"items": [
+				{ "title": "Sign up", "description": "Create your free account." },
+				{ "title": "Publish", "description": "Go live in minutes." }
+			]
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,17 @@
+/**
+ * Post Filter block — editor-only styles.
+ * The preview is ServerSideRender output (front-end style.scss applies). Controls
+ * and links in the preview shouldn't act inside the editor.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-post-filter--editor {
+	.etu-post-filter__bar,
+	.etu-post-filter__footer {
+		pointer-events: none;
+	}
+
+	.etu-post-filter__card {
+		pointer-events: none;
+	}
+}

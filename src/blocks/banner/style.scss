@@ -1,0 +1,180 @@
+/**
+ * Banner (Hero) block — front-end (and shared) styles.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-banner {
+	--etu-banner-accent: var(--etu-accent, #635bff);
+	--etu-banner-overlay-color: #0f172a;
+	--etu-banner-overlay-opacity: 0%;
+
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	padding: 56px 40px;
+	border-radius: var(--etu-radius-lg, 16px);
+	background-color: #0f172a;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+.etu-banner.alignfull {
+	border-radius: 0;
+}
+
+/* ---- Height presets ---- */
+.etu-banner--h-small {
+	min-height: 340px;
+}
+
+.etu-banner--h-medium {
+	min-height: 480px;
+}
+
+.etu-banner--h-large {
+	min-height: 640px;
+}
+
+.etu-banner--h-full {
+	min-height: 100vh;
+}
+
+/* ---- Positioning ---- */
+.etu-banner--align-left {
+	align-items: flex-start;
+}
+
+.etu-banner--align-center {
+	align-items: center;
+}
+
+.etu-banner--align-right {
+	align-items: flex-end;
+}
+
+.etu-banner--valign-top {
+	justify-content: flex-start;
+}
+
+.etu-banner--valign-center {
+	justify-content: center;
+}
+
+.etu-banner--valign-bottom {
+	justify-content: flex-end;
+}
+
+/* ---- Overlay (over the image, under the content) ---- */
+.etu-banner__overlay {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	pointer-events: none;
+	background: color-mix(
+		in srgb,
+		var(--etu-banner-overlay-color) var(--etu-banner-overlay-opacity),
+		transparent
+	);
+}
+
+/* ---- Content ---- */
+.etu-banner__content {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	width: 100%;
+	max-width: 720px;
+	text-align: center;
+}
+
+.etu-banner__eyebrow {
+	margin: 0;
+	font-size: 0.85rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--etu-banner-accent);
+}
+
+.etu-banner__heading {
+	margin: 0;
+	font-size: clamp(1.9rem, 4vw, 3rem);
+	font-weight: 800;
+	line-height: 1.1;
+	color: inherit;
+}
+
+.etu-banner__text {
+	margin: 0;
+	font-size: 1.1rem;
+	line-height: 1.6;
+	opacity: 0.92;
+}
+
+.etu-banner__buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 8px;
+}
+
+.etu-banner--align-center .etu-banner__buttons {
+	justify-content: center;
+}
+
+.etu-banner--align-right .etu-banner__buttons {
+	justify-content: flex-end;
+}
+
+.etu-banner__btn {
+	display: inline-block;
+	padding: 13px 26px;
+	border: 2px solid transparent;
+	border-radius: var(--etu-radius-sm, 8px);
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.2;
+	text-decoration: none;
+	cursor: pointer;
+	transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+}
+
+.etu-banner__btn--primary {
+	background: var(--etu-banner-accent);
+	color: #fff;
+}
+
+.etu-banner__btn--primary:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 26px color-mix(in srgb, var(--etu-banner-accent) 45%, transparent);
+}
+
+.etu-banner__btn--secondary {
+	background: transparent;
+	color: inherit;
+	border-color: currentColor;
+}
+
+.etu-banner__btn--secondary:hover {
+	background: rgba(255, 255, 255, 0.14);
+}
+
+.etu-banner__btn:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.etu-banner__btn {
+		transition: none;
+	}
+
+	.etu-banner__btn--primary:hover {
+		transform: none;
+	}
+}

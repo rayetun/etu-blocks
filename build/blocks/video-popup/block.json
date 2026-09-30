@@ -1,0 +1,101 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "etu/video-popup",
+  "version": "1.0.0",
+  "title": "Video Popup",
+  "category": "etu-blocks",
+  "icon": "video-alt3",
+  "description": "A poster with a play button that opens the video in an accessible dialog. The YouTube/Vimeo embed loads only on click — no third-party scripts or cookies until then.",
+  "keywords": [
+    "video",
+    "popup",
+    "lightbox",
+    "youtube",
+    "vimeo"
+  ],
+  "textdomain": "etu-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "interactivity": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "videoType": {
+      "type": "string",
+      "default": "youtube"
+    },
+    "videoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "videoFile": {
+      "type": "object",
+      "default": {}
+    },
+    "posterImage": {
+      "type": "object",
+      "default": {}
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": false
+    },
+    "autoplay": {
+      "type": "boolean",
+      "default": true
+    },
+    "aspectRatio": {
+      "type": "string",
+      "default": "16x9"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": ""
+    },
+    "overlayColor": {
+      "type": "string",
+      "default": ""
+    },
+    "overlayOpacity": {
+      "type": "object",
+      "default": {}
+    },
+    "rounded": {
+      "type": "object",
+      "default": {}
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockMargin": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "example": {
+    "attributes": {
+      "videoType": "youtube",
+      "title": "Watch the demo",
+      "showTitle": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,125 @@
+/**
+ * CTA block — front-end (and shared) styles.
+ * Presets: Centered / Split / Banner. Text alignment via generated text-align;
+ * the actions row is inline-flex so it follows the alignment.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-cta {
+	--etu-cta-accent: var(--etu-accent, #635bff);
+
+	&__heading {
+		margin: 0 0 10px;
+		font-size: 1.9rem;
+		font-weight: 700;
+		color: #0f172a;
+	}
+
+	&__description {
+		margin: 0;
+		font-size: 1.05rem;
+		line-height: 1.6;
+		color: #475569;
+	}
+
+	&__actions {
+		display: inline-flex;
+		flex-wrap: wrap;
+		gap: 12px;
+		margin-top: 20px;
+		text-align: left;
+	}
+
+	&__button {
+		display: inline-block;
+		padding: 12px 24px;
+		border-radius: 10px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: opacity 0.18s ease, transform 0.18s ease;
+	}
+
+	&__button--primary {
+		background: var(--etu-cta-accent);
+		color: #fff;
+	}
+
+	&__button--secondary {
+		background: transparent;
+		color: var(--etu-cta-accent);
+		border: 1px solid var(--etu-cta-accent);
+	}
+
+	&__button:hover {
+		transform: translateY(-1px);
+	}
+
+	&__button:focus-visible {
+		outline: 2px solid var(--etu-cta-accent);
+		outline-offset: 2px;
+	}
+
+	/* ---- Preset: Split ---- */
+	&--preset-split {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 24px;
+		text-align: left;
+	}
+
+	&--preset-split .etu-cta__actions {
+		margin-top: 0;
+	}
+
+	/* ---- Preset: Banner ---- */
+	&--preset-banner {
+		padding: 48px 40px;
+		border-radius: 20px;
+		background: linear-gradient(
+			135deg,
+			var(--etu-cta-accent),
+			color-mix(in srgb, var(--etu-cta-accent) 68%, #000)
+		);
+		color: #fff;
+	}
+
+	&--preset-banner .etu-cta__heading,
+	&--preset-banner .etu-cta__description {
+		color: #fff;
+	}
+
+	&--preset-banner .etu-cta__button--primary {
+		background: #fff;
+		color: var(--etu-cta-accent);
+	}
+
+	&--preset-banner .etu-cta__button--secondary {
+		color: #fff;
+		border-color: rgba(255, 255, 255, 0.6);
+	}
+}
+
+/* Screen-reader-only helper. */
+.etu-cta .screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.etu-cta__button {
+		transition: none;
+	}
+
+	.etu-cta__button:hover {
+		transform: none;
+	}
+}

@@ -1,0 +1,32 @@
+/**
+ * Lottie block — editor-only styles (setup prompt).
+ */
+@use "../../shared/styles/tokens";
+
+.etu-lottie--editor {
+	.etu-lottie__editor-notice {
+		margin: 0 0 12px !important;
+	}
+
+	.etu-lottie__setup {
+		flex: 1;
+		padding: 40px 24px;
+		text-align: center;
+		border: 1px dashed var(--etu-border-strong, #cbd5e1);
+		border-radius: var(--etu-radius-md, 12px);
+		background: var(--etu-surface-hover, #f8fafc);
+	}
+
+	.etu-lottie__setup-title {
+		margin: 0 0 4px;
+		font-size: 15px;
+		font-weight: 600;
+		color: var(--etu-text, #1e293b);
+	}
+
+	.etu-lottie__setup-help {
+		margin: 0;
+		font-size: 13px;
+		color: var(--etu-text-muted, #64748b);
+	}
+}

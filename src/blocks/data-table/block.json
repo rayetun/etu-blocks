@@ -1,0 +1,62 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "etu/data-table",
+	"version": "1.0.0",
+	"title": "Data Table",
+	"category": "etu-blocks",
+	"icon": "editor-table",
+	"description": "A structured data table with sortable columns, live search, sticky header and responsive stacking — accessible and powered by the Interactivity API.",
+	"keywords": [ "table", "data", "sortable", "grid", "spreadsheet" ],
+	"textdomain": "etu-blocks",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"interactivity": true,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"columns": {
+			"type": "array",
+			"default": [
+				{ "label": "Name", "align": "left", "type": "text" },
+				{ "label": "Role", "align": "left", "type": "text" },
+				{ "label": "Score", "align": "right", "type": "number" }
+			]
+		},
+		"rows": {
+			"type": "array",
+			"default": [
+				[ "Ada Lovelace", "Engineer", "98" ],
+				[ "Alan Turing", "Researcher", "95" ],
+				[ "Grace Hopper", "Admiral", "99" ]
+			]
+		},
+		"caption": { "type": "string", "default": "" },
+		"sortable": { "type": "boolean", "default": true },
+		"searchable": { "type": "boolean", "default": false },
+		"stickyHeader": { "type": "boolean", "default": false },
+		"striped": { "type": "boolean", "default": true },
+		"bordered": { "type": "boolean", "default": false },
+		"compact": { "type": "boolean", "default": false },
+		"responsive": { "type": "string", "default": "scroll" },
+		"headerBg": { "type": "string", "default": "" },
+		"headerColor": { "type": "string", "default": "" },
+		"accentColor": { "type": "string", "default": "" },
+		"stripeColor": { "type": "string", "default": "" },
+		"blockId": { "type": "string", "default": "" },
+		"blockPadding": { "type": "object", "default": {} },
+		"blockMargin": { "type": "object", "default": {} }
+	},
+	"example": {
+		"attributes": {
+			"caption": "Team scores",
+			"striped": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

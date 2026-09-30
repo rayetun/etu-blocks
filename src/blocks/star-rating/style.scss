@@ -1,0 +1,49 @@
+/**
+ * Star Rating block — front-end (and shared) styles.
+ * Two-layer fill for fractional ratings. Default fill is gold (rating convention),
+ * overridable by the Filled colour control. Alignment via generated text-align.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-star-rating {
+	--etu-star-accent: #fbbf24;
+
+	&__label {
+		display: inline;
+		margin-right: 10px;
+		font-weight: 600;
+		color: var(--etu-text, #1e293b);
+		vertical-align: middle;
+	}
+
+	&__stars {
+		position: relative;
+		display: inline-block;
+		font-size: 20px;
+		line-height: 1;
+		letter-spacing: 2px;
+		vertical-align: middle;
+	}
+
+	&__empty {
+		color: var(--etu-border-strong, #cbd5e1);
+	}
+
+	&__filled {
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		white-space: nowrap;
+		color: var(--etu-star-accent);
+	}
+
+	&__value {
+		display: inline;
+		margin-left: 10px;
+		font-weight: 600;
+		font-variant-numeric: tabular-nums;
+		color: var(--etu-text-muted, #64748b);
+		vertical-align: middle;
+	}
+}

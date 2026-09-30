@@ -1,0 +1,113 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "etu/tabs",
+  "version": "1.0.0",
+  "title": "Tabs",
+  "category": "etu-blocks",
+  "icon": "index-card",
+  "description": "Accessible tabbed content following the ARIA Tabs pattern, with full keyboard navigation.",
+  "keywords": [
+    "tabs",
+    "tabbed",
+    "panels",
+    "accordion"
+  ],
+  "textdomain": "etu-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "interactivity": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "tabs": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Tab One",
+          "content": "Content for the first tab."
+        },
+        {
+          "label": "Tab Two",
+          "content": "Content for the second tab."
+        }
+      ]
+    },
+    "ariaLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "preset": {
+      "type": "string",
+      "default": "line"
+    },
+    "tabAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "tabGap": {
+      "type": "object",
+      "default": {}
+    },
+    "tabTextColor": {
+      "type": "string",
+      "default": ""
+    },
+    "tabTextColorHover": {
+      "type": "string",
+      "default": ""
+    },
+    "tabActiveColor": {
+      "type": "string",
+      "default": ""
+    },
+    "accentColor": {
+      "type": "string",
+      "default": ""
+    },
+    "tabTypography": {
+      "type": "object",
+      "default": {}
+    },
+    "tabPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockMargin": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "example": {
+    "attributes": {
+      "preset": "line",
+      "tabs": [
+        {
+          "label": "Overview",
+          "content": "A quick overview lives in the first tab."
+        },
+        {
+          "label": "Details",
+          "content": "More detail lives in the second tab."
+        }
+      ]
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

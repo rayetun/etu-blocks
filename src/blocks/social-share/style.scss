@@ -1,0 +1,203 @@
+/**
+ * Social Share block — front-end (and shared) styles.
+ * Presets: Solid / Outline / Minimal. Shapes: Rounded / Pill / Circle.
+ * Each button resolves its colour from --etu-ss-color, which is the house accent
+ * by default and the network's brand colour under the --brand modifier.
+ */
+@use "../../shared/styles/tokens";
+
+$etu-ss-brands: (
+	facebook: #1877f2,
+	x: #000000,
+	linkedin: #0a66c2,
+	pinterest: #e60023,
+	reddit: #ff4500,
+	whatsapp: #25d366,
+	telegram: #229ed9,
+	email: #64748b,
+	copy: #64748b,
+	native: #635bff,
+);
+
+.etu-social-share {
+	--etu-ss-accent: var(--etu-accent, #635bff);
+	--etu-ss-icon: 20px;
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 10px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__item {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__btn {
+		--etu-ss-color: var(--etu-ss-accent);
+
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		padding: 10px 16px;
+		border: 1.5px solid transparent;
+		font-size: 0.9rem;
+		font-weight: 600;
+		line-height: 1;
+		text-decoration: none;
+		cursor: pointer;
+		background: transparent;
+		color: inherit;
+		transition: transform 0.18s ease, box-shadow 0.18s ease,
+			background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+	}
+
+	&__btn[hidden] {
+		display: none !important;
+	}
+
+	&__icon {
+		display: inline-flex;
+		flex: 0 0 auto;
+	}
+
+	&__icon svg {
+		width: var(--etu-ss-icon);
+		height: var(--etu-ss-icon);
+	}
+
+	&__label {
+		white-space: nowrap;
+	}
+
+	&__btn:focus-visible {
+		outline: 2px solid var(--etu-ss-color);
+		outline-offset: 2px;
+	}
+
+	/* Brand colours (used under the --brand modifier). */
+	@each $key, $color in $etu-ss-brands {
+		&__btn--#{$key} {
+			--etu-ss-brand: #{$color};
+		}
+	}
+
+	&--brand &__btn {
+		--etu-ss-color: var(--etu-ss-brand, var(--etu-ss-accent));
+	}
+
+	/* ---- Preset: Solid ---- */
+	&--preset-solid &__btn {
+		background: var(--etu-ss-color);
+		color: #fff;
+	}
+
+	&--preset-solid &__btn:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 16px color-mix(in srgb, var(--etu-ss-color) 35%, transparent);
+	}
+
+	/* ---- Preset: Outline ---- */
+	&--preset-outline &__btn {
+		color: var(--etu-ss-color);
+		border-color: currentColor;
+	}
+
+	&--preset-outline &__btn:hover {
+		background: var(--etu-ss-color);
+		color: #fff;
+		border-color: transparent;
+		transform: translateY(-2px);
+	}
+
+	/* ---- Preset: Minimal ---- */
+	&--preset-minimal &__btn {
+		color: var(--etu-ss-color);
+		padding: 8px 10px;
+	}
+
+	&--preset-minimal &__btn:hover {
+		background: color-mix(in srgb, var(--etu-ss-color) 12%, transparent);
+	}
+
+	/* ---- Shapes ---- */
+	&--shape-rounded &__btn {
+		border-radius: var(--etu-radius-sm, 8px);
+	}
+
+	&--shape-pill &__btn {
+		border-radius: var(--etu-radius-pill, 999px);
+	}
+
+	&--shape-circle &__btn {
+		width: 44px;
+		height: 44px;
+		padding: 0;
+		border-radius: 50%;
+	}
+
+	/* ---- Icon-only ---- */
+	&--icon-only &__label {
+		display: none;
+	}
+
+	&--icon-only:not(.etu-social-share--shape-circle) &__btn {
+		padding: 10px;
+	}
+
+	/* ---- Copy: "Copied!" tooltip ---- */
+	&__tip {
+		position: absolute;
+		bottom: calc(100% + 8px);
+		left: 50%;
+		transform: translate(-50%, 4px);
+		padding: 4px 8px;
+		border-radius: 6px;
+		background: var(--etu-text, #1e293b);
+		color: #fff;
+		font-size: 0.75rem;
+		font-weight: 600;
+		white-space: nowrap;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.18s ease, transform 0.18s ease;
+	}
+
+	&__btn--copy.is-copied .etu-social-share__tip {
+		opacity: 1;
+		transform: translate(-50%, 0);
+	}
+
+	/* Visually-hidden live region for the copy announcement. */
+	&__status {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		border: 0;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		white-space: nowrap;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.etu-social-share__btn,
+	.etu-social-share__tip {
+		transition: none;
+	}
+
+	.etu-social-share__btn:hover {
+		transform: none;
+	}
+}

@@ -1,0 +1,109 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "etu/countdown",
+  "version": "1.0.0",
+  "title": "Countdown",
+  "category": "etu-blocks",
+  "icon": "clock",
+  "description": "A countdown timer to a fixed date or an evergreen per-visitor duration, with an accessible text equivalent and a completion message.",
+  "keywords": [
+    "countdown",
+    "timer",
+    "clock",
+    "deadline",
+    "evergreen"
+  ],
+  "textdomain": "etu-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "interactivity": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "mode": {
+      "type": "string",
+      "default": "date"
+    },
+    "targetDate": {
+      "type": "string",
+      "default": ""
+    },
+    "evDays": {
+      "type": "number",
+      "default": 0
+    },
+    "evHours": {
+      "type": "number",
+      "default": 24
+    },
+    "evMinutes": {
+      "type": "number",
+      "default": 0
+    },
+    "showLabels": {
+      "type": "boolean",
+      "default": true
+    },
+    "hideSeconds": {
+      "type": "boolean",
+      "default": false
+    },
+    "onComplete": {
+      "type": "string",
+      "default": "message"
+    },
+    "completedText": {
+      "type": "string",
+      "default": ""
+    },
+    "preset": {
+      "type": "string",
+      "default": "cards"
+    },
+    "contentAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": ""
+    },
+    "numberColor": {
+      "type": "string",
+      "default": ""
+    },
+    "labelColor": {
+      "type": "string",
+      "default": ""
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockMargin": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "example": {
+    "attributes": {
+      "mode": "evergreen",
+      "evHours": 24,
+      "preset": "cards"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

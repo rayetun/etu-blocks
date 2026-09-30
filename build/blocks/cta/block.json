@@ -1,0 +1,104 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "etu/cta",
+  "version": "1.0.0",
+  "title": "Call to Action",
+  "category": "etu-blocks",
+  "icon": "megaphone",
+  "description": "A heading, supporting text and buttons to drive the next action.",
+  "keywords": [
+    "cta",
+    "call to action",
+    "button",
+    "banner"
+  ],
+  "textdomain": "etu-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "primaryText": {
+      "type": "string",
+      "default": ""
+    },
+    "primaryUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "secondaryText": {
+      "type": "string",
+      "default": ""
+    },
+    "secondaryUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "preset": {
+      "type": "string",
+      "default": "centered"
+    },
+    "contentAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": ""
+    },
+    "headingColor": {
+      "type": "string",
+      "default": ""
+    },
+    "descriptionColor": {
+      "type": "string",
+      "default": ""
+    },
+    "headingTypography": {
+      "type": "object",
+      "default": {}
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockMargin": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "example": {
+    "attributes": {
+      "heading": "Ready to build faster?",
+      "description": "Accessible, interactive blocks — free.",
+      "primaryText": "Get started",
+      "primaryUrl": "https://example.com",
+      "preset": "banner"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

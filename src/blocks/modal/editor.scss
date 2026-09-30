@@ -1,0 +1,51 @@
+/**
+ * Modal / Popup block — editor-only styles.
+ * The dialog is shown inline (as a card) so its content is editable.
+ */
+.etu-modal--editor {
+	.etu-modal__trigger {
+		cursor: text;
+	}
+
+	.etu-modal__auto-note {
+		display: inline-block;
+		padding: 8px 14px;
+		border-radius: var(--etu-radius-sm, 8px);
+		background: color-mix(in srgb, var(--etu-modal-accent, #635bff) 10%, transparent);
+		color: var(--etu-modal-accent, #635bff);
+		font-size: 0.9rem;
+		font-weight: 600;
+	}
+
+	/* Neutralise the front-end overlay animation start-state + scroll cap. */
+	.etu-modal__dialog {
+		opacity: 1 !important;
+		transform: none !important;
+		max-height: none;
+		overflow: visible;
+		margin-top: 16px;
+		border: 1px dashed var(--etu-border-strong, #cbd5e1);
+		box-shadow: var(--etu-shadow-card, 0 4px 20px rgba(15, 23, 42, 0.05));
+	}
+
+	.etu-modal__editor-dialog {
+		position: relative;
+	}
+
+	.etu-modal__editor-label {
+		position: absolute;
+		top: -9px;
+		left: 16px;
+		padding: 0 6px;
+		background: var(--etu-surface, #fff);
+		font-size: 11px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: var(--etu-text-muted, #64748b);
+	}
+
+	.etu-modal__close {
+		cursor: default;
+	}
+}

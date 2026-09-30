@@ -1,0 +1,44 @@
+/**
+ * Slides / Carousel block — editor-only styles.
+ * Slides are shown stacked and clearly bounded for easy editing.
+ */
+.etu-slides--editor {
+	.etu-slides__editor-hint {
+		margin-bottom: 12px;
+		font-size: 0.85rem;
+		color: var(--etu-text-muted, #64748b);
+	}
+
+	.etu-slides__editor-track {
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+		counter-reset: etu-slide;
+	}
+
+	.etu-slide--editor {
+		position: relative;
+		counter-increment: etu-slide;
+		padding: 18px 16px 8px;
+		border: 1px dashed var(--etu-border-strong, #cbd5e1);
+		border-radius: var(--etu-radius-md, 12px);
+	}
+
+	.etu-slide--editor::before {
+		content: "Slide " counter(etu-slide);
+		position: absolute;
+		top: -9px;
+		left: 14px;
+		padding: 0 6px;
+		background: var(--etu-surface, #fff);
+		font-size: 11px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: var(--etu-text-muted, #64748b);
+	}
+
+	.etu-slides__add-slide {
+		margin-top: 16px;
+	}
+}

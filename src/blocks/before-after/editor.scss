@@ -1,0 +1,76 @@
+/**
+ * Before / After block — editor-only styles.
+ *
+ * The comparison preview reuses the shared front-end styles (style.scss, which is
+ * enqueued in the editor too). These rules cover only the setup panel shown while
+ * one or both images are still unset, and small editor affordances.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-before-after--editor {
+	.etu-before-after__range {
+		cursor: ew-resize;
+	}
+
+	&.etu-before-after--vertical .etu-before-after__range {
+		cursor: ns-resize;
+	}
+}
+
+.etu-before-after__setup {
+	padding: 32px 24px;
+	text-align: center;
+	border: 1px dashed var(--etu-border-strong, #cbd5e1);
+	border-radius: var(--etu-radius-md, 12px);
+	background: var(--etu-surface-hover, #f8fafc);
+
+	&-title {
+		margin: 0 0 4px;
+		font-size: 15px;
+		font-weight: 600;
+		color: var(--etu-text, #1e293b);
+	}
+
+	&-help {
+		margin: 0 0 16px;
+		font-size: 13px;
+		color: var(--etu-text-muted, #64748b);
+	}
+}
+
+.etu-before-after__slots {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	justify-content: center;
+}
+
+.etu-before-after__slot {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	width: 180px;
+
+	img {
+		width: 100%;
+		height: 110px;
+		object-fit: cover;
+		border-radius: var(--etu-radius-sm, 8px);
+		display: block;
+	}
+
+	&-empty {
+		width: 100%;
+		height: 110px;
+		border-radius: var(--etu-radius-sm, 8px);
+		background: repeating-linear-gradient(
+			45deg,
+			var(--etu-surface, #fff),
+			var(--etu-surface, #fff) 10px,
+			var(--etu-surface-hover, #eef2f7) 10px,
+			var(--etu-surface-hover, #eef2f7) 20px
+		);
+		border: 1px solid var(--etu-border, #cbd5e1);
+	}
+}

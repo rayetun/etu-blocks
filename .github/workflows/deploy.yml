@@ -1,0 +1,51 @@
+name: Deploy to WordPress.org
+
+# Publishing a GitHub release deploys that version's code (trunk + a new SVN tag)
+# and the .wordpress-org assets to WordPress.org. A guard skips the deploy when the
+# version already exists on SVN, so re-publishing the current release is harmless.
+#
+# Requires repository secrets: SVN_USERNAME, SVN_PASSWORD (a WordPress.org account
+# with commit access to the plugin).
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    name: Deploy ${{ github.event.release.tag_name }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Read Stable tag from readme.txt
+        id: ver
+        run: |
+          version="$(grep -i '^Stable tag:' readme.txt | head -1 | tr -d '\r' | sed -E 's/^Stable tag:[[:space:]]*//')"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "Plugin version: $version"
+
+      - name: Check whether the SVN tag already exists
+        id: svn
+        run: |
+          url="https://plugins.svn.wordpress.org/etu-blocks/tags/${{ steps.ver.outputs.version }}/"
+          code="$(curl -s -o /dev/null -w '%{http_code}' "$url")"
+          if [ "$code" = "200" ]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "SVN tag ${{ steps.ver.outputs.version }} already exists — code deploy will be skipped."
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Deploy to WordPress.org
+        if: steps.svn.outputs.exists == 'false'
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: etu-blocks
+
+      - name: Skip note
+        if: steps.svn.outputs.exists == 'true'
+        run: echo "Version ${{ steps.ver.outputs.version }} is already published on WordPress.org. Bump the Stable tag in readme.txt (and the plugin header) for the next release. Assets are handled by the assets workflow."

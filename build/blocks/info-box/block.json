@@ -1,0 +1,108 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "etu/info-box",
+  "version": "1.0.0",
+  "title": "Info Box",
+  "category": "etu-blocks",
+  "icon": "info-outline",
+  "description": "An icon, heading, description and optional button — the classic marketing feature box.",
+  "keywords": [
+    "info",
+    "feature",
+    "icon box",
+    "card"
+  ],
+  "textdomain": "etu-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "icon": {
+      "type": "string",
+      "default": ""
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonText": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "iconPosition": {
+      "type": "string",
+      "default": "stacked"
+    },
+    "headingLevel": {
+      "type": "string",
+      "default": "h3"
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "preset": {
+      "type": "string",
+      "default": "card"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": ""
+    },
+    "iconColor": {
+      "type": "string",
+      "default": ""
+    },
+    "titleColor": {
+      "type": "string",
+      "default": ""
+    },
+    "descriptionColor": {
+      "type": "string",
+      "default": ""
+    },
+    "titleTypography": {
+      "type": "object",
+      "default": {}
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockMargin": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "example": {
+    "attributes": {
+      "icon": "★",
+      "title": "Feature title",
+      "description": "A short description of this feature goes here.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://example.com"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

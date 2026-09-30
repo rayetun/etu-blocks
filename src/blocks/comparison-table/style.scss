@@ -1,0 +1,238 @@
+/**
+ * Comparison Table block — front-end (and shared) styles.
+ * A real table with a highlighted (featured) column framed as a card, a sticky
+ * feature-label column for horizontal scrolling, and three presets.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-ct {
+	--etu-ct-accent: var(--etu-accent, #635bff);
+
+	&__scroll {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		padding: 6px;
+		margin: -6px;
+	}
+
+	&__table {
+		width: 100%;
+		border-collapse: separate;
+		border-spacing: 0;
+		color: var(--etu-text, #1e293b);
+	}
+
+	&__corner {
+		background: var(--etu-surface, #fff);
+	}
+
+	/* ---- Column headers ---- */
+	&__col-head {
+		position: relative;
+		min-width: 140px;
+		padding: 22px 18px;
+		text-align: center;
+		vertical-align: bottom;
+		background: var(--etu-surface-soft, #f8fafc);
+	}
+
+	&__badge {
+		display: inline-block;
+		margin-bottom: 10px;
+		padding: 3px 10px;
+		border-radius: var(--etu-radius-pill, 999px);
+		background: var(--etu-ct-accent);
+		color: #fff;
+		font-size: 0.7rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+	}
+
+	&__col-title {
+		display: block;
+		font-size: 1.15rem;
+		font-weight: 700;
+		line-height: 1.3;
+		color: var(--etu-text, #1e293b);
+	}
+
+	&__btn {
+		display: inline-block;
+		margin-top: 14px;
+		padding: 8px 18px;
+		border-radius: var(--etu-radius-sm, 8px);
+		background: var(--etu-ct-accent);
+		color: #fff;
+		font-size: 0.85rem;
+		font-weight: 600;
+		text-decoration: none;
+		transition: transform 0.18s ease, filter 0.18s ease;
+	}
+
+	&__btn:hover {
+		transform: translateY(-1px);
+		filter: brightness(1.06);
+	}
+
+	/* ---- Feature label column (sticky on horizontal scroll) ---- */
+	&__row-head {
+		position: sticky;
+		left: 0;
+		z-index: 1;
+		min-width: 160px;
+		padding: 15px 18px;
+		text-align: left;
+		font-weight: 600;
+		color: var(--etu-text-soft, #334155);
+		background: var(--etu-surface, #fff);
+	}
+
+	/* ---- Data cells ---- */
+	&__cell {
+		padding: 15px 18px;
+		background: var(--etu-surface, #fff);
+	}
+
+	&--cells-center &__cell {
+		text-align: center;
+	}
+
+	&--cells-left &__cell {
+		text-align: left;
+	}
+
+	&__mark {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__mark svg {
+		width: 22px;
+		height: 22px;
+	}
+
+	&__mark--yes {
+		color: var(--etu-ct-accent);
+	}
+
+	&__mark--no {
+		color: var(--etu-border-strong, #cbd5e1);
+	}
+
+	&__dash {
+		color: var(--etu-text-muted, #64748b);
+	}
+
+	/* ---- Striped rows ---- */
+	&--striped tbody tr:nth-child(even) &__cell,
+	&--striped tbody tr:nth-child(even) &__row-head {
+		background: var(--etu-ct-stripe, var(--etu-surface-soft, #f8fafc));
+	}
+
+	/* ---- Highlighted (featured) column, framed as a card ---- */
+	&__col-head--highlighted {
+		background: var(--etu-ct-accent);
+		border: 2px solid var(--etu-ct-accent);
+		border-bottom: 0;
+		border-top-left-radius: 14px;
+		border-top-right-radius: 14px;
+	}
+
+	&__col-head--highlighted .etu-ct__col-title {
+		color: #fff;
+	}
+
+	&__col-head--highlighted .etu-ct__badge {
+		background: #fff;
+		color: var(--etu-ct-accent);
+	}
+
+	&__col-head--highlighted .etu-ct__btn {
+		background: #fff;
+		color: var(--etu-ct-accent);
+	}
+
+	&__cell--highlighted {
+		border-left: 2px solid var(--etu-ct-accent);
+		border-right: 2px solid var(--etu-ct-accent);
+		background: color-mix(in srgb, var(--etu-ct-accent) 7%, #fff);
+	}
+
+	&--striped tbody tr:nth-child(even) &__cell--highlighted {
+		background: color-mix(in srgb, var(--etu-ct-accent) 12%, #fff);
+	}
+
+	tbody tr:last-child &__cell--highlighted {
+		border-bottom: 2px solid var(--etu-ct-accent);
+		border-bottom-left-radius: 14px;
+		border-bottom-right-radius: 14px;
+	}
+
+	/* ---- Preset: Modern (default) — soft dividers ---- */
+	&--preset-modern &__col-head,
+	&--preset-modern &__row-head,
+	&--preset-modern &__cell {
+		border-bottom: 1px solid var(--etu-border, #e2e8f0);
+	}
+
+	/* ---- Preset: Bordered — full grid ---- */
+	&--preset-bordered &__table {
+		border-top: 1px solid var(--etu-border, #e2e8f0);
+		border-left: 1px solid var(--etu-border, #e2e8f0);
+	}
+
+	&--preset-bordered :where(th, td) {
+		border-right: 1px solid var(--etu-border, #e2e8f0);
+		border-bottom: 1px solid var(--etu-border, #e2e8f0);
+	}
+
+	/* ---- Preset: Minimal — clean lines, no header fill ---- */
+	&--preset-minimal &__col-head {
+		background: transparent;
+	}
+
+	&--preset-minimal &__col-head,
+	&--preset-minimal &__row-head,
+	&--preset-minimal &__cell {
+		border-bottom: 1px solid var(--etu-border, #e2e8f0);
+	}
+
+	&--preset-minimal &__col-head--highlighted {
+		background: transparent;
+		border: 0;
+		border-bottom: 2px solid var(--etu-ct-accent);
+	}
+
+	&--preset-minimal &__col-head--highlighted .etu-ct__col-title {
+		color: var(--etu-ct-accent);
+	}
+
+	&--preset-minimal &__col-head--highlighted .etu-ct__badge,
+	&--preset-minimal &__col-head--highlighted .etu-ct__btn {
+		background: var(--etu-ct-accent);
+		color: #fff;
+	}
+
+	&--preset-minimal &__cell--highlighted {
+		border-left: 0;
+		border-right: 0;
+		background: transparent;
+	}
+
+	&--preset-minimal tbody tr:last-child &__cell--highlighted {
+		border-bottom: 1px solid var(--etu-border, #e2e8f0);
+		border-radius: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.etu-ct__btn {
+		transition: none;
+	}
+
+	.etu-ct__btn:hover {
+		transform: none;
+	}
+}

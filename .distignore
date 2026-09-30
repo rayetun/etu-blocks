@@ -1,0 +1,28 @@
+# Files and folders excluded from the distributed plugin ZIP.
+#
+# What ships:
+#   etu-blocks.php, readme.txt, uninstall.php,
+#   assets/, build/, includes/, languages/,
+#   src/         — unminified source, per readme's Development section
+#                  (Guideline 4: human-readable code alongside build/)
+#   package.json — build story context for the review team
+
+/.git
+/.github
+/.claude
+README.md
+.gitignore
+.distignore
+.editorconfig
+.prettierrc
+.prettierrc.js
+.eslintrc
+.stylelintrc
+/node_modules
+/.wordpress-org
+package-lock.json
+composer.json
+composer.lock
+phpcs.xml.dist
+*.map
+*.log

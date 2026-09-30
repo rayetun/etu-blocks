@@ -1,0 +1,181 @@
+/**
+ * Table of Contents block — front-end (and shared) styles.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-toc {
+	--etu-toc-accent: var(--etu-accent, #635bff);
+	--etu-toc-bg: var(--etu-surface-soft, #f8fafc);
+
+	&__inner {
+		padding: 20px 22px;
+		color: var(--etu-text, #1e293b);
+	}
+
+	/* ---- Presets ---- */
+	&--preset-boxed &__inner {
+		background: var(--etu-toc-bg);
+		border: 1px solid var(--etu-border, #e2e8f0);
+		border-radius: var(--etu-radius-lg, 16px);
+	}
+
+	&--preset-bordered &__inner {
+		border: 1px solid var(--etu-border, #e2e8f0);
+		border-radius: var(--etu-radius-lg, 16px);
+	}
+
+	&--preset-plain &__inner {
+		padding: 0;
+	}
+
+	/* ---- Title / toggle ---- */
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		width: 100%;
+		margin: 0 0 12px;
+		font-size: 1.05rem;
+		font-weight: 700;
+		color: var(--etu-text, #1e293b);
+	}
+
+	&__toggle {
+		padding: 0;
+		border: 0;
+		background: none;
+		cursor: pointer;
+		text-align: left;
+		font: inherit;
+		color: inherit;
+	}
+
+	&__toggle:focus-visible {
+		outline: 2px solid var(--etu-toc-accent);
+		outline-offset: 3px;
+		border-radius: 4px;
+	}
+
+	&__chevron {
+		flex: 0 0 auto;
+		width: 20px;
+		height: 20px;
+		color: var(--etu-text-muted, #64748b);
+		transition: transform 0.2s ease;
+	}
+
+	&__toggle[aria-expanded="false"] &__chevron {
+		transform: rotate(-90deg);
+	}
+
+	/* ---- Lists ---- */
+	&__list,
+	&__sublist {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		counter-reset: etu-toc-c;
+	}
+
+	&__list[hidden] {
+		display: none;
+	}
+
+	&__sublist {
+		margin-top: 3px;
+		padding-inline-start: 16px;
+	}
+
+	&__item {
+		margin: 0;
+	}
+
+	&--list-number &__item {
+		counter-increment: etu-toc-c;
+	}
+
+	/* ---- Links ---- */
+	&__link {
+		display: block;
+		padding: 6px 10px;
+		border-radius: 6px;
+		color: var(--etu-text-soft, #334155);
+		font-size: 0.95rem;
+		line-height: 1.4;
+		text-decoration: none;
+		transition: color 0.16s ease, background-color 0.16s ease, box-shadow 0.16s ease;
+	}
+
+	&--list-number &__link::before {
+		content: counters(etu-toc-c, ".") ".";
+		margin-inline-end: 8px;
+		color: var(--etu-toc-accent);
+		font-variant-numeric: tabular-nums;
+	}
+
+	&--list-bullet &__link::before {
+		content: "";
+		display: inline-block;
+		width: 5px;
+		height: 5px;
+		margin-inline-end: 10px;
+		border-radius: 50%;
+		background: var(--etu-toc-accent);
+		vertical-align: middle;
+	}
+
+	&__link:hover {
+		color: var(--etu-toc-accent);
+		background: color-mix(in srgb, var(--etu-toc-accent) 8%, transparent);
+	}
+
+	&__link:focus-visible {
+		outline: 2px solid var(--etu-toc-accent);
+		outline-offset: 1px;
+	}
+
+	&__link.is-active,
+	&__link[aria-current="location"] {
+		color: var(--etu-toc-accent);
+		font-weight: 600;
+		background: color-mix(in srgb, var(--etu-toc-accent) 10%, transparent);
+		box-shadow: inset 3px 0 0 var(--etu-toc-accent);
+	}
+
+	/* ---- Sticky: the whole block sticks within the content column ---- */
+	&--sticky {
+		position: sticky;
+		top: 24px;
+		/* Paint above the content that scrolls up behind it. */
+		z-index: 10;
+		align-self: start;
+	}
+
+	&--sticky &__inner {
+		/* Stay compact; the list scrolls inside past this height so the TOC
+		   never dominates the viewport. */
+		max-height: 40vh;
+		overflow-y: auto;
+		/* Opaque panel so content scrolls behind it, not through it. */
+		background: var(--etu-toc-bg, var(--etu-surface, #fff));
+	}
+
+	/* ---- Editor placeholder ---- */
+	&__empty {
+		margin: 0;
+		color: var(--etu-text-muted, #64748b);
+		font-size: 0.9rem;
+		font-style: italic;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.etu-toc__chevron,
+	.etu-toc__link {
+		transition: none;
+	}
+}

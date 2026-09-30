@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "etu/modal",
+	"version": "1.0.0",
+	"title": "Modal / Popup",
+	"category": "etu-blocks",
+	"icon": "external",
+	"description": "An accessible modal dialog — open it from a button, on page load, or after a delay. Put any blocks inside. Built on the Interactivity API.",
+	"keywords": [ "modal", "popup", "dialog", "lightbox", "overlay" ],
+	"textdomain": "etu-blocks",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"interactivity": true
+	},
+	"attributes": {
+		"trigger": { "type": "string", "default": "button" },
+		"buttonText": { "type": "string", "default": "Open" },
+		"buttonAlign": { "type": "string", "default": "left" },
+		"delaySeconds": { "type": "number", "default": 3 },
+		"showOnce": { "type": "boolean", "default": false },
+		"dialogLabel": { "type": "string", "default": "" },
+		"size": { "type": "string", "default": "medium" },
+		"position": { "type": "string", "default": "center" },
+		"animation": { "type": "string", "default": "zoom" },
+		"showClose": { "type": "boolean", "default": true },
+		"closeOnBackdrop": { "type": "boolean", "default": true },
+		"accentColor": { "type": "string", "default": "" },
+		"overlayColor": { "type": "string", "default": "" },
+		"overlayOpacity": { "type": "object", "default": {} },
+		"modalBackground": { "type": "string", "default": "" },
+		"modalRadius": { "type": "object", "default": {} },
+		"modalPadding": { "type": "object", "default": {} },
+		"blockId": { "type": "string", "default": "" }
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

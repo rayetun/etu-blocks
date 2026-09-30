@@ -1,0 +1,229 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "etu/pricing-table",
+  "version": "1.0.0",
+  "title": "Pricing Table",
+  "category": "etu-blocks",
+  "icon": "money-alt",
+  "description": "Premium pricing plans with a featured plan, feature lists and an optional monthly / yearly billing toggle. Accessible and built on the Interactivity API.",
+  "keywords": [
+    "pricing",
+    "plans",
+    "price",
+    "table",
+    "subscription"
+  ],
+  "textdomain": "etu-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "interactivity": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "plans": {
+      "type": "array",
+      "default": [
+        {
+          "name": "Starter",
+          "badge": "",
+          "highlighted": false,
+          "currency": "$",
+          "price": "0",
+          "priceYearly": "0",
+          "period": "/mo",
+          "periodYearly": "/yr",
+          "description": "For getting started",
+          "features": [
+            {
+              "text": "1 project",
+              "included": true
+            },
+            {
+              "text": "2 GB storage",
+              "included": true
+            },
+            {
+              "text": "Priority support",
+              "included": false
+            },
+            {
+              "text": "Custom domain",
+              "included": false
+            }
+          ],
+          "buttonText": "Choose Starter",
+          "buttonUrl": ""
+        },
+        {
+          "name": "Pro",
+          "badge": "Most popular",
+          "highlighted": true,
+          "currency": "$",
+          "price": "29",
+          "priceYearly": "290",
+          "period": "/mo",
+          "periodYearly": "/yr",
+          "description": "For growing teams",
+          "features": [
+            {
+              "text": "Unlimited projects",
+              "included": true
+            },
+            {
+              "text": "50 GB storage",
+              "included": true
+            },
+            {
+              "text": "Priority support",
+              "included": true
+            },
+            {
+              "text": "Custom domain",
+              "included": false
+            }
+          ],
+          "buttonText": "Choose Pro",
+          "buttonUrl": ""
+        },
+        {
+          "name": "Business",
+          "badge": "",
+          "highlighted": false,
+          "currency": "$",
+          "price": "79",
+          "priceYearly": "790",
+          "period": "/mo",
+          "periodYearly": "/yr",
+          "description": "For larger organisations",
+          "features": [
+            {
+              "text": "Unlimited projects",
+              "included": true
+            },
+            {
+              "text": "1 TB storage",
+              "included": true
+            },
+            {
+              "text": "Priority support",
+              "included": true
+            },
+            {
+              "text": "Custom domain",
+              "included": true
+            }
+          ],
+          "buttonText": "Choose Business",
+          "buttonUrl": ""
+        }
+      ]
+    },
+    "columns": {
+      "type": "string",
+      "default": "3"
+    },
+    "preset": {
+      "type": "string",
+      "default": "modern"
+    },
+    "enableBilling": {
+      "type": "boolean",
+      "default": false
+    },
+    "monthlyLabel": {
+      "type": "string",
+      "default": "Monthly"
+    },
+    "yearlyLabel": {
+      "type": "string",
+      "default": "Yearly"
+    },
+    "yearlyBadge": {
+      "type": "string",
+      "default": ""
+    },
+    "accentColor": {
+      "type": "string",
+      "default": ""
+    },
+    "cardBackground": {
+      "type": "string",
+      "default": ""
+    },
+    "headingColor": {
+      "type": "string",
+      "default": ""
+    },
+    "priceColor": {
+      "type": "string",
+      "default": ""
+    },
+    "textColor": {
+      "type": "string",
+      "default": ""
+    },
+    "nameTypography": {
+      "type": "object",
+      "default": {}
+    },
+    "priceTypography": {
+      "type": "object",
+      "default": {}
+    },
+    "cardGap": {
+      "type": "object",
+      "default": {
+        "value": 24,
+        "unit": "px"
+      }
+    },
+    "cardPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockMargin": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "example": {
+    "attributes": {
+      "plans": [
+        {
+          "name": "Pro",
+          "badge": "Popular",
+          "highlighted": true,
+          "currency": "$",
+          "price": "29",
+          "period": "/mo",
+          "description": "For teams",
+          "features": [
+            {
+              "text": "Unlimited",
+              "included": true
+            }
+          ],
+          "buttonText": "Choose Pro"
+        }
+      ]
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

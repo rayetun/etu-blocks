@@ -1,0 +1,98 @@
+/**
+ * Pricing Table block — editor-only styles.
+ */
+.etu-pricing--editor {
+	.etu-pricing__billing {
+		pointer-events: none;
+	}
+
+	.etu-pricing__card {
+		overflow: visible;
+	}
+
+	.etu-pricing__card-tools {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		display: flex;
+		gap: 2px;
+		z-index: 2;
+	}
+
+	/* Keep header fields centred while editing. */
+	.etu-pricing__badge,
+	.etu-pricing__name,
+	.etu-pricing__currency,
+	.etu-pricing__amount,
+	.etu-pricing__period {
+		cursor: text;
+	}
+
+	.etu-pricing__yearly-edit {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 6px;
+		margin-top: 6px;
+		font-size: 0.85rem;
+		color: var(--etu-text-muted, #64748b);
+	}
+
+	.etu-pricing__feature {
+		align-items: center;
+	}
+
+	.etu-pricing__feature-toggle {
+		flex: 0 0 auto;
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+		padding: 0;
+		color: var(--etu-pricing-accent, #635bff);
+	}
+
+	.etu-pricing__feature--excluded .etu-pricing__feature-toggle {
+		color: var(--etu-border-strong, #cbd5e1);
+	}
+
+	.etu-pricing__feature-text {
+		flex: 1 1 auto;
+	}
+
+	.etu-pricing__feature-remove {
+		flex: 0 0 auto;
+		opacity: 0;
+		transition: opacity 0.12s ease;
+	}
+
+	.etu-pricing__feature:hover .etu-pricing__feature-remove,
+	.etu-pricing__feature:focus-within .etu-pricing__feature-remove {
+		opacity: 1;
+	}
+
+	.etu-pricing__add-feature {
+		align-self: flex-start;
+		margin-bottom: 16px;
+	}
+
+	.etu-pricing__btn-edit {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		margin-top: auto;
+	}
+
+	.etu-pricing__btn-edit .etu-pricing__btn {
+		flex: 1 1 auto;
+		margin-top: 0;
+	}
+
+	.etu-pricing__add-plan {
+		margin-top: 16px;
+	}
+}
+
+.etu-pricing__link-popover {
+	padding: 12px;
+	min-width: 260px;
+}

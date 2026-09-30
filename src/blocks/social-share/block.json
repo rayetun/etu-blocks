@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "etu/social-share",
+	"version": "1.0.0",
+	"title": "Social Share",
+	"category": "etu-blocks",
+	"icon": "share",
+	"description": "Accessible share buttons — social networks, copy link and native device share, built on the Interactivity API.",
+	"keywords": [ "share", "social", "sharing", "copy link" ],
+	"textdomain": "etu-blocks",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"interactivity": true,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"preset": { "type": "string", "default": "solid" },
+		"buttonShape": { "type": "string", "default": "rounded" },
+		"shareAlign": { "type": "string", "default": "left" },
+		"showLabels": { "type": "boolean", "default": true },
+		"useBrandColors": { "type": "boolean", "default": true },
+		"networks": {
+			"type": "array",
+			"default": [ "facebook", "x", "linkedin", "copy" ]
+		},
+		"iconSize": { "type": "object", "default": {} },
+		"buttonGap": { "type": "object", "default": {} },
+		"accentColor": { "type": "string", "default": "" },
+		"labelTypography": { "type": "object", "default": {} },
+		"shareUrl": { "type": "string", "default": "" },
+		"shareText": { "type": "string", "default": "" },
+		"openInNewTab": { "type": "boolean", "default": true },
+		"blockId": { "type": "string", "default": "" },
+		"blockPadding": { "type": "object", "default": {} },
+		"blockMargin": { "type": "object", "default": {} }
+	},
+	"example": {
+		"attributes": {
+			"preset": "solid",
+			"networks": [ "facebook", "x", "linkedin", "copy" ]
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

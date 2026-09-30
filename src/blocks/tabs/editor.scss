@@ -1,0 +1,22 @@
+/**
+ * Tabs block — editor-only styles.
+ * The front-end preset styles apply in the canvas too; these only cover editing
+ * affordances (inline label editing + the active tab the editor is focused on).
+ */
+.etu-tabs--editor {
+	.etu-tabs__tab {
+		cursor: text;
+	}
+
+	.etu-tabs__tab.is-active {
+		color: var(--etu-tabs-accent);
+		font-weight: 600;
+	}
+
+	.etu-tabs__tab .components-button {
+		margin-inline-start: 4px;
+		min-width: 20px;
+		height: 20px;
+		padding: 0;
+	}
+}

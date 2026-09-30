@@ -1,0 +1,140 @@
+/**
+ * Info Box block — front-end (and shared) styles.
+ * Presets: Minimal / Card / Bordered. Uses the shared house tokens.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-info-box {
+	--etu-info-accent: var(--etu-accent, #635bff);
+
+	display: flex;
+	gap: 16px;
+
+	&--stacked {
+		flex-direction: column;
+	}
+
+	&--inline {
+		flex-direction: row;
+		align-items: flex-start;
+	}
+
+	&__icon {
+		flex: 0 0 auto;
+		font-size: 1.75rem;
+		line-height: 1;
+		color: var(--etu-info-accent);
+	}
+
+	&__title {
+		margin: 0 0 8px;
+		font-size: 20px;
+		font-weight: 600;
+		color: var(--etu-text, #1e293b);
+	}
+
+	&__description {
+		margin: 0;
+		color: var(--etu-text-muted, #64748b);
+		line-height: 1.7;
+	}
+
+	&__description > :first-child {
+		margin-top: 0;
+	}
+
+	&__description > :last-child {
+		margin-bottom: 0;
+	}
+
+	&__button {
+		display: inline-block;
+		margin-top: 16px;
+		padding: 10px 20px;
+		border-radius: var(--etu-radius-sm, 8px);
+		background: var(--etu-info-accent);
+		color: #fff;
+		font-weight: 600;
+		text-decoration: none;
+		transition: opacity 0.18s ease, transform 0.18s ease;
+	}
+
+	&__button:hover {
+		opacity: 0.92;
+	}
+
+	&__button:focus-visible {
+		outline: 2px solid var(--etu-info-accent);
+		outline-offset: 2px;
+	}
+
+	/* ---- Preset: Card ---- */
+	&--preset-card {
+		padding: var(--etu-pad-card, 28px);
+		background: var(--etu-surface, #fff);
+		border: 1px solid var(--etu-border, #e2e8f0);
+		border-radius: var(--etu-radius-lg, 16px);
+		box-shadow: var(--etu-shadow-card);
+		transition: box-shadow 0.2s ease, transform 0.2s ease;
+	}
+
+	&--preset-card:hover {
+		box-shadow: var(--etu-shadow-card-hover);
+		transform: translateY(-2px);
+	}
+
+	&--preset-card .etu-info-box__icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 56px;
+		height: 56px;
+		border-radius: var(--etu-radius-md, 14px);
+		background: color-mix(in srgb, var(--etu-info-accent) 14%, #fff);
+		font-size: 1.5rem;
+	}
+
+	/* ---- Preset: Bordered ---- */
+	&--preset-bordered {
+		padding: 24px 24px 24px 28px;
+		background: var(--etu-surface, #fff);
+		border: 1px solid var(--etu-border, #e2e8f0);
+		border-left: 4px solid var(--etu-info-accent);
+		border-radius: var(--etu-radius-md, 12px);
+	}
+
+	&--preset-bordered .etu-info-box__icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 44px;
+		height: 44px;
+		border-radius: var(--etu-radius-sm, 8px);
+		background: color-mix(in srgb, var(--etu-info-accent) 12%, #fff);
+		font-size: 1.35rem;
+	}
+}
+
+/* Screen-reader-only helper. */
+.etu-info-box .screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.etu-info-box--preset-card,
+	.etu-info-box__button {
+		transition: none;
+	}
+
+	.etu-info-box--preset-card:hover {
+		transform: none;
+	}
+}

@@ -1,0 +1,242 @@
+/**
+ * Slides / Carousel block — front-end (and shared) styles.
+ * A native scroll-snap track (touch + keyboard for free) with overlay arrows,
+ * dots and an optional play/pause control.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-slides {
+	--etu-slides-per: 1;
+	--etu-slides-gap: 16px;
+	--etu-slides-accent: var(--etu-accent, #635bff);
+
+	position: relative;
+
+	&__viewport {
+		position: relative;
+	}
+
+	&__track {
+		display: flex;
+		gap: var(--etu-slides-gap);
+		overflow-x: auto;
+		overflow-y: hidden;
+		scroll-snap-type: x mandatory;
+		scroll-behavior: smooth;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+		margin: 0;
+		padding: 6px 0;
+		list-style: none;
+	}
+
+	&__track::-webkit-scrollbar {
+		display: none;
+	}
+
+	&__track:focus-visible {
+		outline: 2px solid var(--etu-slides-accent);
+		outline-offset: 4px;
+	}
+
+	&__slide {
+		flex: 0 0 calc(
+			(100% - (var(--etu-slides-per) - 1) * var(--etu-slides-gap)) /
+				var(--etu-slides-per)
+		);
+		display: flex;
+		min-width: 0;
+		margin: 0;
+		list-style: none;
+		scroll-snap-align: start;
+	}
+
+	/* ---- Arrows (overlay the track edges) ---- */
+	&__arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 44px;
+		height: 44px;
+		padding: 0;
+		border: 0;
+		border-radius: 50%;
+		background: var(--etu-surface, #fff);
+		color: var(--etu-slides-accent);
+		box-shadow: var(--etu-shadow-card, 0 4px 20px rgba(15, 23, 42, 0.08));
+		cursor: pointer;
+		transition: background-color 0.18s ease, color 0.18s ease;
+	}
+
+	&__arrow svg {
+		width: 22px;
+		height: 22px;
+	}
+
+	/* Over edges — overlay the slide edges; best for full-width heroes. */
+	&--arrows-edge &__arrow--prev {
+		left: 8px;
+	}
+
+	&--arrows-edge &__arrow--next {
+		right: 8px;
+	}
+
+	/* Outside — sit in the margin beside the carousel (needs room). */
+	&--arrows-outside &__arrow--prev {
+		left: -54px;
+	}
+
+	&--arrows-outside &__arrow--next {
+		right: -54px;
+	}
+
+	/* Bottom — arrows join the controls row and never cover the slides. */
+	&--arrows-bottom &__arrow {
+		position: static;
+		transform: none;
+		width: 38px;
+		height: 38px;
+		background: color-mix(in srgb, var(--etu-slides-accent) 12%, transparent);
+		box-shadow: none;
+	}
+
+	&--arrows-bottom &__arrow:hover {
+		background: var(--etu-slides-accent);
+		color: #fff;
+	}
+
+	&__arrow:hover {
+		background: var(--etu-slides-accent);
+		color: #fff;
+	}
+
+	&__arrow:focus-visible {
+		outline: 2px solid var(--etu-slides-accent);
+		outline-offset: 2px;
+	}
+
+	/* ---- Controls row (dots + play/pause) ---- */
+	&__controls {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 14px;
+		margin-top: 16px;
+	}
+
+	&__dots {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	&__dot {
+		width: 10px;
+		height: 10px;
+		padding: 0;
+		border: 0;
+		border-radius: 50%;
+		background: color-mix(in srgb, var(--etu-slides-accent) 28%, transparent);
+		cursor: pointer;
+		transition: background-color 0.18s ease, transform 0.18s ease;
+	}
+
+	&__dot:hover {
+		background: color-mix(in srgb, var(--etu-slides-accent) 55%, transparent);
+	}
+
+	&__dot.is-active {
+		background: var(--etu-slides-accent);
+		transform: scale(1.25);
+	}
+
+	&__dot:focus-visible {
+		outline: 2px solid var(--etu-slides-accent);
+		outline-offset: 2px;
+	}
+
+	&__play {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		padding: 0;
+		border: 0;
+		border-radius: 50%;
+		background: color-mix(in srgb, var(--etu-slides-accent) 12%, transparent);
+		color: var(--etu-slides-accent);
+		cursor: pointer;
+	}
+
+	&__play svg {
+		width: 18px;
+		height: 18px;
+	}
+
+	&__play-icon {
+		display: inline-flex;
+	}
+
+	&__play-icon[hidden] {
+		display: none;
+	}
+
+	&__play:focus-visible {
+		outline: 2px solid var(--etu-slides-accent);
+		outline-offset: 2px;
+	}
+
+	/* Visually-hidden live region. */
+	&__status {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		border: 0;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		white-space: nowrap;
+	}
+}
+
+/* Each slide's content wrapper stretches to equal height. */
+.etu-slide {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.etu-slide > :first-child {
+	margin-top: 0;
+}
+
+.etu-slide > :last-child {
+	margin-bottom: 0;
+}
+
+/* On narrow screens drop the overlay/outside arrows (swipe + dots are enough).
+   Bottom arrows stay — they take no side room. */
+@media (max-width: 600px) {
+	.etu-slides--arrows-edge .etu-slides__arrow,
+	.etu-slides--arrows-outside .etu-slides__arrow {
+		display: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.etu-slides__track {
+		scroll-behavior: auto;
+	}
+
+	.etu-slides__arrow,
+	.etu-slides__dot {
+		transition: none;
+	}
+}

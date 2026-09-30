@@ -1,0 +1,17 @@
+/**
+ * Social Share block — editor-only styles.
+ */
+.etu-social-share--editor {
+	.etu-social-share__btn {
+		cursor: default;
+	}
+
+	.etu-social-share__empty {
+		margin: 0;
+		padding: 12px 14px;
+		border: 1px dashed var(--etu-border, #e2e8f0);
+		border-radius: var(--etu-radius-sm, 8px);
+		color: var(--etu-text-muted, #64748b);
+		font-size: 0.9rem;
+	}
+}

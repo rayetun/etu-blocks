@@ -1,0 +1,16 @@
+/**
+ * Icon List block — editor-only styles.
+ */
+.etu-icon-list--editor-wrap {
+	.etu-icon-list__icon {
+		min-width: 1ch;
+	}
+
+	.etu-icon-list__remove {
+		margin-inline-start: auto;
+	}
+
+	.etu-icon-list__add {
+		margin-top: 12px;
+	}
+}

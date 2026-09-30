@@ -1,0 +1,184 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "etu/post-grid",
+  "version": "1.0.0",
+  "title": "Post Grid",
+  "category": "etu-blocks",
+  "icon": "grid-view",
+  "description": "Display posts in a premium grid, masonry or carousel — with a category filter, full query controls and accessible cards. Built on the Interactivity API.",
+  "keywords": [
+    "posts",
+    "grid",
+    "masonry",
+    "carousel",
+    "blog",
+    "query"
+  ],
+  "textdomain": "etu-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "interactivity": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "postType": {
+      "type": "string",
+      "default": "post"
+    },
+    "perPage": {
+      "type": "number",
+      "default": 6
+    },
+    "orderBy": {
+      "type": "string",
+      "default": "date"
+    },
+    "order": {
+      "type": "string",
+      "default": "desc"
+    },
+    "queryCategories": {
+      "type": "array",
+      "default": []
+    },
+    "offset": {
+      "type": "number",
+      "default": 0
+    },
+    "excludeCurrent": {
+      "type": "boolean",
+      "default": true
+    },
+    "layout": {
+      "type": "string",
+      "default": "grid"
+    },
+    "columns": {
+      "type": "string",
+      "default": "3"
+    },
+    "carouselPerView": {
+      "type": "object",
+      "default": {
+        "desktop": 3,
+        "tablet": 2,
+        "mobile": 1
+      }
+    },
+    "cardStyle": {
+      "type": "string",
+      "default": "elevated"
+    },
+    "hoverEffect": {
+      "type": "string",
+      "default": "both"
+    },
+    "showImage": {
+      "type": "boolean",
+      "default": true
+    },
+    "imageRatio": {
+      "type": "string",
+      "default": "landscape"
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "showExcerpt": {
+      "type": "boolean",
+      "default": true
+    },
+    "excerptLength": {
+      "type": "number",
+      "default": 20
+    },
+    "showMeta": {
+      "type": "boolean",
+      "default": true
+    },
+    "showAuthor": {
+      "type": "boolean",
+      "default": false
+    },
+    "showCategory": {
+      "type": "boolean",
+      "default": true
+    },
+    "showButton": {
+      "type": "boolean",
+      "default": false
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Read more"
+    },
+    "enableFilter": {
+      "type": "boolean",
+      "default": false
+    },
+    "showArrows": {
+      "type": "boolean",
+      "default": true
+    },
+    "showDots": {
+      "type": "boolean",
+      "default": true
+    },
+    "accentColor": {
+      "type": "string",
+      "default": ""
+    },
+    "cardBackground": {
+      "type": "string",
+      "default": ""
+    },
+    "titleColor": {
+      "type": "string",
+      "default": ""
+    },
+    "textColor": {
+      "type": "string",
+      "default": ""
+    },
+    "titleTypography": {
+      "type": "object",
+      "default": {}
+    },
+    "cardGap": {
+      "type": "object",
+      "default": {
+        "value": 24,
+        "unit": "px"
+      }
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockMargin": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "example": {
+    "attributes": {
+      "layout": "grid",
+      "columns": "3"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

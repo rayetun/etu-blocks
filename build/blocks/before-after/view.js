@@ -1,0 +1,1 @@
+import{getContext as t,store as e}from"@wordpress/interactivity";e("etu/before-after",{actions:{slide(e){const i=t(),r=(a=Number(e.target.value)||0,Math.max(0,Math.min(100,a)));var a;i.position=r,i.beforeClip="vertical"===i.orientation?`inset(0 0 ${100-r}% 0)`:`inset(0 ${100-r}% 0 0)`,i.dividerPos=`${r}%`,i.valueText=`${Math.round(r)}%`}}});

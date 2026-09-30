@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "etu/lottie",
+	"version": "1.0.0",
+	"title": "Lottie",
+	"category": "etu-blocks",
+	"icon": "video-alt2",
+	"description": "Play a Lottie (JSON) animation with autoplay, on-scroll, hover or click triggers — accessible and reduced-motion aware. The player is bundled, not loaded from a CDN.",
+	"keywords": [ "lottie", "animation", "svg", "motion", "json" ],
+	"textdomain": "etu-blocks",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"interactivity": true,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"source": { "type": "string", "default": "url" },
+		"src": { "type": "string", "default": "" },
+		"file": { "type": "object", "default": {} },
+		"trigger": { "type": "string", "default": "viewport" },
+		"loop": { "type": "boolean", "default": true },
+		"speedPct": { "type": "number", "default": 100 },
+		"maxWidth": { "type": "object", "default": {} },
+		"align": { "type": "string", "default": "center" },
+		"title": { "type": "string", "default": "" },
+		"decorative": { "type": "boolean", "default": true },
+		"blockId": { "type": "string", "default": "" },
+		"blockPadding": { "type": "object", "default": {} },
+		"blockMargin": { "type": "object", "default": {} }
+	},
+	"example": {
+		"attributes": {
+			"trigger": "viewport"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

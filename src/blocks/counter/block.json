@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "etu/counter",
+	"version": "1.0.0",
+	"title": "Counter",
+	"category": "etu-blocks",
+	"icon": "chart-bar",
+	"description": "An animated number that counts up when it scrolls into view — perfect for stats.",
+	"keywords": [ "counter", "number", "stats", "count up" ],
+	"textdomain": "etu-blocks",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"interactivity": true,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"number": { "type": "string", "default": "1200" },
+		"prefix": { "type": "string", "default": "" },
+		"suffix": { "type": "string", "default": "+" },
+		"label": { "type": "string", "default": "Happy customers" },
+		"duration": { "type": "number", "default": 2000 },
+		"separator": { "type": "boolean", "default": true },
+		"preset": { "type": "string", "default": "minimal" },
+		"contentAlign": { "type": "string", "default": "center" },
+		"accentColor": { "type": "string", "default": "" },
+		"numberColor": { "type": "string", "default": "" },
+		"labelColor": { "type": "string", "default": "" },
+		"numberTypography": { "type": "object", "default": {} },
+		"labelTypography": { "type": "object", "default": {} },
+		"blockId": { "type": "string", "default": "" },
+		"blockPadding": { "type": "object", "default": {} },
+		"blockMargin": { "type": "object", "default": {} }
+	},
+	"example": {
+		"attributes": {
+			"number": "2500",
+			"suffix": "+",
+			"label": "Happy customers",
+			"preset": "card"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

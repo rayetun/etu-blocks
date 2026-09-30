@@ -1,0 +1,37 @@
+/**
+ * Team Member block — editor-only styles.
+ */
+.etu-team-member--editor {
+	.etu-team-member__avatar-btn {
+		display: inline-block;
+		padding: 0;
+		border: 0;
+		background: none;
+		cursor: pointer;
+	}
+
+	.etu-team-member__add {
+		margin: 0;
+	}
+
+	/* Overlay: give the (absolute) media a placeholder and lift the Add photo
+	   button above the gradient + text so it's usable while editing. */
+	&.etu-team-member--preset-overlay {
+		.etu-team-member__media {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: #cbd5e1;
+		}
+
+		.etu-team-member__add {
+			position: relative;
+			z-index: 3;
+		}
+
+		.etu-team-member__socials {
+			opacity: 1;
+			transform: none;
+		}
+	}
+}

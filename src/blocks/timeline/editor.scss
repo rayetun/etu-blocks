@@ -1,0 +1,18 @@
+/**
+ * Timeline block — editor-only styles.
+ */
+.etu-timeline--editor-wrap {
+	.etu-timeline__remove {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	.etu-timeline__item {
+		padding-right: 32px;
+	}
+
+	.etu-timeline__add {
+		margin-top: 12px;
+	}
+}

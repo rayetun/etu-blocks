@@ -1,0 +1,45 @@
+/**
+ * Counter block — front-end (and shared) styles.
+ * Presets: Minimal / Card / Boxed. Uses the shared house tokens.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-counter {
+	--etu-counter-accent: var(--etu-accent, #635bff);
+
+	&__number {
+		font-size: 3rem;
+		font-weight: 800;
+		line-height: 1.05;
+		color: var(--etu-counter-accent);
+	}
+
+	&__prefix,
+	&__suffix {
+		font-size: 0.6em;
+		font-weight: 700;
+	}
+
+	&__label {
+		margin-top: 8px;
+		font-size: 1rem;
+		font-weight: 500;
+		color: var(--etu-text-muted, #64748b);
+	}
+
+	/* ---- Preset: Card ---- */
+	&--preset-card {
+		padding: var(--etu-pad-card, 28px);
+		background: var(--etu-surface, #fff);
+		border: 1px solid var(--etu-border, #e2e8f0);
+		border-radius: var(--etu-radius-lg, 16px);
+		box-shadow: var(--etu-shadow-card);
+	}
+
+	/* ---- Preset: Boxed ---- */
+	&--preset-boxed {
+		padding: 24px;
+		border: 1px solid var(--etu-border, #e2e8f0);
+		border-radius: var(--etu-radius-md, 12px);
+	}
+}

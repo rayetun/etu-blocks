@@ -1,0 +1,30 @@
+name: Update WordPress.org assets
+
+# Pushes the plugin directory assets (icon, banner, screenshots) in .wordpress-org/
+# to the WordPress.org SVN /assets area. This does NOT change the plugin version,
+# so existing users are not prompted to update — it only refreshes the listing art.
+#
+# Runs on any push to main that touches .wordpress-org/, and can be run manually.
+# Requires repository secrets: SVN_USERNAME, SVN_PASSWORD.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.wordpress-org/**'
+  workflow_dispatch:
+
+jobs:
+  assets:
+    name: Deploy assets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update plugin assets
+        uses: 10up/action-wordpress-plugin-asset-update@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: etu-blocks

@@ -1,0 +1,1 @@
+import{getContext as t,store as e}from"@wordpress/interactivity";e("etu/pricing",{actions:{setMonthly(){t().yearly=!1},setYearly(){t().yearly=!0}}});

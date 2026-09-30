@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "etu/comparison-table",
+	"version": "1.0.0",
+	"title": "Comparison Table",
+	"category": "etu-blocks",
+	"icon": "editor-table",
+	"description": "Compare plans or products across features — with a highlighted column, check / cross / text cells and a premium accessible design.",
+	"keywords": [ "comparison", "table", "pricing", "features", "compare" ],
+	"textdomain": "etu-blocks",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"columns": {
+			"type": "array",
+			"default": [
+				{ "title": "Free", "badge": "", "highlighted": false, "buttonText": "", "buttonUrl": "" },
+				{ "title": "Pro", "badge": "Popular", "highlighted": true, "buttonText": "", "buttonUrl": "" },
+				{ "title": "Business", "badge": "", "highlighted": false, "buttonText": "", "buttonUrl": "" }
+			]
+		},
+		"rows": {
+			"type": "array",
+			"default": [
+				{ "label": "Projects", "cells": [ { "type": "text", "text": "3" }, { "type": "text", "text": "25" }, { "type": "text", "text": "Unlimited" } ] },
+				{ "label": "Storage", "cells": [ { "type": "text", "text": "2 GB" }, { "type": "text", "text": "50 GB" }, { "type": "text", "text": "1 TB" } ] },
+				{ "label": "Priority support", "cells": [ { "type": "cross", "text": "" }, { "type": "check", "text": "" }, { "type": "check", "text": "" } ] },
+				{ "label": "Custom domain", "cells": [ { "type": "cross", "text": "" }, { "type": "check", "text": "" }, { "type": "check", "text": "" } ] }
+			]
+		},
+		"preset": { "type": "string", "default": "modern" },
+		"cellAlign": { "type": "string", "default": "center" },
+		"stripe": { "type": "boolean", "default": true },
+		"accentColor": { "type": "string", "default": "" },
+		"headingColor": { "type": "string", "default": "" },
+		"textColor": { "type": "string", "default": "" },
+		"stripeColor": { "type": "string", "default": "" },
+		"headingTypography": { "type": "object", "default": {} },
+		"cellTypography": { "type": "object", "default": {} },
+		"blockId": { "type": "string", "default": "" },
+		"blockPadding": { "type": "object", "default": {} },
+		"blockMargin": { "type": "object", "default": {} }
+	},
+	"example": {
+		"attributes": {
+			"columns": [
+				{ "title": "Free", "highlighted": false },
+				{ "title": "Pro", "badge": "Popular", "highlighted": true }
+			],
+			"rows": [
+				{ "label": "Storage", "cells": [ { "type": "text", "text": "2 GB" }, { "type": "text", "text": "1 TB" } ] }
+			]
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

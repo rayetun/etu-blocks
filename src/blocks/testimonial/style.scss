@@ -1,0 +1,90 @@
+/**
+ * Testimonial block — front-end (and shared) styles.
+ * Presets: Card / Quote / Minimal. Uses the shared house tokens.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-testimonial {
+	--etu-testimonial-accent: var(--etu-accent, #635bff);
+
+	&__rating {
+		display: inline-flex;
+		gap: 2px;
+		margin-bottom: 14px;
+	}
+
+	&__star {
+		width: 18px;
+		height: 18px;
+		fill: var(--etu-testimonial-accent);
+	}
+
+	&__star--empty {
+		fill: #d5dbe4;
+	}
+
+	&__quote {
+		margin: 0 0 20px;
+		padding: 0;
+		border: 0;
+		font-size: 1.15rem;
+		font-style: normal;
+		line-height: 1.6;
+		color: var(--etu-text, #1e293b);
+	}
+
+	&__author {
+		display: inline-flex;
+		align-items: center;
+		gap: 14px;
+		text-align: left;
+	}
+
+	&__avatar {
+		width: 52px;
+		height: 52px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	&__author-text {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__name {
+		font-weight: 600;
+		color: var(--etu-text, #1e293b);
+	}
+
+	&__role {
+		font-size: 0.9rem;
+		color: var(--etu-text-muted, #64748b);
+	}
+
+	/* ---- Preset: Card ---- */
+	&--preset-card {
+		padding: 32px;
+		background: var(--etu-surface, #fff);
+		border: 1px solid var(--etu-border, #e2e8f0);
+		border-radius: var(--etu-radius-lg, 16px);
+		box-shadow: var(--etu-shadow-card);
+	}
+
+	/* ---- Preset: Quote ---- */
+	/* The mark is a block element so it follows the block's text alignment. */
+	&--preset-quote::before {
+		content: "\201C";
+		display: block;
+		font-family: Georgia, "Times New Roman", serif;
+		font-size: 3.5rem;
+		line-height: 0.6;
+		color: var(--etu-testimonial-accent);
+		opacity: 0.22;
+		margin-bottom: 6px;
+	}
+
+	&--preset-quote .etu-testimonial__quote {
+		font-size: 1.4rem;
+	}
+}

@@ -1,0 +1,18 @@
+/**
+ * Countdown block — editor-only styles.
+ * The timer preview reuses style.scss (enqueued in the editor); this covers the
+ * "set a date" prompt shown before a target is chosen.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-countdown--editor {
+	.etu-countdown__setup {
+		padding: 28px 24px;
+		text-align: center;
+		font-size: 14px;
+		color: var(--etu-text-muted, #64748b);
+		border: 1px dashed var(--etu-border-strong, #cbd5e1);
+		border-radius: var(--etu-radius-md, 12px);
+		background: var(--etu-surface-hover, #f8fafc);
+	}
+}

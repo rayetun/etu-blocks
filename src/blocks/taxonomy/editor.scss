@@ -1,0 +1,21 @@
+/**
+ * Taxonomy block — editor-only styles.
+ * The preview is ServerSideRender output (front-end style.scss applies). Links in
+ * the preview shouldn't navigate away from the editor.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-taxonomy--editor {
+	.etu-taxonomy__card,
+	.etu-taxonomy__pill {
+		pointer-events: none;
+	}
+
+	.etu-taxonomy__empty {
+		padding: 24px;
+		text-align: center;
+		color: var(--etu-text-muted, #64748b);
+		border: 1px dashed var(--etu-border-strong, #cbd5e1);
+		border-radius: var(--etu-radius-md, 12px);
+	}
+}

@@ -1,0 +1,16 @@
+/**
+ * Steps block — editor-only styles.
+ */
+.etu-steps--editor-wrap {
+	.etu-steps__item {
+		align-items: flex-start;
+	}
+
+	.etu-steps__remove {
+		margin-inline-start: auto;
+	}
+
+	.etu-steps__add {
+		margin-top: 12px;
+	}
+}

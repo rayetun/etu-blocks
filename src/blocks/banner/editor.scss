@@ -1,0 +1,25 @@
+/**
+ * Banner (Hero) block — editor-only styles.
+ */
+.etu-banner--editor {
+	/* The empty-button spans are edited inline; keep them clickable/visible. */
+	.etu-banner__btn {
+		cursor: text;
+	}
+
+	.etu-banner__buttons {
+		align-items: center;
+	}
+
+	/* Placeholder text stays legible on the dark default background. */
+	.etu-banner__eyebrow [data-rich-text-placeholder],
+	.etu-banner__heading [data-rich-text-placeholder],
+	.etu-banner__text [data-rich-text-placeholder] {
+		opacity: 0.75;
+	}
+}
+
+.etu-banner__link-popover {
+	padding: 12px;
+	min-width: 260px;
+}

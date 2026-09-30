@@ -1,0 +1,47 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "etu/map",
+	"version": "1.0.0",
+	"title": "Google Map",
+	"category": "etu-blocks",
+	"icon": "location-alt",
+	"description": "A premium Google Map embed with a privacy-first click-to-load facade, an info card, directions link, map types and styling — no API key required.",
+	"keywords": [ "map", "google map", "location", "address", "directions" ],
+	"textdomain": "etu-blocks",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"interactivity": true,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"query": { "type": "string", "default": "" },
+		"zoom": { "type": "number", "default": 14 },
+		"mapType": { "type": "string", "default": "m" },
+		"aspectRatio": { "type": "string", "default": "16x9" },
+		"clickToLoad": { "type": "boolean", "default": true },
+		"grayscale": { "type": "boolean", "default": false },
+		"title": { "type": "string", "default": "" },
+		"address": { "type": "string", "default": "" },
+		"showInfoCard": { "type": "boolean", "default": true },
+		"showDirections": { "type": "boolean", "default": true },
+		"rounded": { "type": "object", "default": {} },
+		"accentColor": { "type": "string", "default": "" },
+		"blockId": { "type": "string", "default": "" },
+		"blockPadding": { "type": "object", "default": {} },
+		"blockMargin": { "type": "object", "default": {} }
+	},
+	"example": {
+		"attributes": {
+			"query": "Eiffel Tower, Paris",
+			"title": "Eiffel Tower",
+			"address": "Champ de Mars, Paris"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

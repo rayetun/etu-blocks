@@ -1,0 +1,13 @@
+/**
+ * Notice block — editor-only styles.
+ */
+.etu-notice--editor {
+	.etu-notice__title,
+	.etu-notice__content {
+		cursor: text;
+	}
+
+	.etu-notice__dismiss {
+		pointer-events: none;
+	}
+}

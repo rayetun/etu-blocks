@@ -1,0 +1,59 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "etu/post-filter",
+	"version": "1.0.0",
+	"title": "Post Filter",
+	"category": "etu-blocks",
+	"icon": "filter",
+	"description": "A filterable post grid: search, taxonomy dropdowns and reset update the results live via the Interactivity API — with a full no-JavaScript fallback.",
+	"keywords": [ "filter", "search", "posts", "taxonomy", "ajax" ],
+	"textdomain": "etu-blocks",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"interactivity": true,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"postType": { "type": "string", "default": "post" },
+		"filterTaxonomies": { "type": "array", "default": [ "category" ] },
+		"enableSearch": { "type": "boolean", "default": true },
+		"enableReset": { "type": "boolean", "default": true },
+		"perPage": { "type": "number", "default": 9 },
+		"columns": { "type": "string", "default": "3" },
+		"orderBy": { "type": "string", "default": "date" },
+		"order": { "type": "string", "default": "desc" },
+		"cardStyle": { "type": "string", "default": "card" },
+		"overlayColor": { "type": "string", "default": "" },
+		"overlayOpacity": { "type": "object", "default": {} },
+		"showImage": { "type": "boolean", "default": true },
+		"imageRatio": { "type": "string", "default": "landscape" },
+		"showPlaceholder": { "type": "boolean", "default": true },
+		"hoverEffect": { "type": "string", "default": "lift" },
+		"showCategory": { "type": "boolean", "default": false },
+		"showDate": { "type": "boolean", "default": true },
+		"showExcerpt": { "type": "boolean", "default": true },
+		"excerptWords": { "type": "number", "default": 20 },
+		"showButton": { "type": "boolean", "default": false },
+		"buttonText": { "type": "string", "default": "" },
+		"accentColor": { "type": "string", "default": "" },
+		"cardBg": { "type": "string", "default": "" },
+		"titleColor": { "type": "string", "default": "" },
+		"textColor": { "type": "string", "default": "" },
+		"blockId": { "type": "string", "default": "" },
+		"blockPadding": { "type": "object", "default": {} },
+		"blockMargin": { "type": "object", "default": {} }
+	},
+	"example": {
+		"attributes": {
+			"postType": "post",
+			"columns": "3"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

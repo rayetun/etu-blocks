@@ -1,0 +1,122 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "etu/banner",
+  "version": "1.0.0",
+  "title": "Banner",
+  "category": "etu-blocks",
+  "icon": "cover-image",
+  "description": "A premium hero banner — background image with overlay, headline, text and buttons, with height and content-position controls.",
+  "keywords": [
+    "banner",
+    "hero",
+    "cover",
+    "header",
+    "call to action"
+  ],
+  "textdomain": "etu-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": ""
+    },
+    "heading": {
+      "type": "string",
+      "default": "Build something people love"
+    },
+    "text": {
+      "type": "string",
+      "default": "A short, punchy supporting line that sets up your call to action."
+    },
+    "primaryText": {
+      "type": "string",
+      "default": "Get started"
+    },
+    "primaryUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "secondaryText": {
+      "type": "string",
+      "default": ""
+    },
+    "secondaryUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "bgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "bgImage": {
+      "type": "object",
+      "default": {}
+    },
+    "overlayColor": {
+      "type": "string",
+      "default": ""
+    },
+    "overlayOpacity": {
+      "type": "object",
+      "default": {}
+    },
+    "heightPreset": {
+      "type": "string",
+      "default": "medium"
+    },
+    "contentAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "verticalAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "contentWidth": {
+      "type": "object",
+      "default": {}
+    },
+    "accentColor": {
+      "type": "string",
+      "default": ""
+    },
+    "textColor": {
+      "type": "string",
+      "default": ""
+    },
+    "headingTypography": {
+      "type": "object",
+      "default": {}
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockMargin": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "example": {
+    "attributes": {
+      "heading": "Build something people love",
+      "text": "A short supporting line."
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

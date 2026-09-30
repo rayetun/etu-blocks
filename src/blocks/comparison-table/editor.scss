@@ -1,0 +1,75 @@
+/**
+ * Comparison Table block — editor-only styles.
+ */
+.etu-ct--editor {
+	.etu-ct__col-tools {
+		display: flex;
+		justify-content: center;
+		gap: 2px;
+		margin-bottom: 8px;
+	}
+
+	/* Keep the badge visible/editable even when empty. */
+	.etu-ct__badge:empty::before,
+	.etu-ct__badge[data-rich-text-placeholder]::after {
+		opacity: 0.7;
+	}
+
+	.etu-ct__row-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 8px;
+	}
+
+	.etu-ct__cell-inner {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: inherit;
+		min-height: 28px;
+	}
+
+	.etu-ct--cells-center & .etu-ct__cell-inner,
+	&.etu-ct--cells-center .etu-ct__cell-inner {
+		justify-content: center;
+	}
+
+	.etu-ct__cell-cycle {
+		position: absolute;
+		top: -6px;
+		right: -6px;
+		opacity: 0;
+		background: var(--etu-surface, #fff);
+		box-shadow: 0 1px 4px rgba(15, 23, 42, 0.18);
+		transition: opacity 0.12s ease;
+	}
+
+	.etu-ct__cell:hover .etu-ct__cell-cycle,
+	.etu-ct__cell:focus-within .etu-ct__cell-cycle {
+		opacity: 1;
+	}
+
+	.etu-ct__add-col {
+		padding: 0 6px;
+		vertical-align: middle;
+		background: none;
+	}
+
+	.etu-ct__spacer {
+		background: none;
+	}
+
+	.etu-ct__add-row {
+		margin-top: 14px;
+	}
+
+	.etu-ct__row-remove {
+		flex: 0 0 auto;
+	}
+}
+
+.etu-ct__link-popover {
+	padding: 12px;
+	min-width: 260px;
+}

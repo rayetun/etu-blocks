@@ -1,0 +1,103 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "etu/icon-list",
+  "version": "1.0.0",
+  "title": "Icon List",
+  "category": "etu-blocks",
+  "icon": "editor-ul",
+  "description": "A list of items each with its own icon — perfect for feature and benefit lists.",
+  "keywords": [
+    "icon list",
+    "checklist",
+    "features",
+    "list"
+  ],
+  "textdomain": "etu-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "icon": "✓",
+          "text": "Accessible by default"
+        },
+        {
+          "icon": "✓",
+          "text": "Built on the Interactivity API"
+        },
+        {
+          "icon": "✓",
+          "text": "Premium presets — free"
+        }
+      ]
+    },
+    "preset": {
+      "type": "string",
+      "default": "checklist"
+    },
+    "columns": {
+      "type": "string",
+      "default": "1"
+    },
+    "contentAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": ""
+    },
+    "iconColor": {
+      "type": "string",
+      "default": ""
+    },
+    "textColor": {
+      "type": "string",
+      "default": ""
+    },
+    "textTypography": {
+      "type": "object",
+      "default": {}
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockMargin": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "example": {
+    "attributes": {
+      "preset": "checklist",
+      "items": [
+        {
+          "icon": "✓",
+          "text": "Accessible by default"
+        },
+        {
+          "icon": "✓",
+          "text": "Interactivity API powered"
+        }
+      ]
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

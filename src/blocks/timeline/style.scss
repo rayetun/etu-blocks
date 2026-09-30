@@ -1,0 +1,104 @@
+/**
+ * Timeline block — front-end (and shared) styles.
+ * Presets: Line / Card / Minimal.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-timeline {
+	--etu-timeline-accent: var(--etu-accent, #635bff);
+
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	&__item {
+		position: relative;
+		padding: 0 0 28px 32px;
+	}
+
+	&__item:last-child {
+		padding-bottom: 0;
+	}
+
+	/* One continuous rail: each item draws the full-height segment, and the
+	   first / last items are trimmed to their marker centre so the line runs
+	   from the first dot to the last dot — through every marker. */
+	&__item::before {
+		content: "";
+		position: absolute;
+		left: 6px;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background: var(--etu-border, #e2e8f0);
+	}
+
+	/* Marker centre = top (3) + half height (7) = 10px. */
+	&__item:first-child::before {
+		top: 10px;
+	}
+
+	&__item:last-child::before {
+		bottom: calc(100% - 10px);
+	}
+
+	&__item:only-child::before {
+		display: none;
+	}
+
+	&__marker {
+		position: absolute;
+		left: 0;
+		/* Centre the 14px marker in the 20px date line: (20 - 14) / 2 = 3. */
+		top: 3px;
+		z-index: 1;
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		background: var(--etu-timeline-accent);
+		box-shadow: 0 0 0 4px color-mix(in srgb, var(--etu-timeline-accent) 18%, #fff);
+	}
+
+	&__date {
+		display: inline-block;
+		margin-bottom: 4px;
+		font-size: 0.85rem;
+		font-weight: 700;
+		line-height: 20px;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: var(--etu-timeline-accent);
+	}
+
+	&__title {
+		margin: 0 0 4px;
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: var(--etu-text, #1e293b);
+	}
+
+	&__description {
+		margin: 0;
+		color: var(--etu-text-muted, #64748b);
+		line-height: 1.6;
+	}
+
+	/* ---- Preset: Card ---- */
+	&--preset-card &__content {
+		padding: 16px 18px;
+		background: var(--etu-surface, #fff);
+		border: 1px solid var(--etu-border, #e2e8f0);
+		border-radius: var(--etu-radius-md, 12px);
+		box-shadow: var(--etu-shadow-card);
+	}
+
+	/* ---- Preset: Minimal ---- */
+	&--preset-minimal &__item {
+		padding-left: 0;
+	}
+
+	&--preset-minimal &__item::before,
+	&--preset-minimal &__marker {
+		display: none;
+	}
+}

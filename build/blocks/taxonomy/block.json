@@ -1,0 +1,110 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "etu/taxonomy",
+  "version": "1.0.0",
+  "title": "Taxonomy",
+  "category": "etu-blocks",
+  "icon": "category",
+  "description": "A visual browser for any taxonomy — term cards with a representative image, description and post count, as a grid, list or pills.",
+  "keywords": [
+    "taxonomy",
+    "categories",
+    "terms",
+    "tags",
+    "browse"
+  ],
+  "textdomain": "etu-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "taxonomy": {
+      "type": "string",
+      "default": "category"
+    },
+    "layout": {
+      "type": "string",
+      "default": "grid"
+    },
+    "columns": {
+      "type": "string",
+      "default": "4"
+    },
+    "imageSource": {
+      "type": "string",
+      "default": "auto"
+    },
+    "showCount": {
+      "type": "boolean",
+      "default": true
+    },
+    "showDescription": {
+      "type": "boolean",
+      "default": false
+    },
+    "hideEmpty": {
+      "type": "boolean",
+      "default": true
+    },
+    "orderBy": {
+      "type": "string",
+      "default": "name"
+    },
+    "order": {
+      "type": "string",
+      "default": "asc"
+    },
+    "number": {
+      "type": "number",
+      "default": 0
+    },
+    "parentScope": {
+      "type": "string",
+      "default": "all"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": ""
+    },
+    "cardBg": {
+      "type": "string",
+      "default": ""
+    },
+    "textColor": {
+      "type": "string",
+      "default": ""
+    },
+    "countColor": {
+      "type": "string",
+      "default": ""
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockMargin": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "example": {
+    "attributes": {
+      "taxonomy": "category",
+      "layout": "grid"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

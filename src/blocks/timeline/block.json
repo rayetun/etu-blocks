@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "etu/timeline",
+	"version": "1.0.0",
+	"title": "Timeline",
+	"category": "etu-blocks",
+	"icon": "clock",
+	"description": "A vertical timeline of dated events — for histories, roadmaps and milestones.",
+	"keywords": [ "timeline", "history", "roadmap", "events" ],
+	"textdomain": "etu-blocks",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": [
+				{ "date": "2024", "title": "Founded", "description": "The project began as an open idea." },
+				{ "date": "2025", "title": "First release", "description": "Shipped the initial block library." },
+				{ "date": "2026", "title": "WordPress 7.0", "description": "Rebuilt on the Interactivity API." }
+			]
+		},
+		"preset": { "type": "string", "default": "line" },
+		"accentColor": { "type": "string", "default": "" },
+		"dateColor": { "type": "string", "default": "" },
+		"titleColor": { "type": "string", "default": "" },
+		"descColor": { "type": "string", "default": "" },
+		"titleTypography": { "type": "object", "default": {} },
+		"blockId": { "type": "string", "default": "" },
+		"blockPadding": { "type": "object", "default": {} },
+		"blockMargin": { "type": "object", "default": {} }
+	},
+	"example": {
+		"attributes": {
+			"preset": "line",
+			"items": [
+				{ "date": "2025", "title": "First release", "description": "Shipped the library." },
+				{ "date": "2026", "title": "WordPress 7.0", "description": "Interactivity API." }
+			]
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,85 @@
+/**
+ * Countdown block — front-end (and shared) styles.
+ * Presets: Cards (boxed units) and Minimal (plain numbers). Uses house tokens.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-countdown {
+	--etu-cd-accent: var(--etu-accent, #635bff);
+	--etu-cd-number: var(--etu-cd-accent);
+	--etu-cd-label: var(--etu-text-muted, #64748b);
+	--etu-cd-card-bg: var(--etu-surface, #fff);
+
+	&__timer {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: center;
+		gap: 14px;
+	}
+
+	&__unit {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 6px;
+	}
+
+	&__value {
+		font-size: clamp(2rem, 6vw, 3.25rem);
+		font-weight: 700;
+		line-height: 1;
+		color: var(--etu-cd-number);
+		font-variant-numeric: tabular-nums;
+	}
+
+	&__label {
+		font-size: 0.72rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: var(--etu-cd-label);
+	}
+
+	&__completed {
+		text-align: center;
+		font-size: 1.15rem;
+		font-weight: 600;
+		color: var(--etu-text, #1e293b);
+		padding: 12px 8px;
+	}
+
+	/* ---- Preset: Cards ---- */
+	&--preset-cards &__unit {
+		min-width: 88px;
+		padding: 18px 20px;
+		background: var(--etu-cd-card-bg);
+		border: 1px solid var(--etu-border, #e2e8f0);
+		border-radius: var(--etu-radius-md, 12px);
+		box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+	}
+
+	/* ---- Preset: Minimal ---- */
+	&--preset-minimal &__timer {
+		gap: 22px;
+	}
+
+	&--preset-minimal &__value {
+		font-size: clamp(1.75rem, 5vw, 2.75rem);
+	}
+
+	/* Screen-reader-only live region for the completion announcement. */
+	&__live {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		border: 0;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		white-space: nowrap;
+	}
+}

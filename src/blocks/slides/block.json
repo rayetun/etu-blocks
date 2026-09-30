@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "etu/slides",
+	"version": "1.0.0",
+	"title": "Slides / Carousel",
+	"category": "etu-blocks",
+	"icon": "slides",
+	"description": "An accessible content carousel — put any blocks in each slide. Arrows, dots, autoplay and touch, built on the Interactivity API.",
+	"keywords": [ "carousel", "slider", "slides", "gallery" ],
+	"textdomain": "etu-blocks",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"interactivity": true,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"perView": {
+			"type": "object",
+			"default": { "desktop": 3, "tablet": 2, "mobile": 1 }
+		},
+		"gap": { "type": "object", "default": { "value": 16, "unit": "px" } },
+		"showArrows": { "type": "boolean", "default": true },
+		"arrowPosition": { "type": "string", "default": "edge" },
+		"showDots": { "type": "boolean", "default": true },
+		"autoplay": { "type": "boolean", "default": false },
+		"autoplaySpeed": { "type": "number", "default": 5 },
+		"loop": { "type": "boolean", "default": true },
+		"pauseOnHover": { "type": "boolean", "default": true },
+		"accentColor": { "type": "string", "default": "" },
+		"ariaLabel": { "type": "string", "default": "" },
+		"blockId": { "type": "string", "default": "" },
+		"blockPadding": { "type": "object", "default": {} },
+		"blockMargin": { "type": "object", "default": {} }
+	},
+	"example": {
+		"attributes": { "perView": { "desktop": 3, "tablet": 2, "mobile": 1 } },
+		"innerBlocks": [
+			{ "name": "etu/slide", "innerBlocks": [ { "name": "core/paragraph", "attributes": { "content": "Slide one" } } ] },
+			{ "name": "etu/slide", "innerBlocks": [ { "name": "core/paragraph", "attributes": { "content": "Slide two" } } ] }
+		]
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

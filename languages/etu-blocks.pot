@@ -1,0 +1,3978 @@
+# Copyright (C) 2026 Etu
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Etu Blocks — Interactive Accessible Block Library & Page Builder 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/etu-blocks\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-01T22:04:22+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: etu-blocks\n"
+
+#. Plugin Name of the plugin
+#: etu-blocks.php
+msgid "Etu Blocks — Interactive Accessible Block Library & Page Builder"
+msgstr ""
+
+#. Description of the plugin
+#: etu-blocks.php
+msgid "A curated library of accessible, Interactivity-API-powered blocks for the WordPress editor."
+msgstr ""
+
+#. Author of the plugin
+#: etu-blocks.php
+msgid "Etu"
+msgstr ""
+
+#. translators: %s: minimum WordPress version.
+#: etu-blocks.php:78
+#, php-format
+msgid "Etu Blocks requires WordPress %s or higher."
+msgstr ""
+
+#: includes/admin/class-dashboard.php:61
+#: includes/admin/class-dashboard.php:62
+#: includes/admin/class-dashboard.php:357
+#: includes/class-blocks.php:59
+msgid "Etu Blocks"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:144
+#: includes/blocks/taxonomy/schema.php:121
+#: src/blocks/post-grid/render.php:244
+#: src/blocks/post-grid/render.php:246
+msgid "All"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:145
+#: includes/blocks/counter/schema.php:98
+#: includes/blocks/info-box/schema.php:104
+#: includes/blocks/taxonomy/schema.php:87
+msgid "Content"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:146
+msgid "Marketing"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:147
+msgid "Interactive"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:148
+msgid "Media"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:149
+msgid "Dynamic"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:261
+msgid "Permission denied."
+msgstr ""
+
+#: includes/admin/class-dashboard.php:268
+msgid "Invalid block."
+msgstr ""
+
+#: includes/admin/class-dashboard.php:290
+#: includes/admin/class-dashboard.php:345
+msgid "Blocks"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:291
+#: includes/admin/class-dashboard.php:339
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:340
+msgid "Plugin-wide options. Every block also has its own inspector controls."
+msgstr ""
+
+#. translators: 1: active block count, 2: total block count.
+#: includes/admin/class-dashboard.php:348
+#, php-format
+msgid "%1$d of %2$d blocks enabled. Turn off any you do not need."
+msgstr ""
+
+#: includes/admin/class-dashboard.php:360
+msgid "Etu Blocks sections"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:384
+msgid "Toggle colour theme"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:386
+msgid "Theme"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:389
+msgid "Support"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:396
+msgid "Manage blocks"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:402
+msgid "Search blocks…"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:403
+msgid "Search blocks"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:405
+msgid "Filter by type"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:421
+msgid "No blocks are registered yet. Build the plugin to see blocks here."
+msgstr ""
+
+#. translators: %s: block title.
+#: includes/admin/class-dashboard.php:444
+#, php-format
+msgid "Enable %s"
+msgstr ""
+
+#. translators: %s: number of items.
+#: includes/admin/class-dashboard.php:456
+#, php-format
+msgid "Used on %s item"
+msgid_plural "Used on %s items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-dashboard.php:460
+msgid "Not used yet"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:469
+msgid "No blocks match your search."
+msgstr ""
+
+#: includes/admin/class-dashboard.php:493
+msgid "Support Etu Blocks"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:495
+msgid "Enjoying Etu Blocks? A quick review or a message on the support forum keeps it maintained and improving."
+msgstr ""
+
+#: includes/admin/class-dashboard.php:499
+msgid "Leave a Review"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:502
+msgid "Donate"
+msgstr ""
+
+#: includes/admin/class-dashboard.php:505
+msgid "Get Support"
+msgstr ""
+
+#: includes/admin/class-settings.php:118
+msgid "Etu Blocks settings"
+msgstr ""
+
+#: includes/admin/class-settings.php:122
+msgid "Settings saved."
+msgstr ""
+
+#: includes/admin/class-settings.php:131
+msgid "Google Maps API key"
+msgstr ""
+
+#: includes/admin/class-settings.php:143
+msgid "Optional. Without a key the Google Map block uses a keyless embed that works for most sites. Add your own API key here if your site is high-traffic and you see rate-limit warnings."
+msgstr ""
+
+#: includes/admin/class-settings.php:155
+msgid "Allow admins to upload .json and .lottie files to the Media Library"
+msgstr ""
+
+#: includes/admin/class-settings.php:158
+msgid "The Lottie block accepts URLs and file uploads. Files still have to be valid JSON (or a valid .lottie archive) to be accepted — a file with the wrong contents disguised as .json is rejected."
+msgstr ""
+
+#: includes/admin/class-settings.php:170
+msgid "Delete all Etu Blocks data when the plugin is uninstalled"
+msgstr ""
+
+#: includes/admin/class-settings.php:173
+msgid "Off by default. When on, uninstalling the plugin also removes its options and caches. Your posts, pages and blocks are never touched — just the plugin's own settings and stored usage cache."
+msgstr ""
+
+#: includes/admin/class-settings.php:178
+msgid "Save changes"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:16
+#: includes/blocks/before-after/schema.php:36
+#: includes/blocks/post-grid/schema.php:40
+#: includes/blocks/post-grid/schema.php:45
+#: includes/blocks/pricing-table/schema.php:16
+#: includes/blocks/slides/schema.php:16
+#: includes/blocks/taxonomy/schema.php:33
+#: includes/blocks/taxonomy/schema.php:44
+#: includes/blocks/video-popup/schema.php:87
+#: src/shared/inspector/EtuInspector.js:18
+msgid "Layout"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:21
+msgid "Height"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:23
+msgid "S"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:24
+msgid "M"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:25
+msgid "L"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:26
+msgid "Full"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:32
+#: includes/blocks/notice/schema.php:44
+msgid "Content alignment"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:38
+msgid "Vertical position"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:40
+#: includes/blocks/info-box/schema.php:36
+#: includes/blocks/modal/schema.php:65
+msgid "Top"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:41
+#: includes/blocks/comparison-table/schema.php:34
+#: includes/blocks/modal/schema.php:64
+#: src/blocks/data-table/edit.js:27
+#: src/shared/inspector/controls.js:48
+msgid "Center"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:42
+#: includes/blocks/slides/schema.php:56
+msgid "Bottom"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:48
+msgid "Content width"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:57
+#: includes/blocks/before-after/schema.php:78
+#: includes/blocks/comparison-table/schema.php:51
+#: includes/blocks/countdown/schema.php:50
+#: includes/blocks/counter/schema.php:43
+#: includes/blocks/cta/schema.php:43
+#: includes/blocks/data-table/schema.php:72
+#: includes/blocks/faq/schema.php:41
+#: includes/blocks/icon-list/schema.php:53
+#: includes/blocks/info-box/schema.php:49
+#: includes/blocks/lottie/schema.php:78
+#: includes/blocks/map/schema.php:93
+#: includes/blocks/notice/schema.php:57
+#: includes/blocks/post-filter/schema.php:193
+#: includes/blocks/post-grid/schema.php:245
+#: includes/blocks/pricing-table/schema.php:80
+#: includes/blocks/progress-bar/schema.php:46
+#: includes/blocks/slides/schema.php:103
+#: includes/blocks/social-share/schema.php:98
+#: includes/blocks/star-rating/schema.php:52
+#: includes/blocks/steps/schema.php:37
+#: includes/blocks/tabs/schema.php:66
+#: includes/blocks/taxonomy/schema.php:149
+#: includes/blocks/team-member/schema.php:53
+#: includes/blocks/testimonial/schema.php:43
+#: includes/blocks/timeline/schema.php:37
+#: includes/blocks/toc/schema.php:90
+#: includes/blocks/video-popup/schema.php:101
+msgid "Padding"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:64
+#: includes/blocks/toc/schema.php:114
+msgid "Background"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:69
+msgid "Background image"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:74
+#: includes/blocks/notice/schema.php:82
+msgid "Background colour"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:80
+#: includes/blocks/modal/schema.php:87
+#: includes/blocks/post-filter/schema.php:170
+#: includes/blocks/team-member/schema.php:107
+msgid "Overlay colour"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:86
+#: includes/blocks/modal/schema.php:93
+#: includes/blocks/post-filter/schema.php:177
+#: includes/blocks/team-member/schema.php:113
+msgid "Overlay opacity"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:96
+msgid "Text & buttons"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:101
+#: includes/blocks/comparison-table/schema.php:81
+#: includes/blocks/icon-list/schema.php:83
+#: includes/blocks/notice/schema.php:88
+#: includes/blocks/post-filter/schema.php:186
+#: includes/blocks/post-grid/schema.php:231
+#: includes/blocks/pricing-table/schema.php:122
+#: includes/blocks/tabs/schema.php:93
+#: includes/blocks/taxonomy/schema.php:141
+#: includes/blocks/toc/schema.php:120
+msgid "Text colour"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:107
+#: includes/blocks/modal/schema.php:129
+msgid "Button colour"
+msgstr ""
+
+#: includes/blocks/banner/schema.php:113
+#: includes/blocks/cta/schema.php:85
+msgid "Heading"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:20
+msgid "Images"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:25
+msgid "Before image"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:30
+msgid "After image"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:41
+msgid "Slider direction"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:43
+#: includes/blocks/team-member/schema.php:25
+msgid "Horizontal"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:44
+msgid "Vertical"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:50
+#: includes/blocks/map/schema.php:49
+#: includes/blocks/video-popup/schema.php:75
+msgid "Aspect ratio"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:52
+#: includes/blocks/map/schema.php:51
+#: includes/blocks/video-popup/schema.php:77
+msgid "Wide (16:9)"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:53
+msgid "Photo (3:2)"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:54
+#: includes/blocks/map/schema.php:52
+#: includes/blocks/video-popup/schema.php:78
+msgid "Classic (4:3)"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:55
+#: includes/blocks/map/schema.php:54
+#: includes/blocks/video-popup/schema.php:79
+msgid "Square (1:1)"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:56
+#: includes/blocks/map/schema.php:53
+#: includes/blocks/video-popup/schema.php:80
+msgid "Cinematic (21:9)"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:62
+msgid "Start position (%)"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:69
+#: includes/blocks/map/schema.php:84
+#: includes/blocks/modal/schema.php:114
+#: includes/blocks/notice/schema.php:106
+#: includes/blocks/video-popup/schema.php:92
+msgid "Corner radius"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:85
+msgid "Labels"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:90
+#: includes/blocks/social-share/schema.php:56
+msgid "Show labels"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:91
+msgid "Overlay “Before” and “After” badges on the images."
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:96
+msgid "Before label"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:102
+msgid "After label"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:109
+#: includes/blocks/comparison-table/schema.php:64
+#: includes/blocks/countdown/schema.php:57
+#: includes/blocks/counter/schema.php:56
+#: includes/blocks/cta/schema.php:56
+#: includes/blocks/data-table/schema.php:79
+#: includes/blocks/faq/schema.php:54
+#: includes/blocks/icon-list/schema.php:66
+#: includes/blocks/info-box/schema.php:62
+#: includes/blocks/map/schema.php:100
+#: includes/blocks/notice/schema.php:70
+#: includes/blocks/post-filter/schema.php:164
+#: includes/blocks/post-grid/schema.php:226
+#: includes/blocks/pricing-table/schema.php:93
+#: includes/blocks/progress-bar/schema.php:59
+#: includes/blocks/slides/schema.php:116
+#: includes/blocks/social-share/schema.php:111
+#: includes/blocks/star-rating/schema.php:65
+#: includes/blocks/steps/schema.php:50
+#: includes/blocks/tabs/schema.php:79
+#: includes/blocks/taxonomy/schema.php:137
+#: includes/blocks/team-member/schema.php:66
+#: includes/blocks/testimonial/schema.php:56
+#: includes/blocks/timeline/schema.php:50
+#: includes/blocks/toc/schema.php:103
+#: includes/blocks/video-popup/schema.php:108
+msgid "Colours"
+msgstr ""
+
+#: includes/blocks/before-after/schema.php:114
+msgid "Divider & handle colour"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:16
+#: includes/blocks/counter/schema.php:16
+#: includes/blocks/cta/schema.php:16
+#: includes/blocks/faq/schema.php:20
+#: includes/blocks/icon-list/schema.php:16
+#: includes/blocks/info-box/schema.php:19
+#: includes/blocks/progress-bar/schema.php:16
+#: includes/blocks/social-share/schema.php:25
+#: includes/blocks/star-rating/schema.php:16
+#: includes/blocks/steps/schema.php:16
+#: includes/blocks/tabs/schema.php:22
+#: includes/blocks/team-member/schema.php:16
+#: includes/blocks/testimonial/schema.php:16
+#: includes/blocks/timeline/schema.php:16
+#: includes/blocks/toc/schema.php:26
+msgid "Design"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:21
+#: includes/blocks/countdown/schema.php:25
+#: includes/blocks/data-table/schema.php:52
+#: includes/blocks/social-share/schema.php:30
+#: includes/blocks/toc/schema.php:31
+#: src/shared/inspector/EtuInspector.js:19
+msgid "Style"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:23
+#: includes/blocks/pricing-table/schema.php:23
+msgid "Modern"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:24
+#: includes/blocks/info-box/schema.php:28
+#: includes/blocks/post-grid/schema.php:79
+#: includes/blocks/toc/schema.php:34
+msgid "Bordered"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:25
+#: includes/blocks/countdown/schema.php:28
+#: includes/blocks/counter/schema.php:23
+#: includes/blocks/info-box/schema.php:26
+#: includes/blocks/post-grid/schema.php:80
+#: includes/blocks/pricing-table/schema.php:25
+#: includes/blocks/progress-bar/schema.php:25
+#: includes/blocks/social-share/schema.php:34
+#: includes/blocks/steps/schema.php:25
+#: includes/blocks/team-member/schema.php:26
+#: includes/blocks/testimonial/schema.php:25
+#: includes/blocks/timeline/schema.php:25
+msgid "Minimal"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:31
+msgid "Cell alignment"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:33
+#: includes/blocks/info-box/schema.php:37
+#: src/blocks/data-table/edit.js:26
+#: src/shared/inspector/controls.js:47
+msgid "Left"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:40
+#: includes/blocks/data-table/schema.php:57
+msgid "Striped rows"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:46
+#: includes/blocks/counter/schema.php:38
+#: includes/blocks/cta/schema.php:38
+#: includes/blocks/faq/schema.php:36
+#: includes/blocks/icon-list/schema.php:48
+#: includes/blocks/info-box/schema.php:44
+#: includes/blocks/lottie/schema.php:76
+#: includes/blocks/notice/schema.php:52
+#: includes/blocks/post-filter/schema.php:191
+#: includes/blocks/post-grid/schema.php:243
+#: includes/blocks/pricing-table/schema.php:69
+#: includes/blocks/progress-bar/schema.php:41
+#: includes/blocks/slides/schema.php:98
+#: includes/blocks/star-rating/schema.php:47
+#: includes/blocks/steps/schema.php:32
+#: includes/blocks/tabs/schema.php:61
+#: includes/blocks/taxonomy/schema.php:147
+#: includes/blocks/team-member/schema.php:48
+#: includes/blocks/testimonial/schema.php:38
+#: includes/blocks/timeline/schema.php:32
+#: includes/blocks/toc/schema.php:85
+msgid "Spacing"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:57
+#: includes/blocks/counter/schema.php:49
+#: includes/blocks/cta/schema.php:49
+#: includes/blocks/faq/schema.php:47
+#: includes/blocks/icon-list/schema.php:59
+#: includes/blocks/info-box/schema.php:55
+#: includes/blocks/lottie/schema.php:79
+#: includes/blocks/notice/schema.php:63
+#: includes/blocks/post-filter/schema.php:194
+#: includes/blocks/post-grid/schema.php:246
+#: includes/blocks/pricing-table/schema.php:86
+#: includes/blocks/progress-bar/schema.php:52
+#: includes/blocks/slides/schema.php:109
+#: includes/blocks/social-share/schema.php:104
+#: includes/blocks/star-rating/schema.php:58
+#: includes/blocks/steps/schema.php:43
+#: includes/blocks/tabs/schema.php:72
+#: includes/blocks/taxonomy/schema.php:150
+#: includes/blocks/team-member/schema.php:59
+#: includes/blocks/testimonial/schema.php:49
+#: includes/blocks/timeline/schema.php:43
+#: includes/blocks/toc/schema.php:96
+msgid "Margin"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:69
+msgid "Accent (highlight & checks)"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:75
+#: includes/blocks/cta/schema.php:67
+msgid "Heading colour"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:87
+msgid "Striped row colour"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:94
+#: includes/blocks/counter/schema.php:80
+#: includes/blocks/cta/schema.php:80
+#: includes/blocks/icon-list/schema.php:90
+#: includes/blocks/info-box/schema.php:92
+#: includes/blocks/post-grid/schema.php:236
+#: includes/blocks/pricing-table/schema.php:129
+#: includes/blocks/progress-bar/schema.php:83
+#: includes/blocks/social-share/schema.php:129
+#: includes/blocks/steps/schema.php:74
+#: includes/blocks/team-member/schema.php:123
+#: includes/blocks/testimonial/schema.php:80
+#: includes/blocks/timeline/schema.php:80
+#: src/shared/inspector/controls.js:239
+msgid "Typography"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:99
+#: includes/blocks/toc/schema.php:67
+msgid "Headings"
+msgstr ""
+
+#: includes/blocks/comparison-table/schema.php:105
+msgid "Cells"
+msgstr ""
+
+#: includes/blocks/countdown/schema.php:20
+#: includes/blocks/map/schema.php:72
+#: includes/blocks/notice/schema.php:33
+msgid "Display"
+msgstr ""
+
+#: includes/blocks/countdown/schema.php:27
+#: includes/blocks/post-filter/schema.php:90
+msgid "Cards"
+msgstr ""
+
+#: includes/blocks/countdown/schema.php:34
+#: includes/blocks/counter/schema.php:31
+#: includes/blocks/cta/schema.php:31
+#: includes/blocks/icon-list/schema.php:41
+#: includes/blocks/lottie/schema.php:50
+#: includes/blocks/social-share/schema.php:50
+#: includes/blocks/star-rating/schema.php:40
+#: includes/blocks/tabs/schema.php:38
+#: includes/blocks/team-member/schema.php:32
+#: includes/blocks/testimonial/schema.php:31
+msgid "Alignment"
+msgstr ""
+
+#: includes/blocks/countdown/schema.php:40
+msgid "Show unit labels"
+msgstr ""
+
+#: includes/blocks/countdown/schema.php:45
+msgid "Hide seconds"
+msgstr ""
+
+#: includes/blocks/countdown/schema.php:62
+msgid "Accent / card colour"
+msgstr ""
+
+#: includes/blocks/countdown/schema.php:68
+#: includes/blocks/counter/schema.php:67
+msgid "Number colour"
+msgstr ""
+
+#: includes/blocks/countdown/schema.php:74
+#: includes/blocks/counter/schema.php:73
+#: includes/blocks/progress-bar/schema.php:76
+msgid "Label colour"
+msgstr ""
+
+#: includes/blocks/counter/schema.php:21
+#: includes/blocks/cta/schema.php:21
+#: includes/blocks/faq/schema.php:25
+#: includes/blocks/icon-list/schema.php:21
+#: includes/blocks/info-box/schema.php:24
+#: includes/blocks/progress-bar/schema.php:21
+#: includes/blocks/steps/schema.php:21
+#: includes/blocks/tabs/schema.php:27
+#: includes/blocks/team-member/schema.php:21
+#: includes/blocks/testimonial/schema.php:21
+#: includes/blocks/timeline/schema.php:21
+msgid "Preset"
+msgstr ""
+
+#: includes/blocks/counter/schema.php:24
+#: includes/blocks/info-box/schema.php:27
+#: includes/blocks/post-filter/schema.php:97
+#: includes/blocks/tabs/schema.php:31
+#: includes/blocks/team-member/schema.php:23
+#: includes/blocks/testimonial/schema.php:23
+#: includes/blocks/timeline/schema.php:24
+msgid "Card"
+msgstr ""
+
+#: includes/blocks/counter/schema.php:25
+#: includes/blocks/faq/schema.php:27
+#: includes/blocks/icon-list/schema.php:25
+#: includes/blocks/toc/schema.php:33
+msgid "Boxed"
+msgstr ""
+
+#: includes/blocks/counter/schema.php:61
+#: includes/blocks/cta/schema.php:61
+#: includes/blocks/faq/schema.php:59
+#: includes/blocks/icon-list/schema.php:71
+#: includes/blocks/info-box/schema.php:67
+#: includes/blocks/social-share/schema.php:122
+#: includes/blocks/steps/schema.php:55
+#: includes/blocks/tabs/schema.php:84
+#: includes/blocks/team-member/schema.php:71
+#: includes/blocks/testimonial/schema.php:61
+#: includes/blocks/timeline/schema.php:55
+msgid "Accent colour"
+msgstr ""
+
+#: includes/blocks/counter/schema.php:85
+#: includes/blocks/counter/schema.php:103
+#: src/blocks/data-table/edit.js:196
+msgid "Number"
+msgstr ""
+
+#: includes/blocks/counter/schema.php:91
+#: includes/blocks/progress-bar/schema.php:88
+#: includes/blocks/social-share/schema.php:134
+#: includes/blocks/star-rating/schema.php:108
+msgid "Label"
+msgstr ""
+
+#: includes/blocks/counter/schema.php:108
+msgid "Prefix"
+msgstr ""
+
+#: includes/blocks/counter/schema.php:113
+msgid "Suffix"
+msgstr ""
+
+#: includes/blocks/counter/schema.php:118
+msgid "Thousands separator"
+msgstr ""
+
+#: includes/blocks/counter/schema.php:123
+msgid "Animation duration (ms)"
+msgstr ""
+
+#: includes/blocks/cta/schema.php:23
+msgid "Centered"
+msgstr ""
+
+#: includes/blocks/cta/schema.php:24
+msgid "Split"
+msgstr ""
+
+#: includes/blocks/cta/schema.php:25
+msgid "Banner"
+msgstr ""
+
+#: includes/blocks/cta/schema.php:73
+#: includes/blocks/info-box/schema.php:85
+#: includes/blocks/steps/schema.php:67
+#: includes/blocks/timeline/schema.php:73
+msgid "Description colour"
+msgstr ""
+
+#: includes/blocks/cta/schema.php:92
+msgid "Buttons"
+msgstr ""
+
+#: includes/blocks/cta/schema.php:97
+msgid "Primary button URL"
+msgstr ""
+
+#: includes/blocks/cta/schema.php:102
+msgid "Secondary button URL"
+msgstr ""
+
+#: includes/blocks/cta/schema.php:107
+msgid "Open buttons in a new tab"
+msgstr ""
+
+#: includes/blocks/data-table/schema.php:20
+msgid "Table"
+msgstr ""
+
+#: includes/blocks/data-table/schema.php:25
+msgid "Sortable columns"
+msgstr ""
+
+#: includes/blocks/data-table/schema.php:26
+msgid "Let visitors sort by clicking a column header."
+msgstr ""
+
+#: includes/blocks/data-table/schema.php:31
+msgid "Search box"
+msgstr ""
+
+#: includes/blocks/data-table/schema.php:32
+msgid "Show a field that filters rows as you type."
+msgstr ""
+
+#: includes/blocks/data-table/schema.php:37
+msgid "Sticky header"
+msgstr ""
+
+#: includes/blocks/data-table/schema.php:42
+msgid "On small screens"
+msgstr ""
+
+#: includes/blocks/data-table/schema.php:44
+msgid "Scroll sideways"
+msgstr ""
+
+#: includes/blocks/data-table/schema.php:45
+msgid "Stack into cards"
+msgstr ""
+
+#: includes/blocks/data-table/schema.php:62
+msgid "Cell borders"
+msgstr ""
+
+#: includes/blocks/data-table/schema.php:67
+msgid "Compact spacing"
+msgstr ""
+
+#: includes/blocks/data-table/schema.php:84
+msgid "Header background"
+msgstr ""
+
+#: includes/blocks/data-table/schema.php:90
+msgid "Header text"
+msgstr ""
+
+#: includes/blocks/data-table/schema.php:96
+msgid "Stripe colour"
+msgstr ""
+
+#: includes/blocks/data-table/schema.php:102
+msgid "Accent (sort & focus)"
+msgstr ""
+
+#: includes/blocks/faq/schema.php:28
+#: includes/blocks/tabs/schema.php:29
+#: includes/blocks/timeline/schema.php:23
+msgid "Line"
+msgstr ""
+
+#: includes/blocks/faq/schema.php:29
+msgid "Filled"
+msgstr ""
+
+#: includes/blocks/faq/schema.php:65
+msgid "Question colour"
+msgstr ""
+
+#: includes/blocks/faq/schema.php:71
+msgid "Answer colour"
+msgstr ""
+
+#: includes/blocks/faq/schema.php:78
+#: includes/blocks/tabs/schema.php:121
+msgid "Typography & spacing"
+msgstr ""
+
+#: includes/blocks/faq/schema.php:83
+msgid "Question"
+msgstr ""
+
+#: includes/blocks/faq/schema.php:89
+msgid "Question padding"
+msgstr ""
+
+#: includes/blocks/faq/schema.php:96
+#: includes/blocks/modal/schema.php:136
+#: includes/blocks/notice/schema.php:122
+#: includes/blocks/toc/schema.php:127
+msgid "Behaviour"
+msgstr ""
+
+#: includes/blocks/faq/schema.php:101
+msgid "Allow multiple open at once"
+msgstr ""
+
+#: includes/blocks/faq/schema.php:106
+msgid "Output FAQ schema (SEO)"
+msgstr ""
+
+#: includes/blocks/icon-list/schema.php:23
+msgid "Checklist"
+msgstr ""
+
+#: includes/blocks/icon-list/schema.php:24
+#: includes/blocks/toc/schema.php:35
+#: includes/blocks/toc/schema.php:45
+msgid "Plain"
+msgstr ""
+
+#: includes/blocks/icon-list/schema.php:31
+#: includes/blocks/post-filter/schema.php:104
+#: includes/blocks/post-grid/schema.php:55
+#: includes/blocks/pricing-table/schema.php:31
+#: includes/blocks/taxonomy/schema.php:54
+msgid "Columns"
+msgstr ""
+
+#: includes/blocks/icon-list/schema.php:77
+#: includes/blocks/info-box/schema.php:73
+msgid "Icon colour"
+msgstr ""
+
+#: includes/blocks/icon-list/schema.php:95
+#: src/blocks/data-table/edit.js:193
+msgid "Text"
+msgstr ""
+
+#: includes/blocks/info-box/schema.php:34
+msgid "Icon position"
+msgstr ""
+
+#: includes/blocks/info-box/schema.php:79
+#: includes/blocks/post-filter/schema.php:185
+#: includes/blocks/post-grid/schema.php:230
+#: includes/blocks/steps/schema.php:61
+#: includes/blocks/timeline/schema.php:67
+msgid "Title colour"
+msgstr ""
+
+#: includes/blocks/info-box/schema.php:97
+#: includes/blocks/map/schema.php:65
+#: includes/blocks/notice/schema.php:115
+#: includes/blocks/post-filter/schema.php:56
+#: includes/blocks/post-grid/schema.php:130
+#: includes/blocks/post-grid/schema.php:184
+#: includes/blocks/post-grid/schema.php:238
+#: includes/blocks/steps/schema.php:79
+#: includes/blocks/timeline/schema.php:85
+#: includes/blocks/toc/schema.php:56
+#: includes/blocks/video-popup/schema.php:64
+msgid "Title"
+msgstr ""
+
+#: includes/blocks/info-box/schema.php:109
+msgid "Heading level"
+msgstr ""
+
+#: includes/blocks/info-box/schema.php:116
+msgid "Paragraph"
+msgstr ""
+
+#: includes/blocks/info-box/schema.php:122
+msgid "Icon (emoji or character)"
+msgstr ""
+
+#: includes/blocks/info-box/schema.php:127
+#: src/blocks/banner/edit.js:59
+#: src/blocks/comparison-table/edit.js:259
+#: src/blocks/pricing-table/edit.js:321
+msgid "Button URL"
+msgstr ""
+
+#: includes/blocks/info-box/schema.php:132
+msgid "Open button in a new tab"
+msgstr ""
+
+#: includes/blocks/lottie/schema.php:16
+#: includes/blocks/modal/schema.php:71
+#: src/blocks/lottie/render.php:72
+msgid "Animation"
+msgstr ""
+
+#: includes/blocks/lottie/schema.php:21
+#: src/blocks/slides/render.php:87
+msgid "Play"
+msgstr ""
+
+#: includes/blocks/lottie/schema.php:23
+msgid "On load"
+msgstr ""
+
+#: includes/blocks/lottie/schema.php:24
+msgid "When scrolled into view"
+msgstr ""
+
+#: includes/blocks/lottie/schema.php:25
+msgid "On hover / focus"
+msgstr ""
+
+#: includes/blocks/lottie/schema.php:26
+msgid "On click"
+msgstr ""
+
+#: includes/blocks/lottie/schema.php:29
+#: includes/blocks/slides/schema.php:92
+msgid "Loop"
+msgstr ""
+
+#: includes/blocks/lottie/schema.php:33
+msgid "Speed (%)"
+msgstr ""
+
+#: includes/blocks/lottie/schema.php:41
+msgid "Max width"
+msgstr ""
+
+#: includes/blocks/lottie/schema.php:57
+#: includes/blocks/slides/schema.php:129
+#: includes/blocks/tabs/schema.php:144
+msgid "Accessibility"
+msgstr ""
+
+#: includes/blocks/lottie/schema.php:62
+msgid "Decorative"
+msgstr ""
+
+#: includes/blocks/lottie/schema.php:63
+msgid "Hide from screen readers. Turn off if the animation conveys meaning."
+msgstr ""
+
+#: includes/blocks/lottie/schema.php:68
+msgid "Text alternative"
+msgstr ""
+
+#: includes/blocks/lottie/schema.php:69
+msgid "Describes the animation for assistive tech."
+msgstr ""
+
+#: includes/blocks/map/schema.php:19
+msgid "Location"
+msgstr ""
+
+#: includes/blocks/map/schema.php:24
+msgid "Address or place"
+msgstr ""
+
+#: includes/blocks/map/schema.php:25
+msgid "An address, place name, or \"lat,lng\"."
+msgstr ""
+
+#: includes/blocks/map/schema.php:30
+#: includes/blocks/modal/schema.php:74
+#: includes/blocks/post-filter/schema.php:118
+#: includes/blocks/post-grid/schema.php:91
+msgid "Zoom"
+msgstr ""
+
+#: includes/blocks/map/schema.php:38
+msgid "Map type"
+msgstr ""
+
+#: includes/blocks/map/schema.php:40
+msgid "Road"
+msgstr ""
+
+#: includes/blocks/map/schema.php:41
+msgid "Satellite"
+msgstr ""
+
+#: includes/blocks/map/schema.php:42
+msgid "Hybrid"
+msgstr ""
+
+#: includes/blocks/map/schema.php:43
+msgid "Terrain"
+msgstr ""
+
+#: includes/blocks/map/schema.php:55
+msgid "Tall (3:4)"
+msgstr ""
+
+#: includes/blocks/map/schema.php:62
+msgid "Info card"
+msgstr ""
+
+#: includes/blocks/map/schema.php:64
+msgid "Show info card"
+msgstr ""
+
+#: includes/blocks/map/schema.php:66
+msgid "Address line"
+msgstr ""
+
+#: includes/blocks/map/schema.php:67
+msgid "Directions button"
+msgstr ""
+
+#: includes/blocks/map/schema.php:77
+msgid "Click to load (privacy)"
+msgstr ""
+
+#: includes/blocks/map/schema.php:78
+msgid "Load Google Maps only after the visitor clicks — no third-party request on page view."
+msgstr ""
+
+#: includes/blocks/map/schema.php:80
+msgid "Grayscale (colour on hover)"
+msgstr ""
+
+#: includes/blocks/map/schema.php:105
+msgid "Accent (pin & button)"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:16
+msgid "Opening"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:21
+msgid "Open with"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:23
+msgid "Button"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:24
+msgid "Page load"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:25
+msgid "Delay"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:31
+msgid "Delay (seconds)"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:35
+msgid "Used when \"Open with\" is Delay."
+msgstr ""
+
+#: includes/blocks/modal/schema.php:40
+msgid "Button alignment"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:47
+#: src/blocks/modal/render.php:59
+msgid "Dialog"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:52
+msgid "Size"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:54
+msgid "Small"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:55
+msgid "Medium"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:56
+msgid "Large"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:62
+msgid "Position"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:73
+msgid "Fade"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:75
+msgid "Slide"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:82
+#: includes/blocks/post-filter/schema.php:98
+#: includes/blocks/post-grid/schema.php:81
+#: includes/blocks/team-member/schema.php:24
+msgid "Overlay"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:103
+msgid "Dialog & button"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:108
+msgid "Dialog background"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:123
+msgid "Dialog padding"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:141
+msgid "Dialog label"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:142
+msgid "Accessible name announced when the dialog opens."
+msgstr ""
+
+#: includes/blocks/modal/schema.php:147
+msgid "Close button"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:152
+msgid "Close on backdrop click"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:157
+msgid "Show only once"
+msgstr ""
+
+#: includes/blocks/modal/schema.php:158
+msgid "For Page load / Delay: remembers via a cookie so it shows once per visitor."
+msgstr ""
+
+#: includes/blocks/notice/schema.php:16
+#: includes/blocks/notice/schema.php:21
+#: src/blocks/countdown/edit.js:112
+msgid "Type"
+msgstr ""
+
+#: includes/blocks/notice/schema.php:23
+msgid "Info"
+msgstr ""
+
+#: includes/blocks/notice/schema.php:24
+msgid "Success"
+msgstr ""
+
+#: includes/blocks/notice/schema.php:25
+msgid "Warning"
+msgstr ""
+
+#: includes/blocks/notice/schema.php:26
+msgid "Danger"
+msgstr ""
+
+#: includes/blocks/notice/schema.php:27
+msgid "Neutral"
+msgstr ""
+
+#: includes/blocks/notice/schema.php:34
+msgid "Top/Bottom pin the notice to the screen on the front end."
+msgstr ""
+
+#: includes/blocks/notice/schema.php:36
+msgid "Inline"
+msgstr ""
+
+#: includes/blocks/notice/schema.php:37
+msgid "Top bar"
+msgstr ""
+
+#: includes/blocks/notice/schema.php:38
+msgid "Bottom bar"
+msgstr ""
+
+#: includes/blocks/notice/schema.php:75
+msgid "Accent (icon/border)"
+msgstr ""
+
+#: includes/blocks/notice/schema.php:76
+msgid "Overrides the type colour."
+msgstr ""
+
+#: includes/blocks/notice/schema.php:94
+msgid "Shadow colour"
+msgstr ""
+
+#: includes/blocks/notice/schema.php:101
+msgid "Shape & type"
+msgstr ""
+
+#: includes/blocks/notice/schema.php:127
+msgid "Custom icon (emoji)"
+msgstr ""
+
+#: includes/blocks/notice/schema.php:132
+msgid "Dismissible"
+msgstr ""
+
+#: includes/blocks/notice/schema.php:137
+msgid "Remember dismissal"
+msgstr ""
+
+#: includes/blocks/notice/schema.php:138
+msgid "Keeps it hidden ~1 year (cookie) after the visitor closes it."
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:13
+#: includes/blocks/post-grid/schema.php:15
+#: src/blocks/post-grid/render.php:257
+msgid "Posts"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:14
+#: includes/blocks/post-grid/schema.php:148
+#: includes/blocks/taxonomy/schema.php:16
+msgid "Categories"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:39
+#: includes/blocks/post-grid/schema.php:108
+#: includes/blocks/taxonomy/schema.php:95
+msgid "Query"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:41
+#: includes/blocks/post-grid/schema.php:113
+msgid "Post type"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:45
+msgid "Posts per page"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:53
+#: includes/blocks/post-grid/schema.php:127
+#: includes/blocks/taxonomy/schema.php:101
+msgid "Order by"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:55
+#: includes/blocks/post-filter/schema.php:142
+#: includes/blocks/post-grid/schema.php:129
+#: includes/blocks/post-grid/schema.php:185
+#: src/blocks/timeline/edit.js:70
+msgid "Date"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:57
+#: includes/blocks/post-grid/schema.php:131
+msgid "Menu order"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:58
+#: includes/blocks/post-grid/schema.php:132
+msgid "Comment count"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:59
+#: includes/blocks/post-grid/schema.php:133
+msgid "Random"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:65
+#: includes/blocks/post-grid/schema.php:139
+#: includes/blocks/taxonomy/schema.php:110
+msgid "Order"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:67
+#: includes/blocks/post-grid/schema.php:141
+#: includes/blocks/taxonomy/schema.php:113
+msgid "Desc"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:68
+#: includes/blocks/post-grid/schema.php:142
+#: includes/blocks/taxonomy/schema.php:112
+msgid "Asc"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:75
+msgid "Filters"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:77
+msgid "Search field"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:81
+msgid "Taxonomy filters"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:82
+msgid "Each shows as a dropdown. Only taxonomies on the chosen post type apply."
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:85
+msgid "Reset button"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:95
+#: includes/blocks/post-grid/schema.php:76
+#: includes/blocks/pricing-table/schema.php:21
+msgid "Card style"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:114
+#: includes/blocks/post-grid/schema.php:87
+msgid "Hover effect"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:116
+#: includes/blocks/post-grid/schema.php:89
+#: includes/blocks/taxonomy/schema.php:71
+#: src/shared/inspector/controls.js:215
+msgid "None"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:117
+#: includes/blocks/post-grid/schema.php:90
+msgid "Lift"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:119
+#: includes/blocks/post-grid/schema.php:92
+msgid "Both"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:122
+#: includes/blocks/post-grid/schema.php:171
+msgid "Featured image"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:126
+#: includes/blocks/post-grid/schema.php:175
+msgid "Image ratio"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:129
+#: includes/blocks/post-grid/schema.php:177
+msgid "16:9"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:130
+#: includes/blocks/post-grid/schema.php:178
+msgid "1:1"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:131
+#: includes/blocks/post-grid/schema.php:179
+msgid "3:4"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:137
+msgid "Placeholder when no image"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:138
+msgid "Show a graphic when a post has no featured image."
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:141
+#: includes/blocks/post-grid/schema.php:183
+msgid "Category badge"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:143
+#: includes/blocks/post-grid/schema.php:187
+msgid "Excerpt"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:147
+#: includes/blocks/post-grid/schema.php:191
+msgid "Excerpt words"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:153
+#: includes/blocks/post-grid/schema.php:196
+msgid "Read-more button"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:157
+#: includes/blocks/post-grid/schema.php:197
+msgid "Button text"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:166
+#: includes/blocks/post-grid/schema.php:228
+#: includes/blocks/taxonomy/schema.php:139
+msgid "Accent"
+msgstr ""
+
+#: includes/blocks/post-filter/schema.php:184
+#: includes/blocks/post-grid/schema.php:229
+#: includes/blocks/pricing-table/schema.php:104
+#: includes/blocks/taxonomy/schema.php:140
+msgid "Card background"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:47
+#: includes/blocks/taxonomy/schema.php:46
+msgid "Grid"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:48
+msgid "Masonry"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:49
+#: src/blocks/slides/render.php:65
+msgid "Carousel"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:66
+#: includes/blocks/slides/schema.php:21
+msgid "Slides per view"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:78
+msgid "Elevated"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:98
+#: includes/blocks/pricing-table/schema.php:41
+#: includes/blocks/slides/schema.php:31
+#: includes/blocks/social-share/schema.php:89
+#: includes/blocks/taxonomy/schema.php:77
+msgid "Gap"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:119
+msgid "Number of posts"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:149
+msgid "Leave empty for all categories."
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:155
+msgid "Skip (offset)"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:163
+msgid "Exclude current post"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:169
+msgid "Card content"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:180
+#: includes/blocks/taxonomy/schema.php:70
+msgid "Auto"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:186
+msgid "Author"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:202
+msgid "Filter & navigation"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:207
+msgid "Category filter bar"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:213
+msgid "Carousel arrows"
+msgstr ""
+
+#: includes/blocks/post-grid/schema.php:219
+msgid "Carousel dots"
+msgstr ""
+
+#: includes/blocks/pricing-table/schema.php:24
+#: includes/blocks/social-share/schema.php:33
+msgid "Outline"
+msgstr ""
+
+#: includes/blocks/pricing-table/schema.php:51
+msgid "Billing toggle"
+msgstr ""
+
+#: includes/blocks/pricing-table/schema.php:56
+msgid "Monthly / yearly toggle"
+msgstr ""
+
+#: includes/blocks/pricing-table/schema.php:57
+msgid "Visitors switch between the monthly and yearly prices."
+msgstr ""
+
+#: includes/blocks/pricing-table/schema.php:62
+msgid "Yearly badge"
+msgstr ""
+
+#: includes/blocks/pricing-table/schema.php:63
+msgid "Optional, e.g. \"Save 20%\"."
+msgstr ""
+
+#: includes/blocks/pricing-table/schema.php:74
+msgid "Card padding"
+msgstr ""
+
+#: includes/blocks/pricing-table/schema.php:98
+msgid "Accent (featured & buttons)"
+msgstr ""
+
+#: includes/blocks/pricing-table/schema.php:110
+msgid "Plan name colour"
+msgstr ""
+
+#: includes/blocks/pricing-table/schema.php:116
+msgid "Price colour"
+msgstr ""
+
+#: includes/blocks/pricing-table/schema.php:134
+#: src/blocks/pricing-table/edit.js:171
+msgid "Plan name"
+msgstr ""
+
+#: includes/blocks/pricing-table/schema.php:140
+msgid "Price"
+msgstr ""
+
+#: includes/blocks/pricing-table/schema.php:147
+msgid "Billing labels"
+msgstr ""
+
+#: includes/blocks/pricing-table/schema.php:152
+msgid "Monthly label"
+msgstr ""
+
+#: includes/blocks/pricing-table/schema.php:157
+msgid "Yearly label"
+msgstr ""
+
+#: includes/blocks/progress-bar/schema.php:23
+#: includes/blocks/social-share/schema.php:42
+msgid "Rounded"
+msgstr ""
+
+#: includes/blocks/progress-bar/schema.php:24
+msgid "Striped"
+msgstr ""
+
+#: includes/blocks/progress-bar/schema.php:31
+msgid "Bar height"
+msgstr ""
+
+#: includes/blocks/progress-bar/schema.php:64
+msgid "Bar colour"
+msgstr ""
+
+#: includes/blocks/progress-bar/schema.php:70
+msgid "Track colour"
+msgstr ""
+
+#: includes/blocks/progress-bar/schema.php:95
+msgid "Value"
+msgstr ""
+
+#: includes/blocks/progress-bar/schema.php:100
+msgid "Value (%)"
+msgstr ""
+
+#: includes/blocks/progress-bar/schema.php:107
+#: includes/blocks/star-rating/schema.php:103
+msgid "Show value"
+msgstr ""
+
+#: includes/blocks/slides/schema.php:41
+msgid "Navigation"
+msgstr ""
+
+#: includes/blocks/slides/schema.php:46
+msgid "Arrows"
+msgstr ""
+
+#: includes/blocks/slides/schema.php:51
+msgid "Arrow position"
+msgstr ""
+
+#: includes/blocks/slides/schema.php:52
+msgid "Over edges suits full-width heroes; Outside needs room beside the carousel; Bottom never covers content."
+msgstr ""
+
+#: includes/blocks/slides/schema.php:54
+msgid "Over edges"
+msgstr ""
+
+#: includes/blocks/slides/schema.php:55
+msgid "Outside"
+msgstr ""
+
+#: includes/blocks/slides/schema.php:62
+msgid "Dots"
+msgstr ""
+
+#: includes/blocks/slides/schema.php:68
+#: includes/blocks/slides/schema.php:73
+msgid "Autoplay"
+msgstr ""
+
+#: includes/blocks/slides/schema.php:74
+msgid "Never runs when the visitor prefers reduced motion."
+msgstr ""
+
+#: includes/blocks/slides/schema.php:79
+msgid "Autoplay delay (seconds)"
+msgstr ""
+
+#: includes/blocks/slides/schema.php:87
+msgid "Pause on hover / focus"
+msgstr ""
+
+#: includes/blocks/slides/schema.php:121
+msgid "Controls colour"
+msgstr ""
+
+#: includes/blocks/slides/schema.php:122
+msgid "Arrows and the active dot."
+msgstr ""
+
+#: includes/blocks/slides/schema.php:134
+msgid "Carousel label"
+msgstr ""
+
+#: includes/blocks/slides/schema.php:135
+msgid "Describes the carousel for screen readers, e.g. \"Customer stories\"."
+msgstr ""
+
+#: includes/blocks/social-share/networks.php:26
+#: src/blocks/social-share/networks.js:8
+msgid "Facebook"
+msgstr ""
+
+#: includes/blocks/social-share/networks.php:33
+#: src/blocks/social-share/networks.js:9
+msgid "X"
+msgstr ""
+
+#: includes/blocks/social-share/networks.php:40
+#: src/blocks/team-member/render.php:47
+#: src/blocks/social-share/networks.js:10
+msgid "LinkedIn"
+msgstr ""
+
+#: includes/blocks/social-share/networks.php:47
+#: src/blocks/social-share/networks.js:11
+msgid "Pinterest"
+msgstr ""
+
+#: includes/blocks/social-share/networks.php:54
+#: src/blocks/social-share/networks.js:12
+msgid "Reddit"
+msgstr ""
+
+#: includes/blocks/social-share/networks.php:61
+#: src/blocks/social-share/networks.js:13
+msgid "WhatsApp"
+msgstr ""
+
+#: includes/blocks/social-share/networks.php:68
+#: src/blocks/social-share/networks.js:14
+msgid "Telegram"
+msgstr ""
+
+#: includes/blocks/social-share/networks.php:75
+#: src/blocks/team-member/render.php:50
+#: src/blocks/social-share/networks.js:15
+msgid "Email"
+msgstr ""
+
+#: includes/blocks/social-share/networks.php:82
+#: src/blocks/social-share/render.php:130
+#: src/blocks/social-share/networks.js:16
+msgid "Copy link"
+msgstr ""
+
+#: includes/blocks/social-share/networks.php:89
+#: src/blocks/social-share/networks.js:17
+msgid "Share"
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:32
+msgid "Solid"
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:40
+msgid "Shape"
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:43
+#: includes/blocks/tabs/schema.php:30
+msgid "Pill"
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:44
+#: includes/blocks/star-rating/schema.php:25
+msgid "Circle"
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:57
+msgid "Circle shape always hides labels."
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:63
+msgid "Networks"
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:68
+msgid "Networks to show"
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:75
+msgid "Spacing & size"
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:80
+#: includes/blocks/star-rating/schema.php:31
+msgid "Icon size"
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:116
+msgid "Use brand colours"
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:117
+msgid "Off uses your accent colour for every button."
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:141
+msgid "Share target"
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:146
+msgid "Custom URL"
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:147
+msgid "Leave empty to share the current page."
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:152
+msgid "Custom text"
+msgstr ""
+
+#: includes/blocks/social-share/schema.php:157
+msgid "Open links in a new tab"
+msgstr ""
+
+#: includes/blocks/star-rating/schema.php:21
+msgid "Icon"
+msgstr ""
+
+#: includes/blocks/star-rating/schema.php:23
+msgid "Star"
+msgstr ""
+
+#: includes/blocks/star-rating/schema.php:24
+msgid "Heart"
+msgstr ""
+
+#: includes/blocks/star-rating/schema.php:70
+msgid "Filled colour"
+msgstr ""
+
+#: includes/blocks/star-rating/schema.php:76
+msgid "Empty colour"
+msgstr ""
+
+#: includes/blocks/star-rating/schema.php:83
+#: includes/blocks/star-rating/schema.php:88
+#: includes/blocks/testimonial/schema.php:92
+msgid "Rating"
+msgstr ""
+
+#: includes/blocks/star-rating/schema.php:96
+msgid "Out of"
+msgstr ""
+
+#: includes/blocks/steps/schema.php:23
+msgid "Connected"
+msgstr ""
+
+#: includes/blocks/steps/schema.php:24
+#: includes/blocks/toc/schema.php:43
+msgid "Numbered"
+msgstr ""
+
+#: includes/blocks/tabs/schema.php:47
+msgid "Gap between tabs"
+msgstr ""
+
+#: includes/blocks/tabs/schema.php:102
+msgid "Text colour (hover)"
+msgstr ""
+
+#: includes/blocks/tabs/schema.php:111
+msgid "Active tab colour"
+msgstr ""
+
+#: includes/blocks/tabs/schema.php:126
+msgid "Tab label"
+msgstr ""
+
+#: includes/blocks/tabs/schema.php:134
+msgid "Tab padding"
+msgstr ""
+
+#: includes/blocks/tabs/schema.php:149
+msgid "Accessible label (aria-label)"
+msgstr ""
+
+#: includes/blocks/taxonomy/schema.php:38
+msgid "Taxonomy"
+msgstr ""
+
+#: includes/blocks/taxonomy/schema.php:47
+msgid "List"
+msgstr ""
+
+#: includes/blocks/taxonomy/schema.php:48
+msgid "Pills"
+msgstr ""
+
+#: includes/blocks/taxonomy/schema.php:66
+msgid "Card image"
+msgstr ""
+
+#: includes/blocks/taxonomy/schema.php:68
+msgid "Uses the term image, or the latest post’s featured image."
+msgstr ""
+
+#: includes/blocks/taxonomy/schema.php:89
+#: includes/blocks/taxonomy/schema.php:104
+msgid "Post count"
+msgstr ""
+
+#: includes/blocks/taxonomy/schema.php:90
+msgid "Description"
+msgstr ""
+
+#: includes/blocks/taxonomy/schema.php:97
+msgid "Hide empty terms"
+msgstr ""
+
+#: includes/blocks/taxonomy/schema.php:103
+#: includes/blocks/team-member/schema.php:128
+#: src/blocks/team-member/edit.js:122
+#: src/blocks/testimonial/edit.js:124
+msgid "Name"
+msgstr ""
+
+#: includes/blocks/taxonomy/schema.php:119
+msgid "Show"
+msgstr ""
+
+#: includes/blocks/taxonomy/schema.php:122
+msgid "Top level"
+msgstr ""
+
+#: includes/blocks/taxonomy/schema.php:128
+msgid "Limit (0 = all)"
+msgstr ""
+
+#: includes/blocks/taxonomy/schema.php:142
+msgid "Count colour"
+msgstr ""
+
+#: includes/blocks/team-member/schema.php:38
+msgid "Photo corner radius"
+msgstr ""
+
+#: includes/blocks/team-member/schema.php:77
+msgid "Name colour"
+msgstr ""
+
+#: includes/blocks/team-member/schema.php:83
+msgid "Role colour"
+msgstr ""
+
+#: includes/blocks/team-member/schema.php:89
+msgid "Bio colour"
+msgstr ""
+
+#: includes/blocks/team-member/schema.php:95
+msgid "Social icon colour"
+msgstr ""
+
+#: includes/blocks/team-member/schema.php:102
+msgid "Overlay (Overlay preset)"
+msgstr ""
+
+#: includes/blocks/team-member/schema.php:134
+#: src/blocks/team-member/edit.js:130
+#: src/blocks/testimonial/edit.js:134
+msgid "Role"
+msgstr ""
+
+#: includes/blocks/team-member/schema.php:141
+msgid "Social links"
+msgstr ""
+
+#: includes/blocks/team-member/schema.php:143
+msgid "X / Twitter URL"
+msgstr ""
+
+#: includes/blocks/team-member/schema.php:144
+msgid "LinkedIn URL"
+msgstr ""
+
+#: includes/blocks/team-member/schema.php:145
+msgid "GitHub URL"
+msgstr ""
+
+#: includes/blocks/team-member/schema.php:146
+msgid "Website URL"
+msgstr ""
+
+#: includes/blocks/team-member/schema.php:147
+msgid "Email address"
+msgstr ""
+
+#: includes/blocks/testimonial/schema.php:24
+#: includes/blocks/testimonial/schema.php:85
+msgid "Quote"
+msgstr ""
+
+#: includes/blocks/testimonial/schema.php:67
+msgid "Quote colour"
+msgstr ""
+
+#: includes/blocks/testimonial/schema.php:73
+msgid "Author colour"
+msgstr ""
+
+#: includes/blocks/testimonial/schema.php:97
+msgid "Show star rating"
+msgstr ""
+
+#: includes/blocks/testimonial/schema.php:102
+msgid "Rating (0–5)"
+msgstr ""
+
+#: includes/blocks/timeline/schema.php:61
+msgid "Date colour"
+msgstr ""
+
+#: includes/blocks/toc/schema.php:41
+msgid "Markers"
+msgstr ""
+
+#: includes/blocks/toc/schema.php:44
+msgid "Bulleted"
+msgstr ""
+
+#: includes/blocks/toc/schema.php:51
+msgid "Show title"
+msgstr ""
+
+#: includes/blocks/toc/schema.php:61
+msgid "Collapsible"
+msgstr ""
+
+#: includes/blocks/toc/schema.php:72
+msgid "From"
+msgstr ""
+
+#: includes/blocks/toc/schema.php:78
+msgid "To"
+msgstr ""
+
+#: includes/blocks/toc/schema.php:108
+msgid "Accent (links & active)"
+msgstr ""
+
+#: includes/blocks/toc/schema.php:132
+msgid "Sticky on scroll"
+msgstr ""
+
+#: includes/blocks/toc/schema.php:137
+msgid "Smooth scroll"
+msgstr ""
+
+#: includes/blocks/toc/schema.php:142
+msgid "Highlight active section"
+msgstr ""
+
+#: includes/blocks/toc/schema.php:147
+msgid "Start collapsed"
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:20
+#: src/blocks/video-popup/render.php:108
+msgid "Video"
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:25
+#: src/blocks/lottie/edit.js:147
+#: src/blocks/lottie/edit.js:153
+msgid "Source"
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:27
+msgid "YouTube"
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:28
+msgid "Vimeo"
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:29
+msgid "Self-hosted"
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:35
+msgid "Video URL"
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:41
+msgid "Video file (MP4)"
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:47
+msgid "Play automatically on open"
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:53
+msgid "Poster"
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:58
+msgid "Poster image"
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:59
+msgid "Optional. YouTube videos fall back to their thumbnail."
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:65
+msgid "Used as the play button and dialog label."
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:70
+msgid "Show title on the poster"
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:113
+msgid "Play button colour"
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:119
+msgid "Poster overlay colour"
+msgstr ""
+
+#: includes/blocks/video-popup/schema.php:125
+msgid "Poster overlay opacity"
+msgstr ""
+
+#: includes/class-lottie-uploads.php:97
+msgid "This file is not valid JSON."
+msgstr ""
+
+#: includes/class-post-filter.php:141
+#: src/blocks/post-grid/render.php:105
+msgid "Read more"
+msgstr ""
+
+#: includes/class-post-filter.php:209
+msgid "No posts match your filters."
+msgstr ""
+
+#. translators: 1: read-more label, 2: post title.
+#: includes/class-post-filter.php:249
+#: src/blocks/post-grid/render.php:211
+#, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: includes/class-upsell.php:81
+msgid "Etu Blocks Pro"
+msgstr ""
+
+#: includes/class-upsell.php:83
+msgid "Get more blocks and premium features"
+msgstr ""
+
+#: includes/class-upsell.php:86
+msgid "Extend Etu Blocks with premium blocks, template kits and priority support — built on the same accessible foundation."
+msgstr ""
+
+#: includes/class-upsell.php:91
+msgid "Learn more"
+msgstr ""
+
+#. translators: 1: before label, 2: after label.
+#: src/blocks/before-after/render.php:94
+#, php-format
+msgid "%1$s / %2$s comparison — drag to reveal"
+msgstr ""
+
+#: src/blocks/before-after/render.php:96
+msgid "Before / after comparison — drag to reveal"
+msgstr ""
+
+#: src/blocks/comparison-table/render.php:77
+msgid "Included"
+msgstr ""
+
+#: src/blocks/comparison-table/render.php:81
+#: src/blocks/comparison-table/render.php:85
+msgid "Not included"
+msgstr ""
+
+#. translators: %s: the target date/time.
+#: src/blocks/countdown/render.php:75
+#, php-format
+msgid "Time remaining until %s"
+msgstr ""
+
+#: src/blocks/countdown/render.php:86
+msgid "Limited-time countdown"
+msgstr ""
+
+#: src/blocks/countdown/render.php:99
+#: src/blocks/countdown/edit.js:41
+#: src/blocks/countdown/edit.js:147
+msgid "Days"
+msgstr ""
+
+#: src/blocks/countdown/render.php:100
+#: src/blocks/countdown/edit.js:42
+#: src/blocks/countdown/edit.js:159
+msgid "Hours"
+msgstr ""
+
+#: src/blocks/countdown/render.php:101
+#: src/blocks/countdown/edit.js:43
+#: src/blocks/countdown/edit.js:171
+msgid "Minutes"
+msgstr ""
+
+#: src/blocks/countdown/render.php:102
+#: src/blocks/countdown/edit.js:44
+msgid "Seconds"
+msgstr ""
+
+#: src/blocks/countdown/render.php:107
+#: src/blocks/countdown/edit.js:209
+msgid "The countdown has ended."
+msgstr ""
+
+#: src/blocks/cta/render.php:50
+#: src/blocks/info-box/render.php:72
+#: src/blocks/social-share/render.php:152
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: src/blocks/data-table/render.php:85
+msgid "Data table"
+msgstr ""
+
+#: src/blocks/data-table/render.php:96
+#: src/blocks/post-filter/render.php:137
+msgid "Search…"
+msgstr ""
+
+#: src/blocks/data-table/render.php:96
+msgid "Search table"
+msgstr ""
+
+#. translators: 1: number of matching rows, 2: total number of rows.
+#: src/blocks/data-table/render.php:98
+#, php-format
+msgid "%1$s of %2$s rows"
+msgstr ""
+
+#: src/blocks/lottie/render.php:85
+msgid "Play animation"
+msgstr ""
+
+#. translators: %s: the location.
+#: src/blocks/map/render.php:93
+#, php-format
+msgid "Map of %s"
+msgstr ""
+
+#: src/blocks/map/render.php:126
+#: src/blocks/map/edit.js:127
+msgid "Get directions"
+msgstr ""
+
+#. translators: %s: the location.
+#: src/blocks/map/render.php:153
+#, php-format
+msgid "Load the map of %s"
+msgstr ""
+
+#. translators: %s: the location.
+#: src/blocks/map/render.php:153
+#: src/blocks/map/edit.js:96
+msgid "Load map"
+msgstr ""
+
+#: src/blocks/map/render.php:154
+#: src/blocks/map/edit.js:99
+msgid "Loads Google Maps"
+msgstr ""
+
+#: src/blocks/modal/render.php:47
+#: src/blocks/modal/edit.js:85
+msgid "Open"
+msgstr ""
+
+#: src/blocks/modal/render.php:116
+msgid "Close dialog"
+msgstr ""
+
+#: src/blocks/notice/render.php:116
+msgid "Dismiss"
+msgstr ""
+
+#. translators: %s: number of matching posts.
+#: src/blocks/post-filter/render.php:99
+#, php-format
+msgid "%s results"
+msgstr ""
+
+#: src/blocks/post-filter/render.php:137
+msgid "Search posts"
+msgstr ""
+
+#. translators: %s: taxonomy name (e.g. Categories).
+#: src/blocks/post-filter/render.php:154
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: src/blocks/post-filter/render.php:162
+msgid "Filter"
+msgstr ""
+
+#: src/blocks/post-filter/render.php:165
+#: src/shared/inspector/controls.js:167
+msgid "Reset"
+msgstr ""
+
+#: src/blocks/post-filter/render.php:182
+msgid "Load more"
+msgstr ""
+
+#. translators: %s: category name.
+#: src/blocks/post-grid/render.php:232
+#, php-format
+msgid "Showing: %s"
+msgstr ""
+
+#: src/blocks/post-grid/render.php:243
+msgid "Filter posts by category"
+msgstr ""
+
+#: src/blocks/post-grid/render.php:272
+msgid "Previous"
+msgstr ""
+
+#: src/blocks/post-grid/render.php:273
+msgid "Next"
+msgstr ""
+
+#: src/blocks/post-grid/render.php:278
+msgid "Choose page"
+msgstr ""
+
+#: src/blocks/post-grid/render.php:278
+msgid "Go to page"
+msgstr ""
+
+#: src/blocks/pricing-table/render.php:57
+#: src/blocks/pricing-table/edit.js:122
+msgid "Monthly"
+msgstr ""
+
+#: src/blocks/pricing-table/render.php:60
+#: src/blocks/pricing-table/edit.js:125
+msgid "Yearly"
+msgstr ""
+
+#: src/blocks/pricing-table/render.php:93
+msgid "Billing period"
+msgstr ""
+
+#: src/blocks/pricing-table/render.php:160
+msgid "Included:"
+msgstr ""
+
+#: src/blocks/pricing-table/render.php:160
+msgid "Not included:"
+msgstr ""
+
+#. translators: 1: button text, 2: plan name.
+#: src/blocks/pricing-table/render.php:169
+#, php-format
+msgid "%1$s — %2$s plan"
+msgstr ""
+
+#: src/blocks/progress-bar/render.php:61
+msgid "Progress"
+msgstr ""
+
+#. translators: 1: current slide number, 2: total slides.
+#: src/blocks/slides/render.php:86
+#, php-format
+msgid "Slide %1$d of %2$d"
+msgstr ""
+
+#: src/blocks/slides/render.php:88
+msgid "Pause"
+msgstr ""
+
+#: src/blocks/slides/render.php:97
+msgid "Previous slide"
+msgstr ""
+
+#: src/blocks/slides/render.php:98
+msgid "Next slide"
+msgstr ""
+
+#: src/blocks/slides/render.php:108
+msgid "carousel"
+msgstr ""
+
+#: src/blocks/slides/render.php:117
+msgid "Slides"
+msgstr ""
+
+#. translators: 1: current slide number, 2: total slides.
+#: src/blocks/slides/render.php:123
+#, php-format
+msgid "%1$d of %2$d"
+msgstr ""
+
+#: src/blocks/slides/render.php:124
+msgid "slide"
+msgstr ""
+
+#: src/blocks/slides/render.php:156
+msgid "Choose slide to display"
+msgstr ""
+
+#. translators: %d: slide number.
+#: src/blocks/slides/render.php:159
+#, php-format
+msgid "Go to slide %d"
+msgstr ""
+
+#: src/blocks/social-share/render.php:106
+msgid "Link copied to clipboard"
+msgstr ""
+
+#: src/blocks/social-share/render.php:132
+msgid "Copied!"
+msgstr ""
+
+#: src/blocks/social-share/render.php:137
+msgid "Share…"
+msgstr ""
+
+#: src/blocks/social-share/render.php:143
+msgid "Share by email"
+msgstr ""
+
+#. translators: %s: social network name.
+#: src/blocks/social-share/render.php:146
+#, php-format
+msgid "Share on %s"
+msgstr ""
+
+#. translators: 1: rating value, 2: maximum.
+#: src/blocks/star-rating/render.php:59
+#, php-format
+msgid "Rated %1$s out of %2$d"
+msgstr ""
+
+#: src/blocks/tabs/render.php:50
+msgid "Tabs"
+msgstr ""
+
+#. translators: %s: number of posts (already shown).
+#: src/blocks/taxonomy/render.php:184
+msgid "post"
+msgid_plural "posts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/blocks/team-member/render.php:46
+msgid "X (Twitter)"
+msgstr ""
+
+#: src/blocks/team-member/render.php:48
+msgid "GitHub"
+msgstr ""
+
+#: src/blocks/team-member/render.php:49
+msgid "Website"
+msgstr ""
+
+#. translators: %d: star rating out of five.
+#: src/blocks/testimonial/render.php:70
+#, php-format
+msgid "Rated %d out of 5"
+msgstr ""
+
+#: src/blocks/toc/render.php:66
+#: src/blocks/toc/render.php:170
+#: src/blocks/toc/edit.js:80
+msgid "Table of contents"
+msgstr ""
+
+#. translators: %s: video title.
+#: src/blocks/video-popup/render.php:110
+#, php-format
+msgid "Play video: %s"
+msgstr ""
+
+#. translators: %s: video title.
+#: src/blocks/video-popup/render.php:110
+msgid "Play video"
+msgstr ""
+
+#: src/blocks/video-popup/render.php:162
+msgid "Close video"
+msgstr ""
+
+#: src/blocks/banner/edit.js:51
+msgid "Set link"
+msgstr ""
+
+#: src/blocks/banner/edit.js:92
+msgid "Eyebrow (optional)"
+msgstr ""
+
+#: src/blocks/banner/edit.js:100
+msgid "Headline…"
+msgstr ""
+
+#: src/blocks/banner/edit.js:108
+msgid "Supporting text…"
+msgstr ""
+
+#: src/blocks/banner/edit.js:119
+#: src/blocks/cta/edit.js:68
+msgid "Primary"
+msgstr ""
+
+#: src/blocks/banner/edit.js:131
+msgid "Secondary (optional)"
+msgstr ""
+
+#. translators: %s: slot name (Before/After).
+#: src/blocks/before-after/edit.js:79
+#: src/shared/inspector/controls.js:359
+msgid "Replace"
+msgstr ""
+
+#: src/blocks/before-after/edit.js:116
+msgid "Reveal amount"
+msgstr ""
+
+#: src/blocks/before-after/edit.js:157
+msgid "Before / After comparison"
+msgstr ""
+
+#: src/blocks/before-after/edit.js:160
+msgid "Choose the two images to compare."
+msgstr ""
+
+#: src/blocks/before-after/edit.js:169
+msgid "Select before image"
+msgstr ""
+
+#: src/blocks/before-after/edit.js:174
+msgid "Select after image"
+msgstr ""
+
+#: src/blocks/comparison-table/edit.js:188
+msgid "Feature this column"
+msgstr ""
+
+#: src/blocks/comparison-table/edit.js:203
+msgid "Button & link"
+msgstr ""
+
+#: src/blocks/comparison-table/edit.js:220
+#: src/blocks/data-table/edit.js:206
+msgid "Remove column"
+msgstr ""
+
+#: src/blocks/comparison-table/edit.js:238
+msgid "Button label"
+msgstr ""
+
+#: src/blocks/comparison-table/edit.js:252
+msgid "e.g. Get started"
+msgstr ""
+
+#: src/blocks/comparison-table/edit.js:287
+#: src/blocks/pricing-table/edit.js:163
+msgid "Badge"
+msgstr ""
+
+#: src/blocks/comparison-table/edit.js:300
+msgid "Plan"
+msgstr ""
+
+#: src/blocks/comparison-table/edit.js:316
+#: src/blocks/data-table/edit.js:225
+msgid "Add column"
+msgstr ""
+
+#: src/blocks/comparison-table/edit.js:335
+#: src/blocks/pricing-table/edit.js:266
+msgid "Feature"
+msgstr ""
+
+#: src/blocks/comparison-table/edit.js:349
+#: src/blocks/data-table/edit.js:265
+msgid "Remove row"
+msgstr ""
+
+#: src/blocks/comparison-table/edit.js:403
+msgid "Change cell: yes / no / text"
+msgstr ""
+
+#: src/blocks/comparison-table/edit.js:427
+#: src/blocks/data-table/edit.js:285
+msgid "Add row"
+msgstr ""
+
+#: src/blocks/countdown/edit.js:109
+msgid "Countdown"
+msgstr ""
+
+#: src/blocks/countdown/edit.js:117
+msgid "To a fixed date"
+msgstr ""
+
+#: src/blocks/countdown/edit.js:121
+msgid "Evergreen (per visitor)"
+msgstr ""
+
+#: src/blocks/countdown/edit.js:133
+msgid "Target date & time"
+msgstr ""
+
+#: src/blocks/countdown/edit.js:186
+msgid "When it ends"
+msgstr ""
+
+#: src/blocks/countdown/edit.js:191
+msgid "Show a message"
+msgstr ""
+
+#: src/blocks/countdown/edit.js:195
+msgid "Hide the block"
+msgstr ""
+
+#: src/blocks/countdown/edit.js:204
+msgid "Completed message"
+msgstr ""
+
+#: src/blocks/countdown/edit.js:221
+msgid "Set a target date in the Countdown settings."
+msgstr ""
+
+#: src/blocks/counter/edit.js:63
+#: src/blocks/progress-bar/edit.js:46
+msgid "Label…"
+msgstr ""
+
+#: src/blocks/cta/edit.js:46
+msgid "Heading…"
+msgstr ""
+
+#: src/blocks/cta/edit.js:56
+#: src/blocks/info-box/edit.js:72
+#: src/blocks/steps/edit.js:80
+#: src/blocks/timeline/edit.js:90
+msgid "Description…"
+msgstr ""
+
+#: src/blocks/cta/edit.js:78
+msgid "Secondary"
+msgstr ""
+
+#: src/blocks/data-table/edit.js:28
+#: src/shared/inspector/controls.js:49
+msgid "Right"
+msgstr ""
+
+#: src/blocks/data-table/edit.js:131
+msgid "Table caption (optional)…"
+msgstr ""
+
+#: src/blocks/data-table/edit.js:153
+msgid "Column"
+msgstr ""
+
+#: src/blocks/data-table/edit.js:157
+msgid "Column heading"
+msgstr ""
+
+#: src/blocks/data-table/edit.js:187
+msgid "Sort type"
+msgstr ""
+
+#: src/blocks/data-table/edit.js:253
+msgid "Cell value"
+msgstr ""
+
+#: src/blocks/faq/edit.js:68
+msgid "Question…"
+msgstr ""
+
+#: src/blocks/faq/edit.js:78
+msgid "Answer…"
+msgstr ""
+
+#: src/blocks/faq/edit.js:84
+msgid "Remove question"
+msgstr ""
+
+#: src/blocks/faq/edit.js:92
+msgid "Add question"
+msgstr ""
+
+#: src/blocks/icon-list/edit.js:72
+msgid "List item…"
+msgstr ""
+
+#: src/blocks/icon-list/edit.js:79
+msgid "Remove item"
+msgstr ""
+
+#: src/blocks/icon-list/edit.js:91
+msgid "Add item"
+msgstr ""
+
+#: src/blocks/info-box/edit.js:62
+msgid "Info box title…"
+msgstr ""
+
+#: src/blocks/info-box/edit.js:81
+msgid "Button label…"
+msgstr ""
+
+#: src/blocks/lottie/edit.js:39
+msgid "That is the LottieFiles page URL. Open the animation on LottieFiles, click “</> Get URL” and copy the Lottie JSON URL (usually https://lottie.host/…)."
+msgstr ""
+
+#: src/blocks/lottie/edit.js:45
+msgid "A Lottie source should be a direct .json or .lottie URL. If nothing shows up, this is likely the wrong link."
+msgstr ""
+
+#: src/blocks/lottie/edit.js:159
+msgid "File"
+msgstr ""
+
+#: src/blocks/lottie/edit.js:163
+msgid "URL"
+msgstr ""
+
+#: src/blocks/lottie/edit.js:188
+msgid "Replace file"
+msgstr ""
+
+#: src/blocks/lottie/edit.js:189
+msgid "Upload file"
+msgstr ""
+
+#: src/blocks/lottie/edit.js:201
+#: src/shared/inspector/controls.js:369
+msgid "Remove"
+msgstr ""
+
+#: src/blocks/lottie/edit.js:207
+msgid "Upload a Lottie JSON or .lottie file."
+msgstr ""
+
+#: src/blocks/lottie/edit.js:220
+msgid "Lottie URL"
+msgstr ""
+
+#: src/blocks/lottie/edit.js:225
+msgid "Direct .json or .lottie URL. On LottieFiles use “</> Get URL” → Lottie JSON."
+msgstr ""
+
+#: src/blocks/lottie/edit.js:249
+msgid "Lottie animation"
+msgstr ""
+
+#: src/blocks/lottie/edit.js:253
+msgid "Upload a Lottie JSON or .lottie file in the Source panel."
+msgstr ""
+
+#: src/blocks/lottie/edit.js:257
+msgid "Paste a Lottie URL in the Source panel."
+msgstr ""
+
+#: src/blocks/map/edit.js:144
+msgid "Enter an address or place in the block settings."
+msgstr ""
+
+#: src/blocks/modal/edit.js:20
+msgid "Popup title"
+msgstr ""
+
+#: src/blocks/modal/edit.js:21
+msgid "Popup content…"
+msgstr ""
+
+#: src/blocks/modal/edit.js:55
+msgid "Opens automatically on page load"
+msgstr ""
+
+#. translators: %d: number of seconds.
+#: src/blocks/modal/edit.js:58
+#, js-format
+msgid "Opens automatically after %d seconds"
+msgstr ""
+
+#: src/blocks/modal/edit.js:95
+msgid "Popup content"
+msgstr ""
+
+#: src/blocks/notice/edit.js:61
+msgid "Notice title…"
+msgstr ""
+
+#: src/blocks/notice/edit.js:69
+msgid "Message…"
+msgstr ""
+
+#: src/blocks/post-filter/edit.js:41
+msgid "No posts found for this query yet."
+msgstr ""
+
+#: src/blocks/post-grid/edit.js:40
+msgid "No posts match this query yet."
+msgstr ""
+
+#: src/blocks/pricing-table/edit.js:47
+msgid "Choose plan"
+msgstr ""
+
+#: src/blocks/pricing-table/edit.js:145
+msgid "Feature this plan"
+msgstr ""
+
+#: src/blocks/pricing-table/edit.js:153
+msgid "Remove plan"
+msgstr ""
+
+#: src/blocks/pricing-table/edit.js:204
+msgid "Yearly:"
+msgstr ""
+
+#: src/blocks/pricing-table/edit.js:227
+msgid "Short description"
+msgstr ""
+
+#: src/blocks/pricing-table/edit.js:243
+msgid "Included / not included"
+msgstr ""
+
+#: src/blocks/pricing-table/edit.js:277
+msgid "Remove feature"
+msgstr ""
+
+#: src/blocks/pricing-table/edit.js:292
+msgid "Add feature"
+msgstr ""
+
+#: src/blocks/pricing-table/edit.js:301
+msgid "Button…"
+msgstr ""
+
+#: src/blocks/pricing-table/edit.js:308
+msgid "Set button link"
+msgstr ""
+
+#: src/blocks/pricing-table/edit.js:343
+msgid "Add plan"
+msgstr ""
+
+#: src/blocks/slide/index.js:23
+msgid "Slide content…"
+msgstr ""
+
+#: src/blocks/slides/edit.js:74
+msgid "Carousel — each slide can hold any blocks. Preview the carousel on the front end."
+msgstr ""
+
+#: src/blocks/slides/edit.js:86
+msgid "Add slide"
+msgstr ""
+
+#: src/blocks/social-share/edit.js:63
+msgid "Choose at least one network in the Layout tab."
+msgstr ""
+
+#: src/blocks/steps/edit.js:70
+msgid "Step title…"
+msgstr ""
+
+#: src/blocks/steps/edit.js:88
+msgid "Remove step"
+msgstr ""
+
+#: src/blocks/steps/edit.js:100
+msgid "Add step"
+msgstr ""
+
+#: src/blocks/tabs/edit.js:81
+msgid "Tab label…"
+msgstr ""
+
+#: src/blocks/tabs/edit.js:87
+msgid "Remove tab"
+msgstr ""
+
+#: src/blocks/tabs/edit.js:95
+msgid "Add tab"
+msgstr ""
+
+#: src/blocks/tabs/edit.js:108
+msgid "Tab content…"
+msgstr ""
+
+#: src/blocks/taxonomy/edit.js:41
+msgid "No terms found for this taxonomy yet."
+msgstr ""
+
+#: src/blocks/team-member/edit.js:109
+msgid "Add photo"
+msgstr ""
+
+#: src/blocks/team-member/edit.js:138
+msgid "Short bio…"
+msgstr ""
+
+#: src/blocks/testimonial/edit.js:82
+msgid "Testimonial quote…"
+msgstr ""
+
+#: src/blocks/testimonial/edit.js:110
+msgid "Add avatar"
+msgstr ""
+
+#: src/blocks/timeline/edit.js:80
+msgid "Title…"
+msgstr ""
+
+#: src/blocks/timeline/edit.js:98
+msgid "Remove event"
+msgstr ""
+
+#: src/blocks/timeline/edit.js:110
+msgid "Add event"
+msgstr ""
+
+#: src/blocks/toc/edit.js:85
+msgid "Add headings to this page and they will appear here."
+msgstr ""
+
+#: src/blocks/video-popup/edit.js:119
+msgid "Video Popup"
+msgstr ""
+
+#: src/blocks/video-popup/edit.js:123
+msgid "Choose a video file, or set a poster image."
+msgstr ""
+
+#: src/blocks/video-popup/edit.js:127
+msgid "Paste a YouTube or Vimeo URL in the block settings."
+msgstr ""
+
+#: src/blocks/video-popup/edit.js:151
+msgid "Select video"
+msgstr ""
+
+#: src/shared/inspector/controls.js:41
+msgid "Desktop"
+msgstr ""
+
+#: src/shared/inspector/controls.js:42
+msgid "Tablet"
+msgstr ""
+
+#: src/shared/inspector/controls.js:43
+msgid "Mobile"
+msgstr ""
+
+#: src/shared/inspector/controls.js:50
+msgid "Justify"
+msgstr ""
+
+#: src/shared/inspector/controls.js:191
+msgid "Unit"
+msgstr ""
+
+#: src/shared/inspector/controls.js:204
+#: src/shared/inspector/controls.js:214
+msgid "Default"
+msgstr ""
+
+#: src/shared/inspector/controls.js:205
+msgid "Light (300)"
+msgstr ""
+
+#: src/shared/inspector/controls.js:206
+msgid "Normal (400)"
+msgstr ""
+
+#: src/shared/inspector/controls.js:207
+msgid "Medium (500)"
+msgstr ""
+
+#: src/shared/inspector/controls.js:208
+msgid "Semi-bold (600)"
+msgstr ""
+
+#: src/shared/inspector/controls.js:209
+msgid "Bold (700)"
+msgstr ""
+
+#: src/shared/inspector/controls.js:210
+msgid "Extra-bold (800)"
+msgstr ""
+
+#: src/shared/inspector/controls.js:216
+msgid "Uppercase"
+msgstr ""
+
+#: src/shared/inspector/controls.js:217
+msgid "Lowercase"
+msgstr ""
+
+#: src/shared/inspector/controls.js:218
+msgid "Capitalize"
+msgstr ""
+
+#: src/shared/inspector/controls.js:243
+msgid "Font size (px)"
+msgstr ""
+
+#: src/shared/inspector/controls.js:251
+msgid "Font weight"
+msgstr ""
+
+#: src/shared/inspector/controls.js:258
+msgid "Letter spacing (px)"
+msgstr ""
+
+#: src/shared/inspector/controls.js:269
+msgid "Text transform"
+msgstr ""
+
+#: src/shared/inspector/controls.js:276
+msgid "Line height"
+msgstr ""
+
+#: src/shared/inspector/controls.js:360
+msgid "Select image"
+msgstr ""
+
+#: src/shared/inspector/EtuInspector.js:20
+msgid "Advanced"
+msgstr ""
+
+#: src/blocks/banner/block.json
+msgctxt "block title"
+msgid "Banner"
+msgstr ""
+
+#: src/blocks/banner/block.json
+msgctxt "block description"
+msgid "A premium hero banner — background image with overlay, headline, text and buttons, with height and content-position controls."
+msgstr ""
+
+#: src/blocks/banner/block.json
+#: src/blocks/cta/block.json
+msgctxt "block keyword"
+msgid "banner"
+msgstr ""
+
+#: src/blocks/banner/block.json
+msgctxt "block keyword"
+msgid "hero"
+msgstr ""
+
+#: src/blocks/banner/block.json
+msgctxt "block keyword"
+msgid "cover"
+msgstr ""
+
+#: src/blocks/banner/block.json
+msgctxt "block keyword"
+msgid "header"
+msgstr ""
+
+#: src/blocks/banner/block.json
+#: src/blocks/cta/block.json
+msgctxt "block keyword"
+msgid "call to action"
+msgstr ""
+
+#: src/blocks/before-after/block.json
+msgctxt "block title"
+msgid "Before / After"
+msgstr ""
+
+#: src/blocks/before-after/block.json
+msgctxt "block description"
+msgid "An accessible before/after image comparison slider — drag or use the keyboard to reveal, built on the Interactivity API."
+msgstr ""
+
+#: src/blocks/before-after/block.json
+msgctxt "block keyword"
+msgid "before after"
+msgstr ""
+
+#: src/blocks/before-after/block.json
+#: src/blocks/comparison-table/block.json
+msgctxt "block keyword"
+msgid "comparison"
+msgstr ""
+
+#: src/blocks/before-after/block.json
+msgctxt "block keyword"
+msgid "image slider"
+msgstr ""
+
+#: src/blocks/before-after/block.json
+msgctxt "block keyword"
+msgid "reveal"
+msgstr ""
+
+#: src/blocks/before-after/block.json
+msgctxt "block keyword"
+msgid "juxtapose"
+msgstr ""
+
+#: src/blocks/comparison-table/block.json
+msgctxt "block title"
+msgid "Comparison Table"
+msgstr ""
+
+#: src/blocks/comparison-table/block.json
+msgctxt "block description"
+msgid "Compare plans or products across features — with a highlighted column, check / cross / text cells and a premium accessible design."
+msgstr ""
+
+#: src/blocks/comparison-table/block.json
+#: src/blocks/data-table/block.json
+#: src/blocks/pricing-table/block.json
+msgctxt "block keyword"
+msgid "table"
+msgstr ""
+
+#: src/blocks/comparison-table/block.json
+#: src/blocks/pricing-table/block.json
+msgctxt "block keyword"
+msgid "pricing"
+msgstr ""
+
+#: src/blocks/comparison-table/block.json
+#: src/blocks/icon-list/block.json
+msgctxt "block keyword"
+msgid "features"
+msgstr ""
+
+#: src/blocks/comparison-table/block.json
+msgctxt "block keyword"
+msgid "compare"
+msgstr ""
+
+#: src/blocks/countdown/block.json
+msgctxt "block title"
+msgid "Countdown"
+msgstr ""
+
+#: src/blocks/countdown/block.json
+msgctxt "block description"
+msgid "A countdown timer to a fixed date or an evergreen per-visitor duration, with an accessible text equivalent and a completion message."
+msgstr ""
+
+#: src/blocks/countdown/block.json
+msgctxt "block keyword"
+msgid "countdown"
+msgstr ""
+
+#: src/blocks/countdown/block.json
+msgctxt "block keyword"
+msgid "timer"
+msgstr ""
+
+#: src/blocks/countdown/block.json
+msgctxt "block keyword"
+msgid "clock"
+msgstr ""
+
+#: src/blocks/countdown/block.json
+msgctxt "block keyword"
+msgid "deadline"
+msgstr ""
+
+#: src/blocks/countdown/block.json
+msgctxt "block keyword"
+msgid "evergreen"
+msgstr ""
+
+#: src/blocks/counter/block.json
+msgctxt "block title"
+msgid "Counter"
+msgstr ""
+
+#: src/blocks/counter/block.json
+msgctxt "block description"
+msgid "An animated number that counts up when it scrolls into view — perfect for stats."
+msgstr ""
+
+#: src/blocks/counter/block.json
+msgctxt "block keyword"
+msgid "counter"
+msgstr ""
+
+#: src/blocks/counter/block.json
+msgctxt "block keyword"
+msgid "number"
+msgstr ""
+
+#: src/blocks/counter/block.json
+msgctxt "block keyword"
+msgid "stats"
+msgstr ""
+
+#: src/blocks/counter/block.json
+msgctxt "block keyword"
+msgid "count up"
+msgstr ""
+
+#: src/blocks/cta/block.json
+msgctxt "block title"
+msgid "Call to Action"
+msgstr ""
+
+#: src/blocks/cta/block.json
+msgctxt "block description"
+msgid "A heading, supporting text and buttons to drive the next action."
+msgstr ""
+
+#: src/blocks/cta/block.json
+msgctxt "block keyword"
+msgid "cta"
+msgstr ""
+
+#: src/blocks/cta/block.json
+msgctxt "block keyword"
+msgid "button"
+msgstr ""
+
+#: src/blocks/data-table/block.json
+msgctxt "block title"
+msgid "Data Table"
+msgstr ""
+
+#: src/blocks/data-table/block.json
+msgctxt "block description"
+msgid "A structured data table with sortable columns, live search, sticky header and responsive stacking — accessible and powered by the Interactivity API."
+msgstr ""
+
+#: src/blocks/data-table/block.json
+msgctxt "block keyword"
+msgid "data"
+msgstr ""
+
+#: src/blocks/data-table/block.json
+msgctxt "block keyword"
+msgid "sortable"
+msgstr ""
+
+#: src/blocks/data-table/block.json
+#: src/blocks/post-grid/block.json
+msgctxt "block keyword"
+msgid "grid"
+msgstr ""
+
+#: src/blocks/data-table/block.json
+msgctxt "block keyword"
+msgid "spreadsheet"
+msgstr ""
+
+#: src/blocks/faq/block.json
+msgctxt "block title"
+msgid "FAQ"
+msgstr ""
+
+#: src/blocks/faq/block.json
+msgctxt "block description"
+msgid "An accessible accordion of questions and answers, with optional FAQ schema."
+msgstr ""
+
+#: src/blocks/faq/block.json
+msgctxt "block keyword"
+msgid "faq"
+msgstr ""
+
+#: src/blocks/faq/block.json
+#: src/blocks/tabs/block.json
+msgctxt "block keyword"
+msgid "accordion"
+msgstr ""
+
+#: src/blocks/faq/block.json
+msgctxt "block keyword"
+msgid "questions"
+msgstr ""
+
+#: src/blocks/faq/block.json
+msgctxt "block keyword"
+msgid "toggle"
+msgstr ""
+
+#: src/blocks/icon-list/block.json
+msgctxt "block title"
+msgid "Icon List"
+msgstr ""
+
+#: src/blocks/icon-list/block.json
+msgctxt "block description"
+msgid "A list of items each with its own icon — perfect for feature and benefit lists."
+msgstr ""
+
+#: src/blocks/icon-list/block.json
+msgctxt "block keyword"
+msgid "icon list"
+msgstr ""
+
+#: src/blocks/icon-list/block.json
+msgctxt "block keyword"
+msgid "checklist"
+msgstr ""
+
+#: src/blocks/icon-list/block.json
+msgctxt "block keyword"
+msgid "list"
+msgstr ""
+
+#: src/blocks/info-box/block.json
+msgctxt "block title"
+msgid "Info Box"
+msgstr ""
+
+#: src/blocks/info-box/block.json
+msgctxt "block description"
+msgid "An icon, heading, description and optional button — the classic marketing feature box."
+msgstr ""
+
+#: src/blocks/info-box/block.json
+msgctxt "block keyword"
+msgid "info"
+msgstr ""
+
+#: src/blocks/info-box/block.json
+msgctxt "block keyword"
+msgid "feature"
+msgstr ""
+
+#: src/blocks/info-box/block.json
+msgctxt "block keyword"
+msgid "icon box"
+msgstr ""
+
+#: src/blocks/info-box/block.json
+msgctxt "block keyword"
+msgid "card"
+msgstr ""
+
+#: src/blocks/lottie/block.json
+msgctxt "block title"
+msgid "Lottie"
+msgstr ""
+
+#: src/blocks/lottie/block.json
+msgctxt "block description"
+msgid "Play a Lottie (JSON) animation with autoplay, on-scroll, hover or click triggers — accessible and reduced-motion aware. The player is bundled, not loaded from a CDN."
+msgstr ""
+
+#: src/blocks/lottie/block.json
+msgctxt "block keyword"
+msgid "lottie"
+msgstr ""
+
+#: src/blocks/lottie/block.json
+msgctxt "block keyword"
+msgid "animation"
+msgstr ""
+
+#: src/blocks/lottie/block.json
+msgctxt "block keyword"
+msgid "svg"
+msgstr ""
+
+#: src/blocks/lottie/block.json
+msgctxt "block keyword"
+msgid "motion"
+msgstr ""
+
+#: src/blocks/lottie/block.json
+msgctxt "block keyword"
+msgid "json"
+msgstr ""
+
+#: src/blocks/map/block.json
+msgctxt "block title"
+msgid "Google Map"
+msgstr ""
+
+#: src/blocks/map/block.json
+msgctxt "block description"
+msgid "A premium Google Map embed with a privacy-first click-to-load facade, an info card, directions link, map types and styling — no API key required."
+msgstr ""
+
+#: src/blocks/map/block.json
+msgctxt "block keyword"
+msgid "map"
+msgstr ""
+
+#: src/blocks/map/block.json
+msgctxt "block keyword"
+msgid "google map"
+msgstr ""
+
+#: src/blocks/map/block.json
+msgctxt "block keyword"
+msgid "location"
+msgstr ""
+
+#: src/blocks/map/block.json
+msgctxt "block keyword"
+msgid "address"
+msgstr ""
+
+#: src/blocks/map/block.json
+msgctxt "block keyword"
+msgid "directions"
+msgstr ""
+
+#: src/blocks/modal/block.json
+msgctxt "block title"
+msgid "Modal / Popup"
+msgstr ""
+
+#: src/blocks/modal/block.json
+msgctxt "block description"
+msgid "An accessible modal dialog — open it from a button, on page load, or after a delay. Put any blocks inside. Built on the Interactivity API."
+msgstr ""
+
+#: src/blocks/modal/block.json
+msgctxt "block keyword"
+msgid "modal"
+msgstr ""
+
+#: src/blocks/modal/block.json
+#: src/blocks/video-popup/block.json
+msgctxt "block keyword"
+msgid "popup"
+msgstr ""
+
+#: src/blocks/modal/block.json
+msgctxt "block keyword"
+msgid "dialog"
+msgstr ""
+
+#: src/blocks/modal/block.json
+#: src/blocks/video-popup/block.json
+msgctxt "block keyword"
+msgid "lightbox"
+msgstr ""
+
+#: src/blocks/modal/block.json
+msgctxt "block keyword"
+msgid "overlay"
+msgstr ""
+
+#: src/blocks/notice/block.json
+msgctxt "block title"
+msgid "Notice"
+msgstr ""
+
+#: src/blocks/notice/block.json
+msgctxt "block description"
+msgid "A coloured callout — info, success, warning or danger — with an optional dismiss."
+msgstr ""
+
+#: src/blocks/notice/block.json
+msgctxt "block keyword"
+msgid "notice"
+msgstr ""
+
+#: src/blocks/notice/block.json
+msgctxt "block keyword"
+msgid "alert"
+msgstr ""
+
+#: src/blocks/notice/block.json
+msgctxt "block keyword"
+msgid "callout"
+msgstr ""
+
+#: src/blocks/notice/block.json
+msgctxt "block keyword"
+msgid "message"
+msgstr ""
+
+#: src/blocks/post-filter/block.json
+msgctxt "block title"
+msgid "Post Filter"
+msgstr ""
+
+#: src/blocks/post-filter/block.json
+msgctxt "block description"
+msgid "A filterable post grid: search, taxonomy dropdowns and reset update the results live via the Interactivity API — with a full no-JavaScript fallback."
+msgstr ""
+
+#: src/blocks/post-filter/block.json
+msgctxt "block keyword"
+msgid "filter"
+msgstr ""
+
+#: src/blocks/post-filter/block.json
+msgctxt "block keyword"
+msgid "search"
+msgstr ""
+
+#: src/blocks/post-filter/block.json
+#: src/blocks/post-grid/block.json
+msgctxt "block keyword"
+msgid "posts"
+msgstr ""
+
+#: src/blocks/post-filter/block.json
+#: src/blocks/taxonomy/block.json
+msgctxt "block keyword"
+msgid "taxonomy"
+msgstr ""
+
+#: src/blocks/post-filter/block.json
+msgctxt "block keyword"
+msgid "ajax"
+msgstr ""
+
+#: src/blocks/post-grid/block.json
+msgctxt "block title"
+msgid "Post Grid"
+msgstr ""
+
+#: src/blocks/post-grid/block.json
+msgctxt "block description"
+msgid "Display posts in a premium grid, masonry or carousel — with a category filter, full query controls and accessible cards. Built on the Interactivity API."
+msgstr ""
+
+#: src/blocks/post-grid/block.json
+msgctxt "block keyword"
+msgid "masonry"
+msgstr ""
+
+#: src/blocks/post-grid/block.json
+#: src/blocks/slides/block.json
+msgctxt "block keyword"
+msgid "carousel"
+msgstr ""
+
+#: src/blocks/post-grid/block.json
+msgctxt "block keyword"
+msgid "blog"
+msgstr ""
+
+#: src/blocks/post-grid/block.json
+msgctxt "block keyword"
+msgid "query"
+msgstr ""
+
+#: src/blocks/pricing-table/block.json
+msgctxt "block title"
+msgid "Pricing Table"
+msgstr ""
+
+#: src/blocks/pricing-table/block.json
+msgctxt "block description"
+msgid "Premium pricing plans with a featured plan, feature lists and an optional monthly / yearly billing toggle. Accessible and built on the Interactivity API."
+msgstr ""
+
+#: src/blocks/pricing-table/block.json
+msgctxt "block keyword"
+msgid "plans"
+msgstr ""
+
+#: src/blocks/pricing-table/block.json
+msgctxt "block keyword"
+msgid "price"
+msgstr ""
+
+#: src/blocks/pricing-table/block.json
+msgctxt "block keyword"
+msgid "subscription"
+msgstr ""
+
+#: src/blocks/progress-bar/block.json
+msgctxt "block title"
+msgid "Progress Bar"
+msgstr ""
+
+#: src/blocks/progress-bar/block.json
+msgctxt "block description"
+msgid "A labelled progress bar that fills when it scrolls into view."
+msgstr ""
+
+#: src/blocks/progress-bar/block.json
+msgctxt "block keyword"
+msgid "progress"
+msgstr ""
+
+#: src/blocks/progress-bar/block.json
+msgctxt "block keyword"
+msgid "bar"
+msgstr ""
+
+#: src/blocks/progress-bar/block.json
+msgctxt "block keyword"
+msgid "skill"
+msgstr ""
+
+#: src/blocks/progress-bar/block.json
+msgctxt "block keyword"
+msgid "meter"
+msgstr ""
+
+#: src/blocks/slide/block.json
+msgctxt "block title"
+msgid "Slide"
+msgstr ""
+
+#: src/blocks/slide/block.json
+msgctxt "block description"
+msgid "A single slide inside a Slides / Carousel block. Holds any blocks."
+msgstr ""
+
+#: src/blocks/slides/block.json
+msgctxt "block title"
+msgid "Slides / Carousel"
+msgstr ""
+
+#: src/blocks/slides/block.json
+msgctxt "block description"
+msgid "An accessible content carousel — put any blocks in each slide. Arrows, dots, autoplay and touch, built on the Interactivity API."
+msgstr ""
+
+#: src/blocks/slides/block.json
+msgctxt "block keyword"
+msgid "slider"
+msgstr ""
+
+#: src/blocks/slides/block.json
+msgctxt "block keyword"
+msgid "slides"
+msgstr ""
+
+#: src/blocks/slides/block.json
+msgctxt "block keyword"
+msgid "gallery"
+msgstr ""
+
+#: src/blocks/social-share/block.json
+msgctxt "block title"
+msgid "Social Share"
+msgstr ""
+
+#: src/blocks/social-share/block.json
+msgctxt "block description"
+msgid "Accessible share buttons — social networks, copy link and native device share, built on the Interactivity API."
+msgstr ""
+
+#: src/blocks/social-share/block.json
+msgctxt "block keyword"
+msgid "share"
+msgstr ""
+
+#: src/blocks/social-share/block.json
+msgctxt "block keyword"
+msgid "social"
+msgstr ""
+
+#: src/blocks/social-share/block.json
+msgctxt "block keyword"
+msgid "sharing"
+msgstr ""
+
+#: src/blocks/social-share/block.json
+msgctxt "block keyword"
+msgid "copy link"
+msgstr ""
+
+#: src/blocks/star-rating/block.json
+msgctxt "block title"
+msgid "Star Rating"
+msgstr ""
+
+#: src/blocks/star-rating/block.json
+msgctxt "block description"
+msgid "A star (or heart / circle) rating with optional label and value."
+msgstr ""
+
+#: src/blocks/star-rating/block.json
+#: src/blocks/testimonial/block.json
+msgctxt "block keyword"
+msgid "rating"
+msgstr ""
+
+#: src/blocks/star-rating/block.json
+msgctxt "block keyword"
+msgid "stars"
+msgstr ""
+
+#: src/blocks/star-rating/block.json
+#: src/blocks/testimonial/block.json
+msgctxt "block keyword"
+msgid "review"
+msgstr ""
+
+#: src/blocks/star-rating/block.json
+msgctxt "block keyword"
+msgid "score"
+msgstr ""
+
+#: src/blocks/steps/block.json
+msgctxt "block title"
+msgid "Steps"
+msgstr ""
+
+#: src/blocks/steps/block.json
+msgctxt "block description"
+msgid "A numbered, ordered list of steps — great for how-tos and processes."
+msgstr ""
+
+#: src/blocks/steps/block.json
+msgctxt "block keyword"
+msgid "steps"
+msgstr ""
+
+#: src/blocks/steps/block.json
+msgctxt "block keyword"
+msgid "process"
+msgstr ""
+
+#: src/blocks/steps/block.json
+msgctxt "block keyword"
+msgid "how to"
+msgstr ""
+
+#: src/blocks/steps/block.json
+msgctxt "block keyword"
+msgid "numbered"
+msgstr ""
+
+#: src/blocks/tabs/block.json
+msgctxt "block title"
+msgid "Tabs"
+msgstr ""
+
+#: src/blocks/tabs/block.json
+msgctxt "block description"
+msgid "Accessible tabbed content following the ARIA Tabs pattern, with full keyboard navigation."
+msgstr ""
+
+#: src/blocks/tabs/block.json
+msgctxt "block keyword"
+msgid "tabs"
+msgstr ""
+
+#: src/blocks/tabs/block.json
+msgctxt "block keyword"
+msgid "tabbed"
+msgstr ""
+
+#: src/blocks/tabs/block.json
+msgctxt "block keyword"
+msgid "panels"
+msgstr ""
+
+#: src/blocks/taxonomy/block.json
+msgctxt "block title"
+msgid "Taxonomy"
+msgstr ""
+
+#: src/blocks/taxonomy/block.json
+msgctxt "block description"
+msgid "A visual browser for any taxonomy — term cards with a representative image, description and post count, as a grid, list or pills."
+msgstr ""
+
+#: src/blocks/taxonomy/block.json
+msgctxt "block keyword"
+msgid "categories"
+msgstr ""
+
+#: src/blocks/taxonomy/block.json
+msgctxt "block keyword"
+msgid "terms"
+msgstr ""
+
+#: src/blocks/taxonomy/block.json
+msgctxt "block keyword"
+msgid "tags"
+msgstr ""
+
+#: src/blocks/taxonomy/block.json
+msgctxt "block keyword"
+msgid "browse"
+msgstr ""
+
+#: src/blocks/team-member/block.json
+msgctxt "block title"
+msgid "Team Member"
+msgstr ""
+
+#: src/blocks/team-member/block.json
+msgctxt "block description"
+msgid "A team member card with photo, name, role, bio and social links."
+msgstr ""
+
+#: src/blocks/team-member/block.json
+msgctxt "block keyword"
+msgid "team"
+msgstr ""
+
+#: src/blocks/team-member/block.json
+msgctxt "block keyword"
+msgid "member"
+msgstr ""
+
+#: src/blocks/team-member/block.json
+msgctxt "block keyword"
+msgid "person"
+msgstr ""
+
+#: src/blocks/team-member/block.json
+msgctxt "block keyword"
+msgid "author"
+msgstr ""
+
+#: src/blocks/team-member/block.json
+msgctxt "block keyword"
+msgid "profile"
+msgstr ""
+
+#: src/blocks/testimonial/block.json
+msgctxt "block title"
+msgid "Testimonial"
+msgstr ""
+
+#: src/blocks/testimonial/block.json
+msgctxt "block description"
+msgid "A customer quote with avatar, name, role and an optional star rating."
+msgstr ""
+
+#: src/blocks/testimonial/block.json
+msgctxt "block keyword"
+msgid "testimonial"
+msgstr ""
+
+#: src/blocks/testimonial/block.json
+msgctxt "block keyword"
+msgid "quote"
+msgstr ""
+
+#: src/blocks/timeline/block.json
+msgctxt "block title"
+msgid "Timeline"
+msgstr ""
+
+#: src/blocks/timeline/block.json
+msgctxt "block description"
+msgid "A vertical timeline of dated events — for histories, roadmaps and milestones."
+msgstr ""
+
+#: src/blocks/timeline/block.json
+msgctxt "block keyword"
+msgid "timeline"
+msgstr ""
+
+#: src/blocks/timeline/block.json
+msgctxt "block keyword"
+msgid "history"
+msgstr ""
+
+#: src/blocks/timeline/block.json
+msgctxt "block keyword"
+msgid "roadmap"
+msgstr ""
+
+#: src/blocks/timeline/block.json
+msgctxt "block keyword"
+msgid "events"
+msgstr ""
+
+#: src/blocks/toc/block.json
+msgctxt "block title"
+msgid "Table of Contents"
+msgstr ""
+
+#: src/blocks/toc/block.json
+msgctxt "block description"
+msgid "An accessible table of contents built automatically from the page's headings — with smooth scroll, active-section highlighting and an optional collapse."
+msgstr ""
+
+#: src/blocks/toc/block.json
+msgctxt "block keyword"
+msgid "table of contents"
+msgstr ""
+
+#: src/blocks/toc/block.json
+msgctxt "block keyword"
+msgid "toc"
+msgstr ""
+
+#: src/blocks/toc/block.json
+msgctxt "block keyword"
+msgid "index"
+msgstr ""
+
+#: src/blocks/toc/block.json
+msgctxt "block keyword"
+msgid "navigation"
+msgstr ""
+
+#: src/blocks/toc/block.json
+msgctxt "block keyword"
+msgid "anchors"
+msgstr ""
+
+#: src/blocks/video-popup/block.json
+msgctxt "block title"
+msgid "Video Popup"
+msgstr ""
+
+#: src/blocks/video-popup/block.json
+msgctxt "block description"
+msgid "A poster with a play button that opens the video in an accessible dialog. The YouTube/Vimeo embed loads only on click — no third-party scripts or cookies until then."
+msgstr ""
+
+#: src/blocks/video-popup/block.json
+msgctxt "block keyword"
+msgid "video"
+msgstr ""
+
+#: src/blocks/video-popup/block.json
+msgctxt "block keyword"
+msgid "youtube"
+msgstr ""
+
+#: src/blocks/video-popup/block.json
+msgctxt "block keyword"
+msgid "vimeo"
+msgstr ""

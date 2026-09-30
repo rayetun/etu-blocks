@@ -1,0 +1,10 @@
+/**
+ * Info Box block — editor-only styles.
+ * Front-end preset styles apply in the canvas; the editable button is a span, so
+ * keep it inline-editable without the anchor's block display.
+ */
+.etu-info-box--editor {
+	.etu-info-box__button {
+		cursor: text;
+	}
+}

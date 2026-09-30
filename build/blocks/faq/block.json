@@ -1,0 +1,105 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "etu/faq",
+  "version": "1.0.0",
+  "title": "FAQ",
+  "category": "etu-blocks",
+  "icon": "editor-help",
+  "description": "An accessible accordion of questions and answers, with optional FAQ schema.",
+  "keywords": [
+    "faq",
+    "accordion",
+    "questions",
+    "toggle"
+  ],
+  "textdomain": "etu-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "interactivity": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "question": "What is Etu Blocks?",
+          "answer": "An accessible, interactive block library for WordPress."
+        },
+        {
+          "question": "Is it accessible?",
+          "answer": "Yes — every block is built to WCAG 2.2 AA."
+        }
+      ]
+    },
+    "allowMultipleOpen": {
+      "type": "boolean",
+      "default": false
+    },
+    "showSchema": {
+      "type": "boolean",
+      "default": true
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "preset": {
+      "type": "string",
+      "default": "boxed"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": ""
+    },
+    "questionColor": {
+      "type": "string",
+      "default": ""
+    },
+    "answerColor": {
+      "type": "string",
+      "default": ""
+    },
+    "questionTypography": {
+      "type": "object",
+      "default": {}
+    },
+    "itemPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockMargin": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "example": {
+    "attributes": {
+      "preset": "boxed",
+      "items": [
+        {
+          "question": "What is Etu Blocks?",
+          "answer": "An accessible, interactive block library for WordPress."
+        },
+        {
+          "question": "Is it accessible?",
+          "answer": "Yes — every block is built to WCAG 2.2 AA."
+        }
+      ]
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

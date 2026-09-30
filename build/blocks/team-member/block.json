@@ -1,0 +1,140 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "etu/team-member",
+  "version": "1.0.0",
+  "title": "Team Member",
+  "category": "etu-blocks",
+  "icon": "businessperson",
+  "description": "A team member card with photo, name, role, bio and social links.",
+  "keywords": [
+    "team",
+    "member",
+    "person",
+    "author",
+    "profile"
+  ],
+  "textdomain": "etu-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": ""
+    },
+    "role": {
+      "type": "string",
+      "default": ""
+    },
+    "bio": {
+      "type": "string",
+      "default": ""
+    },
+    "avatarUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "avatarId": {
+      "type": "number",
+      "default": 0
+    },
+    "preset": {
+      "type": "string",
+      "default": "card"
+    },
+    "contentAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": ""
+    },
+    "nameColor": {
+      "type": "string",
+      "default": ""
+    },
+    "roleColor": {
+      "type": "string",
+      "default": ""
+    },
+    "bioColor": {
+      "type": "string",
+      "default": ""
+    },
+    "socialColor": {
+      "type": "string",
+      "default": ""
+    },
+    "overlayColor": {
+      "type": "string",
+      "default": ""
+    },
+    "overlayOpacity": {
+      "type": "object",
+      "default": {}
+    },
+    "avatarRadius": {
+      "type": "object",
+      "default": {}
+    },
+    "nameTypography": {
+      "type": "object",
+      "default": {}
+    },
+    "roleTypography": {
+      "type": "object",
+      "default": {}
+    },
+    "socialTwitter": {
+      "type": "string",
+      "default": ""
+    },
+    "socialLinkedin": {
+      "type": "string",
+      "default": ""
+    },
+    "socialGithub": {
+      "type": "string",
+      "default": ""
+    },
+    "socialWebsite": {
+      "type": "string",
+      "default": ""
+    },
+    "socialEmail": {
+      "type": "string",
+      "default": ""
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockMargin": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "example": {
+    "attributes": {
+      "name": "Jordan Lee",
+      "role": "Product Designer",
+      "bio": "Designs delightful, accessible interfaces.",
+      "preset": "card"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

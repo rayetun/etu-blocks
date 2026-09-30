@@ -1,0 +1,104 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "etu/testimonial",
+  "version": "1.0.0",
+  "title": "Testimonial",
+  "category": "etu-blocks",
+  "icon": "format-quote",
+  "description": "A customer quote with avatar, name, role and an optional star rating.",
+  "keywords": [
+    "testimonial",
+    "quote",
+    "review",
+    "rating"
+  ],
+  "textdomain": "etu-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "quote": {
+      "type": "string",
+      "default": ""
+    },
+    "authorName": {
+      "type": "string",
+      "default": ""
+    },
+    "authorRole": {
+      "type": "string",
+      "default": ""
+    },
+    "avatarUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "avatarId": {
+      "type": "number",
+      "default": 0
+    },
+    "rating": {
+      "type": "number",
+      "default": 5
+    },
+    "showRating": {
+      "type": "boolean",
+      "default": true
+    },
+    "preset": {
+      "type": "string",
+      "default": "card"
+    },
+    "contentAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": ""
+    },
+    "quoteColor": {
+      "type": "string",
+      "default": ""
+    },
+    "authorColor": {
+      "type": "string",
+      "default": ""
+    },
+    "quoteTypography": {
+      "type": "object",
+      "default": {}
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "blockMargin": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "example": {
+    "attributes": {
+      "quote": "This plugin transformed how we build pages — fast, accessible, and beautiful.",
+      "authorName": "Jordan Lee",
+      "authorRole": "Product Designer",
+      "rating": 5,
+      "preset": "card"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

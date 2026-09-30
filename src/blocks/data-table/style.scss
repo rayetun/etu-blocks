@@ -1,0 +1,227 @@
+/**
+ * Data Table block — front-end (and shared) styles.
+ *
+ * A real <table> in a keyboard-focusable scroll region. Sortable headers carry a
+ * chevron driven by aria-sort; "stack" mode turns rows into labelled cards on small
+ * screens using each cell's data-label. Uses the shared house tokens.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-data-table {
+	--etu-dt-accent: var(--etu-accent, #635bff);
+	--etu-dt-header-bg: var(--etu-surface-hover, #f1f5f9);
+	--etu-dt-header-color: var(--etu-text, #1e293b);
+	--etu-dt-stripe: color-mix(in srgb, var(--etu-text, #1e293b) 4%, transparent);
+	--etu-dt-border: var(--etu-border, #e2e8f0);
+
+	/* ---- Toolbar (search) ---- */
+	&__toolbar {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		margin-bottom: 12px;
+		flex-wrap: wrap;
+	}
+
+	&__search {
+		flex: 1 1 240px;
+		max-width: 340px;
+		padding: 9px 14px;
+		border: 1px solid var(--etu-dt-border);
+		border-radius: var(--etu-radius-sm, 8px);
+		background: var(--etu-surface, #fff);
+		color: var(--etu-text, #1e293b);
+		font-size: 0.95rem;
+	}
+
+	&__search:focus-visible {
+		outline: 2px solid var(--etu-dt-accent);
+		outline-offset: 1px;
+		border-color: var(--etu-dt-accent);
+	}
+
+	&__status {
+		font-size: 0.85rem;
+		color: var(--etu-text-muted, #64748b);
+	}
+
+	/* ---- Scroll region ---- */
+	&__scroll {
+		overflow-x: auto;
+		border-radius: var(--etu-radius-md, 12px);
+		border: 1px solid var(--etu-dt-border);
+	}
+
+	&__scroll:focus-visible {
+		outline: 2px solid var(--etu-dt-accent);
+		outline-offset: 2px;
+	}
+
+	/* ---- Table ---- */
+	&__table {
+		width: 100%;
+		border-collapse: collapse;
+		text-align: left;
+		font-size: 0.95rem;
+		color: var(--etu-text, #1e293b);
+	}
+
+	&__caption {
+		caption-side: top;
+		padding: 12px 16px;
+		text-align: left;
+		font-weight: 600;
+		color: var(--etu-text, #1e293b);
+	}
+
+	&__th {
+		background: var(--etu-dt-header-bg);
+		color: var(--etu-dt-header-color);
+		font-weight: 600;
+		padding: 12px 16px;
+		white-space: nowrap;
+		border-bottom: 2px solid var(--etu-dt-border);
+	}
+
+	&__cell {
+		padding: 12px 16px;
+		border-bottom: 1px solid var(--etu-dt-border);
+		vertical-align: top;
+	}
+
+	&__cell--left {
+		text-align: left;
+	}
+	&__cell--center {
+		text-align: center;
+	}
+	&__cell--right {
+		text-align: right;
+	}
+
+	/* ---- Sortable header button ---- */
+	&__sort {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		background: none;
+		color: inherit;
+		font: inherit;
+		font-weight: 600;
+		text-align: inherit;
+		cursor: pointer;
+	}
+
+	&__cell--center &__sort {
+		justify-content: center;
+	}
+	&__cell--right &__sort {
+		justify-content: flex-end;
+	}
+
+	&__sort:focus-visible {
+		outline: 2px solid var(--etu-dt-accent);
+		outline-offset: 2px;
+		border-radius: 4px;
+	}
+
+	&__sort-ind {
+		width: 0;
+		height: 0;
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		border-top: 5px solid currentColor;
+		opacity: 0.3;
+		transition: transform 0.15s ease, opacity 0.15s ease;
+	}
+
+	&__th[aria-sort="ascending"] &__sort-ind {
+		transform: rotate(180deg);
+		opacity: 1;
+		border-top-color: var(--etu-dt-accent);
+	}
+	&__th[aria-sort="descending"] &__sort-ind {
+		opacity: 1;
+		border-top-color: var(--etu-dt-accent);
+	}
+
+	/* ---- Modifiers ---- */
+	&.is-striped tbody tr:nth-child(even) &__cell {
+		background: var(--etu-dt-stripe);
+	}
+
+	& tbody tr:hover &__cell {
+		background: color-mix(in srgb, var(--etu-dt-accent) 6%, transparent);
+	}
+
+	&.is-bordered &__th,
+	&.is-bordered &__cell {
+		border: 1px solid var(--etu-dt-border);
+	}
+
+	&.is-compact &__th,
+	&.is-compact &__cell {
+		padding: 7px 12px;
+	}
+
+	&.is-sticky thead &__th {
+		position: sticky;
+		top: 0;
+		z-index: 2;
+	}
+
+	/* ---- Responsive: stack into cards ---- */
+	&--resp-stack {
+		@media (max-width: 600px) {
+			.etu-data-table__scroll {
+				overflow-x: visible;
+				border: 0;
+			}
+			.etu-data-table__table {
+				border: 0;
+			}
+			.etu-data-table__table thead {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				overflow: hidden;
+				clip: rect(0 0 0 0);
+				clip-path: inset(50%);
+				white-space: nowrap;
+			}
+			.etu-data-table__table tr {
+				display: block;
+				margin-bottom: 14px;
+				border: 1px solid var(--etu-dt-border);
+				border-radius: var(--etu-radius-md, 12px);
+				overflow: hidden;
+			}
+			.etu-data-table__cell {
+				display: flex;
+				justify-content: space-between;
+				gap: 16px;
+				text-align: right;
+				border-bottom: 1px solid var(--etu-dt-border);
+			}
+			.etu-data-table__cell::before {
+				content: attr(data-label);
+				font-weight: 600;
+				text-align: left;
+				color: var(--etu-text, #1e293b);
+			}
+			.etu-data-table__table tr :last-child.etu-data-table__cell {
+				border-bottom: 0;
+			}
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.etu-data-table__sort-ind {
+			transition: none;
+		}
+	}
+}

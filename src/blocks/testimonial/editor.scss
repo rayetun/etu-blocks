@@ -1,0 +1,22 @@
+/**
+ * Testimonial block — editor-only styles.
+ */
+.etu-testimonial--editor {
+	.etu-testimonial__rating {
+		color: var(--etu-testimonial-accent);
+		font-size: 18px;
+		letter-spacing: 2px;
+	}
+
+	.etu-testimonial__star--empty {
+		color: #d5dbe4;
+	}
+
+	.etu-testimonial__avatar-btn {
+		padding: 0;
+		border: 0;
+		background: none;
+		cursor: pointer;
+		border-radius: 50%;
+	}
+}

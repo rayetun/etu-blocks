@@ -1,0 +1,1 @@
+import{getContext as e,getElement as t,store as r}from"@wordpress/interactivity";r("etu/map",{actions:{load(){const r=e(),a=t().ref;r.iframeSrc=r.embedUrl,r.loaded=!0;const o=a.closest(".etu-map__frame"),s=o&&o.querySelector(".etu-map__iframe");s&&window.requestAnimationFrame(()=>{try{s.focus()}catch(e){}})}}});

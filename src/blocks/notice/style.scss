@@ -1,0 +1,187 @@
+/**
+ * Notice block — front-end (and shared) styles.
+ * Semantic types set the accent; Background / Text / Shadow / Radius controls
+ * override. Uses the shared house tokens.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-notice {
+	--etu-notice-accent: var(--etu-accent, #635bff);
+
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	padding: 16px 18px;
+	border-radius: var(--etu-radius-md, 12px);
+	border: 1px solid color-mix(in srgb, var(--etu-notice-accent) 30%, #fff);
+	background: color-mix(in srgb, var(--etu-notice-accent) 8%, #fff);
+	color: var(--etu-text, #1e293b);
+	box-shadow: 0 4px 20px var(--etu-notice-shadow, transparent);
+
+	/* Beat the display:flex above so the bound `hidden` (dismiss) actually hides. */
+	&[hidden] {
+		display: none !important;
+	}
+
+	&__icon {
+		flex: 0 0 auto;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background: var(--etu-notice-accent);
+		color: #fff;
+		font-size: 0.85rem;
+		line-height: 1;
+	}
+
+	&__body {
+		flex: 1 1 auto;
+		min-width: 0;
+	}
+
+	&__title {
+		margin: 0 0 2px;
+		font-weight: 700;
+		color: inherit;
+	}
+
+	&__content {
+		color: inherit;
+		line-height: 1.6;
+	}
+
+	&__content > :first-child {
+		margin-top: 0;
+	}
+
+	&__content > :last-child {
+		margin-bottom: 0;
+	}
+
+	/* Pinned out of flow (top-right) so it never affects how the icon + text
+	   are aligned, and always keeps a clear gap from the edge. */
+	&__dismiss {
+		position: absolute;
+		top: 10px;
+		right: 12px;
+		width: 28px;
+		height: 28px;
+		border: 0;
+		background: transparent;
+		color: currentColor;
+		opacity: 0.7;
+		font-size: 1.4rem;
+		line-height: 1;
+		cursor: pointer;
+		border-radius: 6px;
+	}
+
+	/* Reserve space on the right so text never slides under the dismiss button. */
+	&--dismissible {
+		padding-right: 44px;
+	}
+
+	/* Alignment moves the icon + text together as one group; keep it visually
+	   centred by matching the reserved space on the left. */
+	&--align-center {
+		justify-content: center;
+
+		.etu-notice__body {
+			flex: 0 1 auto;
+			text-align: center;
+		}
+	}
+
+	&--align-center.etu-notice--dismissible {
+		padding-left: 44px;
+	}
+
+	&--align-right {
+		justify-content: flex-end;
+
+		.etu-notice__body {
+			flex: 0 1 auto;
+			text-align: right;
+		}
+	}
+
+	&__dismiss:hover {
+		opacity: 1;
+		background: rgba(0, 0, 0, 0.06);
+	}
+
+	&__dismiss:focus-visible {
+		outline: 2px solid var(--etu-notice-accent);
+		outline-offset: 1px;
+	}
+
+	&--type-info {
+		--etu-notice-accent: #3b82f6;
+	}
+
+	&--type-success {
+		--etu-notice-accent: #16a34a;
+	}
+
+	&--type-warning {
+		--etu-notice-accent: #f59e0b;
+	}
+
+	&--type-danger {
+		--etu-notice-accent: #ef4444;
+	}
+
+	&--type-neutral {
+		--etu-notice-accent: #64748b;
+	}
+
+	/* Fixed announcement bars — front end only (the editor shows them inline). */
+	&--display-top:not(.etu-notice--editor),
+	&--display-bottom:not(.etu-notice--editor) {
+		position: fixed;
+		left: 0;
+		right: 0;
+		width: 100%;
+		max-width: none;
+		margin: 0;
+		/* Centre the row so the icon, text and dismiss button all sit on the
+		   bar's vertical midline (and the dismiss stays clearly visible). */
+		align-items: center;
+		z-index: 9990;
+		border-radius: 0;
+		border-left: 0;
+		border-right: 0;
+	}
+
+	&--display-top:not(.etu-notice--editor) {
+		top: 0;
+		box-shadow: 0 4px 20px var(--etu-notice-shadow, rgba(15, 23, 42, 0.12));
+	}
+
+	&--display-bottom:not(.etu-notice--editor) {
+		bottom: 0;
+		box-shadow: 0 -4px 20px var(--etu-notice-shadow, rgba(15, 23, 42, 0.12));
+	}
+
+	/* On the centred bars, sit the dismiss button on the vertical midline. */
+	&--display-top:not(.etu-notice--editor) &__dismiss,
+	&--display-bottom:not(.etu-notice--editor) &__dismiss {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+/* Keep the top bar clear of the WordPress admin toolbar when logged in. */
+.admin-bar .etu-notice--display-top:not(.etu-notice--editor) {
+	top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+	.admin-bar .etu-notice--display-top:not(.etu-notice--editor) {
+		top: 46px;
+	}
+}

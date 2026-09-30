@@ -1,0 +1,22 @@
+{
+	"name": "etu-blocks",
+	"version": "1.0.0",
+	"description": "Interactive Accessible Block Library & Page Builder for the WordPress editor.",
+	"private": true,
+	"license": "GPL-2.0-or-later",
+	"scripts": {
+		"build": "wp-scripts build --experimental-modules",
+		"start": "wp-scripts start --experimental-modules",
+		"lint:js": "wp-scripts lint-js",
+		"lint:css": "wp-scripts lint-style",
+		"format": "wp-scripts format"
+	},
+	"devDependencies": {
+		"@wordpress/icons": "^15.2.0",
+		"@wordpress/scripts": "^30.0.0"
+	},
+	"dependencies": {
+		"fflate": "^0.8.3",
+		"lottie-web": "^5.13.0"
+	}
+}

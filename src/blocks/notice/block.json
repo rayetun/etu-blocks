@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "etu/notice",
+	"version": "1.0.0",
+	"title": "Notice",
+	"category": "etu-blocks",
+	"icon": "info",
+	"description": "A coloured callout — info, success, warning or danger — with an optional dismiss.",
+	"keywords": [ "notice", "alert", "callout", "message" ],
+	"textdomain": "etu-blocks",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"interactivity": true,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"title": { "type": "string", "default": "" },
+		"content": { "type": "string", "default": "" },
+		"icon": { "type": "string", "default": "" },
+		"preset": { "type": "string", "default": "info" },
+		"display": { "type": "string", "default": "inline" },
+		"noticeAlign": { "type": "string", "default": "" },
+		"dismissible": { "type": "boolean", "default": true },
+		"rememberDismiss": { "type": "boolean", "default": false },
+		"accentColor": { "type": "string", "default": "" },
+		"noticeBackground": { "type": "string", "default": "" },
+		"noticeTextColor": { "type": "string", "default": "" },
+		"noticeRadius": { "type": "object", "default": {} },
+		"noticeShadowColor": { "type": "string", "default": "" },
+		"titleTypography": { "type": "object", "default": {} },
+		"blockId": { "type": "string", "default": "" },
+		"blockPadding": { "type": "object", "default": {} },
+		"blockMargin": { "type": "object", "default": {} }
+	},
+	"example": {
+		"attributes": {
+			"preset": "success",
+			"title": "You're all set",
+			"content": "Your changes were saved successfully."
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

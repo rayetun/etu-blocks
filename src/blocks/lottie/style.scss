@@ -1,0 +1,43 @@
+/**
+ * Lottie block — front-end (and shared) styles.
+ * A centred, width-constrained animation canvas. Uses the shared house tokens.
+ */
+@use "../../shared/styles/tokens";
+
+.etu-lottie {
+	display: flex;
+	justify-content: center;
+
+	&__canvas {
+		display: block;
+		width: 100%;
+		max-width: 400px;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		background: none;
+		line-height: 0;
+	}
+
+	&__canvas svg {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	&__canvas--button {
+		cursor: pointer;
+	}
+
+	&__canvas--button:focus-visible {
+		outline: 3px solid var(--etu-accent, #635bff);
+		outline-offset: 4px;
+		border-radius: 8px;
+	}
+
+	&--hover &__canvas:focus-visible {
+		outline: 3px solid var(--etu-accent, #635bff);
+		outline-offset: 4px;
+		border-radius: 8px;
+	}
+}
