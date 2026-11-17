@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name:       Etu Blocks — Interactive Accessible Block Library & Page Builder
+ * Plugin Name:       Etu Blocks – Accessible Blocks & Page Builder for the Block Editor
  * Description:       A curated library of accessible, Interactivity-API-powered blocks for the WordPress editor.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Author:            Etu
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ETUBLOCKS_VERSION', '1.0.0' );
+define( 'ETUBLOCKS_VERSION', '1.0.1' );
 define( 'ETUBLOCKS_FILE', __FILE__ );
 define( 'ETUBLOCKS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'ETUBLOCKS_URL', plugin_dir_url( __FILE__ ) );

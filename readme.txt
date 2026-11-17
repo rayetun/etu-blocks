@@ -1,15 +1,15 @@
-=== Etu Blocks — Interactive Accessible Block Library & Page Builder ===
+=== Etu Blocks – Accessible Blocks & Page Builder for the Block Editor ===
 Contributors:      rayetun
 Donate link:       https://wise.com/pay/me/mdrayhanu2
-Tags:              blocks, block editor, accessibility, gutenberg blocks, gutenberg
+Tags:              page builder, blocks, gutenberg blocks, block editor, accessibility
 Requires at least: 6.7
 Tested up to:      7.1
 Requires PHP:      7.4
-Stable tag:        1.0.0
+Stable tag:        1.0.1
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-A modern block library — 29 blocks built on the WordPress Interactivity API and WCAG 2.2 AA, with a SaaS-style dashboard. All free.
+Build pages everyone can use. Accessible, interactive page builder blocks for the block editor, built to WCAG 2.2 AA.
 
 == Description ==
 
@@ -153,6 +153,14 @@ Post in the [WordPress.org support forum](https://wordpress.org/support/plugin/e
 
 == Changelog ==
 
+= 1.0.1 =
+
+Listing and metadata update. No changes to block behaviour, markup or output.
+
+* Change: Plugin name now states what the plugin does — "Accessible Blocks & Page Builder for the Block Editor".
+* Change: Readme tags and short description rewritten for clarity.
+* Fix: A repository-only config file (`.gitattributes`) is no longer included in the distributed plugin.
+
 = 1.0.0 =
 
 Initial release. 29 accessible blocks, powered by the WordPress Interactivity API.
@@ -169,6 +177,9 @@ Initial release. 29 accessible blocks, powered by the WordPress Interactivity AP
 * New: Privacy-first facades for Google Maps and Video Popup — no third-party request until the visitor opts in.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Listing and metadata update only — no changes to blocks or output.
 
 = 1.0.0 =
 First public release of Etu Blocks.
