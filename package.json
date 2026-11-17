@@ -1,7 +1,7 @@
 {
 	"name": "etu-blocks",
 	"version": "1.0.1",
-	"description": "Interactive Accessible Block Library & Page Builder for the WordPress editor.",
+	"description": "Accessible Blocks & Page Builder for the WordPress block editor.",
 	"private": true,
 	"license": "GPL-2.0-or-later",
 	"scripts": {

@@ -13,7 +13,9 @@ Build pages everyone can use. Accessible, interactive page builder blocks for th
 
 == Description ==
 
-🧱 **Etu Blocks is a focused, accessible block library — and all of it is free.**
+🧱 **Etu Blocks is an accessible page builder block library for the WordPress editor — and all of it is free.**
+
+Build landing pages, pricing pages, FAQs, team sections and comparison tables with 29 blocks that live inside the block editor itself — no separate page-builder interface, no shortcodes, no lock-in. What you build stays native blocks.
 
 **1. Accessible by construction.** Every interactive block is built keyboard-operable and screen-reader-correct *from the first line of code*, against **WCAG 2.2 Level AA** — real dialog semantics, real range inputs, real focus management, real ARIA state that can't drift from what you see. Accessibility is a merge gate, not a polish pass.
 
@@ -30,6 +32,7 @@ An **Etu Blocks Pro** add-on with additional premium blocks may follow, but noth
 = How Etu Blocks is organised =
 
 * **Accessible by default** — WCAG 2.2 AA is the definition of done
+* **Page building, natively** — sections, layouts and interactive patterns as real blocks, so nothing is locked into a proprietary format
 * **Interactivity API only** — server-rendered first, no framework runtime on visitors' pages
 * **Privacy first** — video and map embeds use a click-to-load facade; no telemetry, no phone-home
 
@@ -158,7 +161,8 @@ Post in the [WordPress.org support forum](https://wordpress.org/support/plugin/e
 Listing and metadata update. No changes to block behaviour, markup or output.
 
 * Change: Plugin name now states what the plugin does — "Accessible Blocks & Page Builder for the Block Editor".
-* Change: Readme tags and short description rewritten for clarity.
+* Change: Readme tags, short description and description intro rewritten for clarity — the description now leads with what you can build.
+* Change: The plugin's own description line (shown on the Plugins screen) now matches the readme short description.
 * Fix: A repository-only config file (`.gitattributes`) is no longer included in the distributed plugin.
 
 = 1.0.0 =

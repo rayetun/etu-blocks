@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Etu Blocks – Accessible Blocks & Page Builder for the Block Editor
- * Description:       A curated library of accessible, Interactivity-API-powered blocks for the WordPress editor.
+ * Description:       Build pages everyone can use. Accessible, interactive page builder blocks for the block editor, built to WCAG 2.2 AA.
  * Version:           1.0.1
  * Requires at least: 6.7
  * Requires PHP:      7.4
